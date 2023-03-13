@@ -9,8 +9,8 @@ overblik = [
                 "margin-top": "0px",
                 "padding-top": "0px",
                 "height": "536px",
-                "backgroundColor":
-                   "#D8E1E8", "font-family": "Ubuntu"})
+                "backgroundColor": "#D8E1E8",
+                "font-family": "Ubuntu"})
 ]
 
 # tab 2 - fravær
