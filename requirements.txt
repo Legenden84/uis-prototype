@@ -1,4 +1,3 @@
-alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 anaconda-client==1.11.0
 anaconda-navigator==2.3.1
 anaconda-project @ file:///opt/conda/conda-bld/anaconda-project_1660339890420/work
