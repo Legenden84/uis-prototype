@@ -13,7 +13,7 @@ external_stylesheets = [
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
                 suppress_callback_exceptions=True,
-)
+                meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'}])
 
 # server = app.server
 server = app.server
@@ -100,28 +100,6 @@ app.layout = html.Div([header, body],
                             "border": "1px solid black",
                             "font-family": "Ubuntu",},
                       )
-
-# viewport for mobile devices
-app.index_string = '''
-<!DOCTYPE html>
-<html>
-    <head>
-        {%metas%}
-        <title>{%title%}</title>
-        {%favicon%}
-        {%css%}
-        <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    </head>
-    <body>
-        {%app_entry%}
-        <footer>
-            {%config%}
-            {%scripts%}
-            {%renderer%}
-        </footer>
-    </body>
-</html>
-'''
 
 # create server object
 if __name__ == '__main__':
