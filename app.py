@@ -94,10 +94,10 @@ body = html.Div([
 app.layout = html.Div([header, body],
                       style={
                             "backgroundColor": "#D8E1E8",
-                            # "width": "375px",
-                            # "height": "667px",
-                            # "margin": "auto",
-                            # "border": "1px solid black",
+                            "width": "375px",
+                            "height": "667px",
+                            "margin": "auto",
+                            "border": "1px solid black",
                             "font-family": "Ubuntu",},
                       )
 
