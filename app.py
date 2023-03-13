@@ -12,7 +12,7 @@ external_stylesheets = [
 # create dash object
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-server = app.server
+# server = app.server
 
 # main layout
 body = html.Div([
@@ -99,4 +99,4 @@ app.layout = html.Div([header, body],
 
 # create server object
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run()
