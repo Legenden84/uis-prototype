@@ -1,4 +1,6 @@
 from dash import dcc, html
+import dash_daq as daq
+import dash_bootstrap_components as dbc
 
 # tab 1 - overblik
 overblik = [
@@ -34,11 +36,51 @@ absence = [
                             "backgroundColor": "#D8E1E8",
                             "font-family": "Ubuntu"}
                     ),
-                    dcc.Checklist(
-                        options=["barn 1", "barn 2", "barn 3"],
-                        labelStyle={'display': 'block', 'margin-bottom': '10px'},
-                        style={'margin-left': '10px', "font-family": "Ubuntu"},
-                    ),
+                    dbc.Row([
+                        dbc.Col(
+                            html.Div([
+                                daq.BooleanSwitch(
+                                    id="bw-1-1",
+                                    on=False,
+                                    color="#16425D",
+                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px"}
+                                ),
+                            ]),
+                        ),
+                        dbc.Col(
+                            dcc.Markdown("Barn 1", style={"font-family": "Ubuntu", "margin-right": "25px"})
+                        ),
+                    ], style={"display": "flex", "justify-content": "space-between",}),
+                    dbc.Row([
+                        dbc.Col(
+                            html.Div([
+                                daq.BooleanSwitch(
+                                    id="bw-1-2",
+                                    on=False,
+                                    color="#16425D",
+                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px"}
+                                ),
+                            ]),
+                        ),
+                        dbc.Col(
+                            dcc.Markdown("Barn 2", style={"font-family": "Ubuntu", "margin-right": "25px"})
+                        ),
+                    ], style={"display": "flex", "justify-content": "space-between",}),
+                    dbc.Row([
+                        dbc.Col(
+                            html.Div([
+                                daq.BooleanSwitch(
+                                    id="bw-1-3",
+                                    on=False,
+                                    color="#16425D",
+                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px"}
+                                ),
+                            ]),
+                        ),
+                        dbc.Col(
+                            dcc.Markdown("Barn 3", style={"font-family": "Ubuntu", "margin-right": "25px"})
+                        ),
+                    ], style={"display": "flex", "justify-content": "space-between",}),
                     dcc.Markdown(
                         """
                         Eventuelle bemærkninger kan skrives i besked feltet nedenfor.
@@ -52,7 +94,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         value="Kommentar felt.",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 175},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 100},
                     ),
                     html.Div([
                         html.Button(
@@ -94,11 +136,51 @@ absence = [
                             "backgroundColor": "#D8E1E8",
                             "font-family": "Ubuntu"}
                     ),
-                    dcc.Checklist(
-                        options=["barn 1", "barn 2", "barn 3"],
-                        labelStyle={'display': 'block', 'margin-bottom': '10px'},
-                        style={'margin-left': '10px', "font-family": "Ubuntu"},
-                    ),
+                    dbc.Row([
+                        dbc.Col(
+                            html.Div([
+                                daq.BooleanSwitch(
+                                    id="bw-2-1",
+                                    on=False,
+                                    color="#16425D",
+                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px"}
+                                ),
+                            ]),
+                        ),
+                        dbc.Col(
+                            dcc.Markdown("Barn 1", style={"font-family": "Ubuntu", "margin-right": "25px"})
+                        ),
+                    ], style={"display": "flex", "justify-content": "space-between",}),
+                    dbc.Row([
+                        dbc.Col(
+                            html.Div([
+                                daq.BooleanSwitch(
+                                    id="bw-2-2",
+                                    on=False,
+                                    color="#16425D",
+                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px"}
+                                ),
+                            ]),
+                        ),
+                        dbc.Col(
+                            dcc.Markdown("Barn 2", style={"font-family": "Ubuntu", "margin-right": "25px"})
+                        ),
+                    ], style={"display": "flex", "justify-content": "space-between",}),
+                    dbc.Row([
+                        dbc.Col(
+                            html.Div([
+                                daq.BooleanSwitch(
+                                    id="bw-2-3",
+                                    on=False,
+                                    color="#16425D",
+                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px"}
+                                ),
+                            ]),
+                        ),
+                        dbc.Col(
+                            dcc.Markdown("Barn 3", style={"font-family": "Ubuntu", "margin-right": "25px"})
+                        ),
+                    ], style={"display": "flex", "justify-content": "space-between",}),
                     dcc.Markdown(
                         """
                         Eventuelle bemærkninger kan skrives i besked feltet nedenfor.
@@ -112,7 +194,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         value="Kommentar felt.",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 175},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 100},
                     ),
                     html.Div([
                         html.Button(
