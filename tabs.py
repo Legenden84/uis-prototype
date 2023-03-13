@@ -222,8 +222,6 @@ absence = [
             ),
         ],
         style={
-            "overflowX": "scroll",
-            "whiteSpace": "nowrap",
             "margin-bottom": "0px",
             "padding-bottom": "0px",
             "height": "30px",
