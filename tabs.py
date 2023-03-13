@@ -21,6 +21,7 @@ absence = [
                 label="SFO",
                 value="tab-2-sfo",
                 children=[
+                    html.H1("SFO sygemelding", style={"text-align": "center"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
@@ -81,6 +82,7 @@ absence = [
                 label="SKOLE",
                 value="tab-2-skole",
                 children=[
+                    html.H1("Skole sygemelding", style={"text-align": "center"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
