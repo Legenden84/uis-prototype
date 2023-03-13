@@ -1,1 +1,1 @@
-web: gunicorn uis-prototype:server
+web: gunicorn uis-prototype:app
