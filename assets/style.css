@@ -1,0 +1,36 @@
+body {
+    background-color: #F7F7F7;
+}
+
+.centered-button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-tabs-container {
+    padding-bottom: 0px;
+    background-color: #D8E1E8;
+    border-radius: 75px;
+    height: 15px;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.custom-tab--selected {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: none !important;
+    border-bottom: none !important;
+    background-color: #D8E1E8;
+    border-radius: 15px;
+    height: 15px;
+
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
