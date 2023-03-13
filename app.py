@@ -32,7 +32,7 @@ body = html.Div([
                 children=overblik,
                 style={
                     "padding": "5px",
-                    "height": "30px",
+                    # "height": "30px",
                     "backgroundColor": "#F7F7F7",
                     "font-family": "Ubuntu",},
                 selected_style={
