@@ -21,7 +21,7 @@ absence = [
                 label="SFO",
                 value="tab-2-sfo",
                 children=[
-                    html.H1("SFO sygemelding", style={"text-align": "center"}),
+                    html.H1("SFO sygemelding", style={"text-align": "center", "font-family": "Ubuntu"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
@@ -52,7 +52,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         value="Kommentar felt.",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 200},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 175},
                     ),
                     html.Div([
                         html.Button(
@@ -82,7 +82,7 @@ absence = [
                 label="SKOLE",
                 value="tab-2-skole",
                 children=[
-                    html.H1("Skole sygemelding", style={"text-align": "center"}),
+                    html.H1("Skole sygemelding", style={"text-align": "center", "font-family": "Ubuntu"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
@@ -112,7 +112,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         value="Kommentar felt.",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 200},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 175},
                     ),
                     html.Div([
                         html.Button(
