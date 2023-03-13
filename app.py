@@ -99,5 +99,5 @@ app.layout = html.Div([header, body],
                       )
 
 # create server object
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+    app.run_server(debug=True)
