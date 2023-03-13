@@ -13,7 +13,7 @@ external_stylesheets = [
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
                 suppress_callback_exceptions=True,
-                meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'}])
+                meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=0.5'}])
 
 # server = app.server
 server = app.server
