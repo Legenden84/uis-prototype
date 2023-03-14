@@ -23,14 +23,15 @@ absence = [
                 label="SFO",
                 value="tab-2-sfo",
                 children=[
-                    html.H1("SFO sygemelding", style={"text-align": "center", "font-family": "Ubuntu"}),
+                    html.H1("SFO sygemelding", style={"text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
                         du registrere sygdom næste morgen.
                         """,
                         style={
-                            "margin-left": "5px",
+                            "margin-left": "8px",
+                            "margin-right": "8px",
                             "margin-top": "0px",
                             "padding-top": "0px",
                             "backgroundColor": "#D8E1E8",
@@ -83,10 +84,13 @@ absence = [
                     ], style={"display": "flex", "justify-content": "space-between",}),
                     dcc.Markdown(
                         """
-                        Eventuelle bemærkninger kan skrives i besked feltet nedenfor.
+                        Bemærkninger kan tilføjes i feltet nedenfor. Bemærk, hvis du ikke markerer et barn som syg.
+                        Vil du der blot gives en besked i forbindelse med fravær der gør at barnet ikke kan være tilstede
+                        ved hele undervisningen. (F.eks. tandlæge besøg.)
                         """,
                         style={
-                            "margin-left": "5px",
+                            "margin-left": "8px",
+                            "margin-right": "8px",
                             "margin-bottom": "0px",
                             "backgroundColor": "#D8E1E8",
                             "font-family": "Ubuntu"}
@@ -94,7 +98,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         placeholder="Indtast kommentar",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 95},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 45},
                     ),
                     html.Div([
                         html.Button(
@@ -124,14 +128,15 @@ absence = [
                 label="SKOLE",
                 value="tab-2-skole",
                 children=[
-                    html.H1("Skole sygemelding", style={"text-align": "center", "font-family": "Ubuntu"}),
+                    html.H1("Skole sygemelding", style={"text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
                         du registrere sygdom næste morgen.
                         """,
                         style={
-                            "margin-left": "5px",
+                            "margin-left": "8px",
+                            "margin-right": "8px",
                             "margin-bottom": "0px",
                             "backgroundColor": "#D8E1E8",
                             "font-family": "Ubuntu"}
@@ -183,10 +188,13 @@ absence = [
                     ], style={"display": "flex", "justify-content": "space-between",}),
                     dcc.Markdown(
                         """
-                        Eventuelle bemærkninger kan skrives i besked feltet nedenfor.
+                        Bemærkninger kan tilføjes i feltet nedenfor. Bemærk, hvis du ikke markerer et barn som syg.
+                        Vil du der blot gives en besked i forbindelse med fravær der gør at barnet ikke kan være tilstede
+                        ved hele undervisningen. (F.eks. tandlæge besøg.)
                         """,
                         style={
-                            "margin-left": "5px",
+                            "margin-left": "8px",
+                            "margin-right": "8px",
                             "margin-bottom": "0px",
                             "backgroundColor": "#D8E1E8",
                             "font-family": "Ubuntu"}
@@ -194,7 +202,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         placeholder="Indtast kommentar",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 95},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 45},
                     ),
                     html.Div([
                         html.Button(
