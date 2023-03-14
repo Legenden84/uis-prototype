@@ -93,7 +93,7 @@ absence = [
                     ),
                     dcc.Textarea(
                         id="text-area",
-                        value="Kommentar felt.",
+                        placeholder="Indtast kommentar",
                         style={"margin-left": "8px", 'width': '94%', 'height': 95},
                     ),
                     html.Div([
@@ -193,7 +193,7 @@ absence = [
                     ),
                     dcc.Textarea(
                         id="text-area",
-                        value="Kommentar felt.",
+                        placeholder="Indtast kommentar",
                         style={"margin-left": "8px", 'width': '94%', 'height': 95},
                     ),
                     html.Div([
