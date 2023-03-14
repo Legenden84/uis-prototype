@@ -17,7 +17,7 @@ overblik = [
 absence = [
     dcc.Tabs(
         id="absence-tab",
-        value="tab-2-main",
+        value="tab-2-skole",
         children=[
             dcc.Tab(
                 label="SFO",
@@ -94,7 +94,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         value="Kommentar felt.",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 100},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 95},
                     ),
                     html.Div([
                         html.Button(
@@ -194,7 +194,7 @@ absence = [
                     dcc.Textarea(
                         id="text-area",
                         value="Kommentar felt.",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 100},
+                        style={"margin-left": "8px", 'width': '94%', 'height': 95},
                     ),
                     html.Div([
                         html.Button(
