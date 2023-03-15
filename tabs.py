@@ -47,31 +47,39 @@ absence = [
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-1-1", options=["Timer"], style={'display': 'inline-block', "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(
+                                    id="timer-1-1",
+                                    options=["Timer"],
+                                    value=["Timer"],
+                                    style={"display": "inline-block",
+                                            "font-family": "Ubuntu",
+                                            "padding-right": "20px",}),
                             ]),
                         ),
                         dbc.Col([
-                            html.Button('-', id='button-1-1-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
-                            html.H2(children='0', id='counter-1-1', style={"font-size": "16px", "font-family": "Ubuntu", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
-                            html.Button('+', id='button-1-1-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"})
+                            html.Button("-", id="button-1-1-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"}),
+                            html.H2(children="0", id="counter-1-1", style={"font-size": "16px", "font-family": "Ubuntu", "display": "inline-block", "margin": "0 10px", "padding-top": "12px"}),
+                            html.Button("+", id="button-1-1-inc", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
                         ], style={"padding-top": "5px"}),
                         dbc.Col(
                             dcc.Markdown("Barn 1", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
                     ], style={"display": "flex", "justify-content": "space-between",}),
                     dbc.Row([
-                        html.Div([
-                            dcc.RangeSlider(min=8, max=15, step=1,
-                                            value=[8, 15],
-                                            id="range-slider-1-1",
-                                            marks={
-                                                i: {
-                                                    "label": str(i),
-                                                    "style": {"color": "#16425D"},
-                                                } for i in range(16)
-                                            },
-                                            className="range-slider"),
-                        ]),
+                        html.Div(
+                            id="range-slider-div-1-1",
+                            children=[
+                                dcc.RangeSlider(min=8, max=15, step=1,
+                                                value=[8, 15],
+                                                id="range-slider-1-1",
+                                                marks={
+                                                    i: {
+                                                        "label": str(i),
+                                                        "style": {"color": "#16425D"},
+                                                    } for i in range(16)
+                                                },
+                                                className="range-slider"),
+                        ], style={"display": "None"}),
                     ]),
                     dbc.Row([
                         dbc.Col(
@@ -82,13 +90,13 @@ absence = [
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-1-2", options=["Timer"], style={'display': 'inline-block', "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="timer-1-2", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
-                            html.Button('-', id='button-1-2-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
-                            html.H2(children='0', id='counter-1-2', style={"font-size": "16px", "font-family": "Ubuntu", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
-                            html.Button('+', id='button-1-2-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"})
+                            html.Button("-", id="button-1-2-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"}),
+                            html.H2(children="0", id="counter-1-2", style={"font-size": "16px", "font-family": "Ubuntu", "display": "inline-block", "margin": "0 10px", "padding-top": "12px"}),
+                            html.Button("+", id="button-1-2-inc", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
                         ], style={"padding-top": "5px"}),
                         dbc.Col(
                             dcc.Markdown("Barn 2", style={"font-family": "Ubuntu", "margin-right": "25px"})
@@ -117,13 +125,13 @@ absence = [
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-1-3", options=["Timer"], style={'display': 'inline-block', "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="timer-1-3", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
-                            html.Button('-', id='button-1-3-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
-                            html.H2(children='0', id='counter-1-3', style={"font-size": "16px", "font-family": "Ubuntu", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
-                            html.Button('+', id='button-1-3-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"})
+                            html.Button("-", id="button-1-3-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"}),
+                            html.H2(children="0", id="counter-1-3", style={"font-size": "16px", "font-family": "Ubuntu", "display": "inline-block", "margin": "0 10px", "padding-top": "12px"}),
+                            html.Button("+", id="button-1-3-inc", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
                         ], style={"padding-top": "5px"}),
                         dbc.Col(
                             dcc.Markdown("Barn 3", style={"font-family": "Ubuntu", "margin-right": "25px"})
@@ -156,14 +164,14 @@ absence = [
                             "font-size": "12px"}
                     ),
                     dcc.Textarea(
-                        id="text-area",
+                        id="text-area-sfo",
                         placeholder="Indtast kommentar",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 45},
+                        style={"margin-left": "8px", "width": "94%", "height": 45},
                     ),
                     html.Div([
                         html.Button(
                             "Registrer fravær",
-                            id="button",
+                            id="button-sfo",
                             n_clicks=0,
                         ),
                     ],
@@ -212,13 +220,13 @@ absence = [
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-2-1", options=["Timer"], style={'display': 'inline-block', "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="timer-2-1", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
-                            html.Button('-', id='button-2-1-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
-                            html.H2(children='0', id='counter-1-1', style={"font-size": "16px", "font-family": "Ubuntu", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
-                            html.Button('+', id='button-2-1-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"})
+                            html.Button("-", id="button-2-1-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"}),
+                            html.H2(children="0", id="counter-2-1", style={"font-size": "16px", "font-family": "Ubuntu", "display": "inline-block", "margin": "0 10px", "padding-top": "12px"}),
+                            html.Button("+", id="button-2-1-inc", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
                         ], style={"padding-top": "5px"}),
                         dbc.Col(
                             dcc.Markdown("Barn 1", style={"font-family": "Ubuntu", "margin-right": "25px"})
@@ -242,18 +250,18 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-1-2",
+                                    id="bw-2-2",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-2-2", options=["Timer"], style={'display': 'inline-block', "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="timer-2-2", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
-                            html.Button('-', id='button-2-2-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
-                            html.H2(children='0', id='counter-1-2', style={"font-size": "16px", "font-family": "Ubuntu", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
-                            html.Button('+', id='button-2-2-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"})
+                            html.Button("-", id="button-2-2-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"}),
+                            html.H2(children="0", id="counter-2-2", style={"font-size": "16px", "font-family": "Ubuntu", "display": "inline-block", "margin": "0 10px", "padding-top": "12px"}),
+                            html.Button("+", id="button-2-2-inc", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
                         ], style={"padding-top": "5px"}),
                         dbc.Col(
                             dcc.Markdown("Barn 2", style={"font-family": "Ubuntu", "margin-right": "25px"})
@@ -282,13 +290,13 @@ absence = [
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-2-3", options=["Timer"], style={'display': 'inline-block', "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="timer-2-3", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
-                            html.Button('-', id='button-2-3-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
-                            html.H2(children='0', id='counter-1-3', style={"font-size": "16px", "font-family": "Ubuntu", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
-                            html.Button('+', id='button-2-3-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"})
+                            html.Button("-", id="button-2-3-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"}),
+                            html.H2(children="0", id="counter-2-3", style={"font-size": "16px", "font-family": "Ubuntu", "display": "inline-block", "margin": "0 10px", "padding-top": "12px"}),
+                            html.Button("+", id="button-2-3-inc", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
                         ], style={"padding-top": "5px"}),
                         dbc.Col(
                             dcc.Markdown("Barn 3", style={"font-family": "Ubuntu", "margin-right": "25px"})
@@ -321,14 +329,14 @@ absence = [
                             "font-size": "12px"}
                     ),
                     dcc.Textarea(
-                        id="text-area",
+                        id="text-area-skole",
                         placeholder="Indtast kommentar",
-                        style={"margin-left": "8px", 'width': '94%', 'height': 45},
+                        style={"margin-left": "8px", "width": "94%", "height": 45},
                     ),
                     html.Div([
                         html.Button(
                             "Registrer fravær",
-                            id="button",
+                            id="button-skole",
                             n_clicks=0,
                         ),
                     ],
