@@ -1,8 +1,7 @@
 from dash import dash, dcc, html
+from dash.dependencies import Input, Output
 from header import header
 from tabs import absence, overblik, time
-from callbacks import app
-from callbacks import *
 
 # fethching style sheets
 external_stylesheets = [
@@ -109,90 +108,138 @@ app.layout = html.Div([header, body],
     Output(component_id="counter-1-1", component_property="children"),
     [
         Input(component_id="button-1-1-inc", component_property="n_clicks"),
-        Input(component_id="button-1-1-dec", component_property="n_clicks")
+        Input(component_id="button-1-1-dec", component_property="n_clicks"),
+        Input(component_id="timer-1-1", component_property="value")
     ],
 )
-def update_counter_1_1(inc, dec):
+def update_counter_1_1(inc, dec, mode):
     value = inc - dec
+    display = "Dage"
+    if mode == ["Timer"]:
+        display = "Timer"
+    elif mode == [] or None:
+        display = "Dage"
+
     if value >= 0:
-        return f"{value}"
+        return f"{display}: {value}"
     else:
-        return "0"
+        value = 0
+        return f"{display}: {value}"
 
 
 @app.callback(
     Output(component_id="counter-1-2", component_property="children"),
     [
         Input(component_id="button-1-2-inc", component_property="n_clicks"),
-        Input(component_id="button-1-2-dec", component_property="n_clicks")
+        Input(component_id="button-1-2-dec", component_property="n_clicks"),
+        Input(component_id="timer-1-2", component_property="value")
     ],
 )
-def update_counter_1_2(inc, dec):
+def update_counter_1_2(inc, dec, mode):
     value = inc - dec
+    display = "Dage"
+    if mode == ["Timer"]:
+        display = "Timer"
+    elif mode == [] or None:
+        display = "Dage"
+
     if value >= 0:
-        return f"{value}"
+        return f"{display}: {value}"
     else:
-        return "0"
+        value = 0
+        return f"{display}: {value}"
 
 
 @app.callback(
     Output(component_id="counter-1-3", component_property="children"),
     [
         Input(component_id="button-1-3-inc", component_property="n_clicks"),
-        Input(component_id="button-1-3-dec", component_property="n_clicks")
+        Input(component_id="button-1-3-dec", component_property="n_clicks"),
+        Input(component_id="timer-1-3", component_property="value")
     ],
 )
-def update_counter_1_3(inc, dec):
+def update_counter_1_3(inc, dec, mode):
     value = inc - dec
+    display = "Dage"
+    if mode == ["Timer"]:
+        display = "Timer"
+    elif mode == [] or None:
+        display = "Dage"
+
     if value >= 0:
-        return f"{value}"
+        return f"{display}: {value}"
     else:
-        return "0"
+        value = 0
+        return f"{display}: {value}"
 
 
 @app.callback(
     Output(component_id="counter-2-1", component_property="children"),
     [
         Input(component_id="button-2-1-inc", component_property="n_clicks"),
-        Input(component_id="button-2-1-dec", component_property="n_clicks")
+        Input(component_id="button-2-1-dec", component_property="n_clicks"),
+        Input(component_id="timer-2-1", component_property="value")
     ],
 )
-def update_counter_2_1(inc, dec):
+def update_counter_2_1(inc, dec, mode):
     value = inc - dec
+    display = "Dage"
+    if mode == ["Timer"]:
+        display = "Timer"
+    elif mode == [] or None:
+        display = "Dage"
+
     if value >= 0:
-        return f"{value}"
+        return f"{display}: {value}"
     else:
-        return "0"
+        value = 0
+        return f"{display}: {value}"
 
 
 @app.callback(
     Output(component_id="counter-2-2", component_property="children"),
     [
         Input(component_id="button-2-2-inc", component_property="n_clicks"),
-        Input(component_id="button-2-2-dec", component_property="n_clicks")
+        Input(component_id="button-2-2-dec", component_property="n_clicks"),
+        Input(component_id="timer-2-2", component_property="value")
     ],
 )
-def update_counter_2_2(inc, dec):
+def update_counter_2_2(inc, dec, mode):
     value = inc - dec
+    display = "Dage"
+    if mode == ["Timer"]:
+        display = "Timer"
+    elif mode == [] or None:
+        display = "Dage"
+
     if value >= 0:
-        return f"{value}"
+        return f"{display}: {value}"
     else:
-        return "0"
+        value = 0
+        return f"{display}: {value}"
 
 
 @app.callback(
     Output(component_id="counter-2-3", component_property="children"),
     [
         Input(component_id="button-2-3-inc", component_property="n_clicks"),
-        Input(component_id="button-2-3-dec", component_property="n_clicks")
+        Input(component_id="button-2-3-dec", component_property="n_clicks"),
+        Input(component_id="timer-2-3", component_property="value")
     ],
 )
-def update_counter_2_3(inc, dec):
+def update_counter_2_3(inc, dec, mode):
     value = inc - dec
+    display = "Dage"
+    if mode == ["Timer"]:
+        display = "Timer"
+    elif mode == [] or None:
+        display = "Dage"
+
     if value >= 0:
-        return f"{value}"
+        return f"{display}: {value}"
     else:
-        return "0"
+        value = 0
+        return f"{display}: {value}"
 
 # create server object
 if __name__ == '__main__':
