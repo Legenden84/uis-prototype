@@ -1,5 +1,5 @@
 from dash import dash, dcc, html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from header import header
 from tabs import absence, overblik, time
 
@@ -105,23 +105,201 @@ app.layout = html.Div([header, body],
 
 # callbacks
 @app.callback(
-
-        Output(component_id="checklist-1-1", component_property="options"),
+        Output(component_id="range-slider-div-1-1", component_property="style"),
+        Output(component_id="counter-1-1", component_property="children"),
+        Output(component_id="button-col-1-1", component_property="style"),
     [
         Input(component_id="bool-switch-1-1", component_property="on"),
+        Input(component_id="button-1-1-inc", component_property="n_clicks"),
+        Input(component_id="button-1-1-dec", component_property="n_clicks"),
+        Input(component_id="range-slider-1-1", component_property="value"),
     ],
 )
-def toggle_kid_1_1(switch):
-    options = [
-        {"label": "Tid", "value": "Tid", "disabled": True},
-    ]
+def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
+    if range_val != [8, 15]:
+        mode = "Timer"
+        counter = range_val[1] - range_val[0]
+    else:
+        mode = "Dage"
+        if n_click_inc - n_click_dec >= 0:
+            counter = n_click_inc - n_click_dec
+        else:
+            counter = 0
+
     if switch == True:
-        for option in options:
-            option["disabled"] = False
-    # else:
-    #     options = [{"label": "Tid", "value": "Tid"}]
-    print(options)
-    return options
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
+    display = f"{mode}: {counter}"
+    return range_div, display, button_col
+
+
+@app.callback(
+        Output(component_id="range-slider-div-1-2", component_property="style"),
+        Output(component_id="counter-1-2", component_property="children"),
+        Output(component_id="button-col-1-2", component_property="style"),
+    [
+        Input(component_id="bool-switch-1-2", component_property="on"),
+        Input(component_id="button-1-2-inc", component_property="n_clicks"),
+        Input(component_id="button-1-2-dec", component_property="n_clicks"),
+        Input(component_id="range-slider-1-2", component_property="value"),
+    ],
+)
+def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
+    if range_val != [8, 15]:
+        mode = "Timer"
+        counter = range_val[1] - range_val[0]
+    else:
+        mode = "Dage"
+        if n_click_inc - n_click_dec >= 0:
+            counter = n_click_inc - n_click_dec
+        else:
+            counter = 0
+
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
+    display = f"{mode}: {counter}"
+    return range_div, display, button_col
+
+
+@app.callback(
+        Output(component_id="range-slider-div-1-3", component_property="style"),
+        Output(component_id="counter-1-3", component_property="children"),
+        Output(component_id="button-col-1-3", component_property="style"),
+    [
+        Input(component_id="bool-switch-1-3", component_property="on"),
+        Input(component_id="button-1-3-inc", component_property="n_clicks"),
+        Input(component_id="button-1-3-dec", component_property="n_clicks"),
+        Input(component_id="range-slider-1-3", component_property="value"),
+    ],
+)
+def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
+    if range_val != [8, 15]:
+        mode = "Timer"
+        counter = range_val[1] - range_val[0]
+    else:
+        mode = "Dage"
+        if n_click_inc - n_click_dec >= 0:
+            counter = n_click_inc - n_click_dec
+        else:
+            counter = 0
+
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
+    display = f"{mode}: {counter}"
+    return range_div, display, button_col
+
+
+@app.callback(
+        Output(component_id="range-slider-div-2-1", component_property="style"),
+        Output(component_id="counter-2-1", component_property="children"),
+        Output(component_id="button-col-2-1", component_property="style"),
+    [
+        Input(component_id="bool-switch-2-1", component_property="on"),
+        Input(component_id="button-2-1-inc", component_property="n_clicks"),
+        Input(component_id="button-2-1-dec", component_property="n_clicks"),
+        Input(component_id="range-slider-2-1", component_property="value"),
+    ],
+)
+def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
+    if range_val != [8, 15]:
+        mode = "Timer"
+        counter = range_val[1] - range_val[0]
+    else:
+        mode = "Dage"
+        if n_click_inc - n_click_dec >= 0:
+            counter = n_click_inc - n_click_dec
+        else:
+            counter = 0
+
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
+    display = f"{mode}: {counter}"
+    return range_div, display, button_col
+
+
+@app.callback(
+        Output(component_id="range-slider-div-2-2", component_property="style"),
+        Output(component_id="counter-2-2", component_property="children"),
+        Output(component_id="button-col-2-2", component_property="style"),
+    [
+        Input(component_id="bool-switch-2-2", component_property="on"),
+        Input(component_id="button-2-2-inc", component_property="n_clicks"),
+        Input(component_id="button-2-2-dec", component_property="n_clicks"),
+        Input(component_id="range-slider-2-2", component_property="value"),
+    ],
+)
+def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
+    if range_val != [8, 15]:
+        mode = "Timer"
+        counter = range_val[1] - range_val[0]
+    else:
+        mode = "Dage"
+        if n_click_inc - n_click_dec >= 0:
+            counter = n_click_inc - n_click_dec
+        else:
+            counter = 0
+
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
+    display = f"{mode}: {counter}"
+    return range_div, display, button_col
+
+
+@app.callback(
+        Output(component_id="range-slider-div-2-3", component_property="style"),
+        Output(component_id="counter-2-3", component_property="children"),
+        Output(component_id="button-col-2-3", component_property="style"),
+    [
+        Input(component_id="bool-switch-2-3", component_property="on"),
+        Input(component_id="button-2-3-inc", component_property="n_clicks"),
+        Input(component_id="button-2-3-dec", component_property="n_clicks"),
+        Input(component_id="range-slider-2-3", component_property="value"),
+    ],
+)
+def toggle_kid_2_3(switch, n_click_inc, n_click_dec, range_val):
+    if range_val != [8, 15]:
+        mode = "Timer"
+        counter = range_val[1] - range_val[0]
+    else:
+        mode = "Dage"
+        if n_click_inc - n_click_dec >= 0:
+            counter = n_click_inc - n_click_dec
+        else:
+            counter = 0
+
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
+    display = f"{mode}: {counter}"
+    return range_div, display, button_col
 
 # create server object
 if __name__ == "__main__":
