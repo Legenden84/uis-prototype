@@ -34,3 +34,11 @@ body {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
+
+.range-slider .rc-slider-track {
+    background-color: #16425D;
+}
+
+.range-slider .number {
+    color: red;
+  }
