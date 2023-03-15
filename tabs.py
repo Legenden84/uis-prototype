@@ -174,6 +174,18 @@ absence = [
                             "Registrer fravær",
                             id="button-sfo",
                             n_clicks=0,
+                            style={
+                                "height": "35px",
+                                "width": "200px",
+                                "font-size": "20px",
+                                "font-family": "Ubuntu",
+                                "backgroundColor": "#16425D",
+                                "color": "white",
+                                "border-top-left-radius": "5px",
+                                "border-top-right-radius": "5px",
+                                "border-bottom-left-radius": "5px",
+                                "border-bottom-right-radius": "5px",
+                            }
                         ),
                     ],
                         className="centered-button"
@@ -348,6 +360,18 @@ absence = [
                             "Registrer fravær",
                             id="button-skole",
                             n_clicks=0,
+                            style={
+                                "height": "35px",
+                                "width": "200px",
+                                "font-size": "20px",
+                                "font-family": "Ubuntu",
+                                "backgroundColor": "#16425D",
+                                "color": "white",
+                                "border-top-left-radius": "5px",
+                                "border-top-right-radius": "5px",
+                                "border-bottom-left-radius": "5px",
+                                "border-bottom-right-radius": "5px",
+                            }
                         ),
                     ],
                         className="centered-button"
