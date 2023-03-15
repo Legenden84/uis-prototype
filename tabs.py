@@ -42,15 +42,15 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-1-1",
+                                    id="bool-switch-1-1",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
                                 dcc.Checklist(
-                                    id="timer-1-1",
-                                    options=["Timer"],
-                                    value=["Timer"],
+                                    id="checklist-1-1",
+                                    options=[],
+                                    value=[],
                                     style={"display": "inline-block",
                                             "font-family": "Ubuntu",
                                             "padding-right": "20px",}),
@@ -85,12 +85,12 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-1-2",
+                                    id="bool-switch-1-2",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-1-2", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="checklist-1-2", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
@@ -120,12 +120,12 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-1-3",
+                                    id="bool-switch-1-3",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-1-3", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="checklist-1-3", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
@@ -215,12 +215,12 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-2-1",
+                                    id="bool-switch-2-1",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-2-1", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="checklist-2-1", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
@@ -250,12 +250,12 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-2-2",
+                                    id="bool-switch-2-2",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-2-2", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="checklist-2-2", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([
@@ -285,12 +285,12 @@ absence = [
                         dbc.Col(
                             html.Div([
                                 daq.BooleanSwitch(
-                                    id="bw-2-3",
+                                    id="bool-switch-2-3",
                                     on=False,
                                     color="#16425D",
                                     style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
                                 ),
-                                dcc.Checklist(id="timer-2-3", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
+                                dcc.Checklist(id="checklist-2-3", options=["Timer"], style={"display": "inline-block", "font-family": "Ubuntu", "padding-right": "20px"}),
                             ]),
                         ),
                         dbc.Col([

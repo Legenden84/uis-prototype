@@ -13,8 +13,8 @@ external_stylesheets = [
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
                 suppress_callback_exceptions=True,
-                meta_tags=[{'name': 'viewport',
-                            'content': 'width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,'}]
+                meta_tags=[{"name": "viewport",
+                            "content": "width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,"}]
 )
 # server = app.server
 server = app.server
@@ -104,8 +104,25 @@ app.layout = html.Div([header, body],
 
 
 # callbacks
+@app.callback(
 
+        Output(component_id="checklist-1-1", component_property="options"),
+    [
+        Input(component_id="bool-switch-1-1", component_property="on"),
+    ],
+)
+def toggle_kid_1_1(switch):
+    options = [
+        {"label": "Tid", "value": "Tid", "disabled": True},
+    ]
+    if switch == True:
+        for option in options:
+            option["disabled"] = False
+    # else:
+    #     options = [{"label": "Tid", "value": "Tid"}]
+    print(options)
+    return options
 
 # create server object
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run_server(debug=True)
