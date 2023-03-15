@@ -48,6 +48,11 @@ absence = [
                                 ),
                             ]),
                         ),
+                        dbc.Col([
+                            html.Button('-', id='button-1-1-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
+                            html.H2(children='0', id='counter-1-1', style={"font-size": "16px", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
+                            html.Button('+', id='button-1-1-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "8px"})
+                        ]),
                         dbc.Col(
                             dcc.Markdown("Barn 1", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
@@ -63,6 +68,11 @@ absence = [
                                 ),
                             ]),
                         ),
+                        dbc.Col([
+                            html.Button('-', id='button-1-2-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
+                            html.H2(children='0', id='counter-1-2', style={"font-size": "16px", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
+                            html.Button('+', id='button-1-2-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "8px"})
+                        ]),
                         dbc.Col(
                             dcc.Markdown("Barn 2", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
@@ -78,6 +88,11 @@ absence = [
                                 ),
                             ]),
                         ),
+                        dbc.Col([
+                            html.Button('-', id='button-1-3-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
+                            html.H2(children='0', id='counter-1-3', style={"font-size": "16px", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
+                            html.Button('+', id='button-1-3-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "8px"})
+                        ]),
                         dbc.Col(
                             dcc.Markdown("Barn 3", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
@@ -152,6 +167,11 @@ absence = [
                                 ),
                             ]),
                         ),
+                        dbc.Col([
+                            html.Button('-', id='button-2-1-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
+                            html.H2(children='0', id='counter-2-1', style={"font-size": "16px", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
+                            html.Button('+', id='button-2-1-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "8px"})
+                        ]),
                         dbc.Col(
                             dcc.Markdown("Barn 1", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
@@ -167,6 +187,11 @@ absence = [
                                 ),
                             ]),
                         ),
+                        dbc.Col([
+                            html.Button('-', id='button-2-2-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
+                            html.H2(children='0', id='counter-2-2', style={"font-size": "16px", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
+                            html.Button('+', id='button-2-2-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "8px"})
+                        ]),
                         dbc.Col(
                             dcc.Markdown("Barn 2", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
@@ -182,6 +207,11 @@ absence = [
                                 ),
                             ]),
                         ),
+                        dbc.Col([
+                            html.Button('-', id='button-2-3-dec', n_clicks=0, style={'display': 'inline-block', "margin-top": "12px"}),
+                            html.H2(children='0', id='counter-2-3', style={"font-size": "16px", 'display': 'inline-block', 'margin': '0 10px', "padding-top": "12px"}),
+                            html.Button('+', id='button-2-3-inc', n_clicks=0, style={'display': 'inline-block', "margin-top": "8px"})
+                        ]),
                         dbc.Col(
                             dcc.Markdown("Barn 3", style={"font-family": "Ubuntu", "margin-right": "25px"})
                         ),
