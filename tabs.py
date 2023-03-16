@@ -1,5 +1,6 @@
 from dash import dcc, html
 from help import *
+from bool_switch import *
 import dash_daq as daq
 import dash_bootstrap_components as dbc
 
@@ -28,29 +29,11 @@ absence = [
                         html.H1("SFO sygemelding", style={"display": "inline-block", "text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
                         modal_open_sfo, modal_sfo,
                     ], style={"display": "flex", "justify-content": "space-between", "margin-left": "8px"}),
-                    dcc.Markdown(
-                        """
-                        Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
-                        du registrere sygdom næste morgen.
-                        """,
-                        style={
-                            "margin-left": "8px",
-                            "margin-right": "8px",
-                            "margin-top": "0px",
-                            "padding-top": "0px",
-                            "backgroundColor": "#D8E1E8",
-                            "font-family": "Ubuntu",
-                            "font-size": "12px"},
-                    ),
+                    top_remark,
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                daq.BooleanSwitch(
-                                    id="bool-switch-1-1",
-                                    on=False,
-                                    color="#16425D",
-                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
-                                ),
+                                create_switch("bool-switch-1-1")
                             ]),
                         ),
                         dbc.Col(
@@ -83,12 +66,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                daq.BooleanSwitch(
-                                    id="bool-switch-1-2",
-                                    on=False,
-                                    color="#16425D",
-                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
-                                ),
+                                create_switch("bool-switch-1-2")
                             ]),
                         ),
                         dbc.Col(
@@ -121,12 +99,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                daq.BooleanSwitch(
-                                    id="bool-switch-1-3",
-                                    on=False,
-                                    color="#16425D",
-                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
-                                ),
+                                create_switch("bool-switch-1-3"),
                             ]),
                         ),
                         dbc.Col(
@@ -157,18 +130,7 @@ absence = [
                         ]),
                     ]),
                     html.Div([
-                        dcc.Markdown(
-                            """
-                            Bemærkninger kan tilføjes i feltet nedenfor.
-                            """,
-                            style={
-                                "margin-left": "8px",
-                                "margin-right": "8px",
-                                "margin-bottom": "0px",
-                                "backgroundColor": "#D8E1E8",
-                                "font-family": "Ubuntu",
-                                "font-size": "12px"}
-                        ),
+                        bottom_remark,
                         dcc.Textarea(
                             id="text-area-sfo",
                             placeholder="Indtast kommentar",
@@ -224,29 +186,11 @@ absence = [
                         html.H1("Skole sygemelding", style={"display": "inline-block", "text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
                         modal_open_skole, modal_skole,
                     ], style={"display": "flex", "justify-content": "space-between", "margin-left": "8px"}),
-                    dcc.Markdown(
-                        """
-                        Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
-                        du registrere sygdom næste morgen.
-                        """,
-                        style={
-                            "margin-left": "8px",
-                            "margin-right": "8px",
-                            "margin-top": "0px",
-                            "padding-top": "0px",
-                            "backgroundColor": "#D8E1E8",
-                            "font-family": "Ubuntu",
-                            "font-size": "12px"},
-                    ),
+                    top_remark,
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                daq.BooleanSwitch(
-                                    id="bool-switch-2-1",
-                                    on=False,
-                                    color="#16425D",
-                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
-                                ),
+                                create_switch("bool-switch-2-1"),
                             ]),
                         ),
                         dbc.Col(
@@ -279,12 +223,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                daq.BooleanSwitch(
-                                    id="bool-switch-2-2",
-                                    on=False,
-                                    color="#16425D",
-                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
-                                ),
+                                create_switch("bool-switch-2-2"),
                             ]),
                         ),
                         dbc.Col(
@@ -317,12 +256,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                daq.BooleanSwitch(
-                                    id="bool-switch-2-3",
-                                    on=False,
-                                    color="#16425D",
-                                    style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
-                                ),
+                                create_switch("bool-switch-2-3"),
                             ]),
                         ),
                         dbc.Col(
@@ -353,18 +287,7 @@ absence = [
                         ]),
                     ]),
                     html.Div([
-                        dcc.Markdown(
-                            """
-                            Bemærkninger kan tilføjes i feltet nedenfor.
-                            """,
-                            style={
-                                "margin-left": "8px",
-                                "margin-right": "8px",
-                                "margin-bottom": "0px",
-                                "backgroundColor": "#D8E1E8",
-                                "font-family": "Ubuntu",
-                                "font-size": "12px"}
-                        ),
+                        bottom_remark,
                         dcc.Textarea(
                             id="text-area-skole",
                             placeholder="Indtast kommentar",

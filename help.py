@@ -58,7 +58,8 @@ modal_sfo = dbc.Modal(
         "height": "525px",
         "width": "350px",
         "transform": "translate(-50%, -50%)",
-        "background-color": "#F7F7F7"}
+        "background-color": "#F7F7F7"
+    }
 )
 
 modal_open_skole = dbc.Button("?",
@@ -119,5 +120,6 @@ modal_skole = dbc.Modal(
         "height": "525px",
         "width": "350px",
         "transform": "translate(-50%, -50%)",
-        "background-color": "#F7F7F7"}
+        "background-color": "#F7F7F7"
+    }
 )
