@@ -152,8 +152,7 @@ absence = [
                                                 className="range-slider"),
                         ]),
                     ]),
-                    html.Div([
-                       dcc.Markdown(
+                    dcc.Markdown(
                         """
                         Bemærkninger kan tilføjes i feltet nedenfor.
                         """,
@@ -164,35 +163,32 @@ absence = [
                             "backgroundColor": "#D8E1E8",
                             "font-family": "Ubuntu",
                             "font-size": "12px"}
-                        ),
-                        dcc.Textarea(
-                            id="text-area-sfo",
-                            placeholder="Indtast kommentar",
-                            style={"margin-left": "8px", "width": "353px", "height": 60},
-                        ),
-                        html.Div([
-                            html.Button(
-                                "Registrer fravær",
-                                id="button-sfo",
-                                n_clicks=0,
-                                style={
-                                    "height": "35px",
-                                    "width": "200px",
-                                    "font-size": "20px",
-                                    "font-family": "Ubuntu",
-                                    "backgroundColor": "#16425D",
-                                    "color": "white",
-                                    "border-top-left-radius": "5px",
-                                    "border-top-right-radius": "5px",
-                                    "border-bottom-left-radius": "5px",
-                                    "border-bottom-right-radius": "5px",
-                                }
-                            ),
-                        ],
-                            className="centered-button"
+                    ),
+                    dcc.Textarea(
+                        id="text-area-sfo",
+                        placeholder="Indtast kommentar",
+                        style={"margin-left": "8px", "width": "94%", "height": 45},
+                    ),
+                    html.Div([
+                        html.Button(
+                            "Registrer fravær",
+                            id="button-sfo",
+                            n_clicks=0,
+                            style={
+                                "height": "35px",
+                                "width": "200px",
+                                "font-size": "20px",
+                                "font-family": "Ubuntu",
+                                "backgroundColor": "#16425D",
+                                "color": "white",
+                                "border-top-left-radius": "5px",
+                                "border-top-right-radius": "5px",
+                                "border-bottom-left-radius": "5px",
+                                "border-bottom-right-radius": "5px",
+                            }
                         ),
                     ],
-                    style={"position": "absolute", "bottom": "310px", "margin-left": "0px"},
+                        className="centered-button"
                     ),
                 ],
                 style={
@@ -342,47 +338,43 @@ absence = [
                                                 className="range-slider"),
                         ]),
                     ]),
+                    dcc.Markdown(
+                        """
+                        Bemærkninger kan tilføjes i feltet nedenfor.
+                        """,
+                        style={
+                            "margin-left": "8px",
+                            "margin-right": "8px",
+                            "margin-bottom": "0px",
+                            "backgroundColor": "#D8E1E8",
+                            "font-family": "Ubuntu",
+                            "font-size": "12px"}
+                    ),
+                    dcc.Textarea(
+                        id="text-area-skole",
+                        placeholder="Indtast kommentar",
+                        style={"margin-left": "8px", "width": "94%", "height": 45},
+                    ),
                     html.Div([
-                        dcc.Markdown(
-                            """
-                            Bemærkninger kan tilføjes i feltet nedenfor.
-                            """,
+                        html.Button(
+                            "Registrer fravær",
+                            id="button-skole",
+                            n_clicks=0,
                             style={
-                                "margin-left": "8px",
-                                "margin-right": "8px",
-                                "margin-bottom": "0px",
-                                "backgroundColor": "#D8E1E8",
+                                "height": "35px",
+                                "width": "200px",
+                                "font-size": "20px",
                                 "font-family": "Ubuntu",
-                                "font-size": "12px"}
-                        ),
-                        dcc.Textarea(
-                            id="text-area-skole",
-                            placeholder="Indtast kommentar",
-                            style={"margin-left": "8px", "width": "353px", "height": 60},
-                        ),
-                        html.Div([
-                            html.Button(
-                                "Registrer fravær",
-                                id="button-skole",
-                                n_clicks=0,
-                                style={
-                                    "height": "35px",
-                                    "width": "200px",
-                                    "font-size": "20px",
-                                    "font-family": "Ubuntu",
-                                    "backgroundColor": "#16425D",
-                                    "color": "white",
-                                    "border-top-left-radius": "5px",
-                                    "border-top-right-radius": "5px",
-                                    "border-bottom-left-radius": "5px",
-                                    "border-bottom-right-radius": "5px",
-                                }
-                            ),
-                        ],
-                            className="centered-button"
+                                "backgroundColor": "#16425D",
+                                "color": "white",
+                                "border-top-left-radius": "5px",
+                                "border-top-right-radius": "5px",
+                                "border-bottom-left-radius": "5px",
+                                "border-bottom-right-radius": "5px",
+                            }
                         ),
                     ],
-                    style={"position": "absolute", "bottom": "310px", "margin-left": "0px"},
+                        className="centered-button"
                     ),
                 ],
                 style={
