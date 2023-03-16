@@ -1,4 +1,5 @@
 import dash_bootstrap_components as dbc
+from markdown import *
 
 modal_open_sfo = dbc.Button("?",
                                 id="open-sfo",
@@ -20,8 +21,7 @@ modal_open_sfo = dbc.Button("?",
 
 modal_sfo = dbc.Modal(
     [
-        dbc.ModalHeader("Modal header"),
-        dbc.ModalBody("Modal body"),
+        dbc.ModalBody(help_text),
         dbc.ModalFooter(
             dbc.Button("Luk",
                         id="close-sfo",
@@ -73,8 +73,7 @@ modal_open_skole = dbc.Button("?",
 
 modal_skole = dbc.Modal(
     [
-        dbc.ModalHeader("Modal header"),
-        dbc.ModalBody("Modal body"),
+        dbc.ModalBody(help_text),
         dbc.ModalFooter(
             dbc.Button("Luk",
                     id="close-skole",
