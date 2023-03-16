@@ -91,10 +91,9 @@ body = html.Div([
 ])
 
 
-
 # create layout
 app.layout = html.Div([header, body],
-                      style={
+                        style={
                             "display": "flex",
                             "flex-direction": "column",
                             "backgroundColor": "#D8E1E8",
@@ -102,7 +101,10 @@ app.layout = html.Div([header, body],
                             "height": "667px",
                             "margin": "auto",
                             "border": "1px solid black",
-                            "font-family": "Ubuntu",},
+                            "font-family": "Ubuntu",
+                            "position": "relative",
+                            "padding-bottom": "50px"
+                        },
                       )
 
 
