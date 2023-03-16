@@ -2,7 +2,7 @@ import json
 from dash import dash, dcc, html
 from dash.dependencies import Input, Output
 from header import header
-from tabs import absence, overblik, time
+from tabs import absence, overblik, tider
 
 # fethching style sheets
 external_stylesheets = [
@@ -63,9 +63,9 @@ body = html.Div([
                 selected_className="custom-tab--selected"
             ),
             dcc.Tab(
-                label="TID",
+                label="TIDER",
                 value="tab-3",
-                children=time,
+                children=tider,
                 style={
                     "padding": "5px",
                     "height": "30px",

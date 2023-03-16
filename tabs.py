@@ -402,7 +402,7 @@ absence = [
 ]
 
 # tab 3 - tid
-time = [
+tider = [
     html.P("This is tab 3.",
            style={
                 "margin-top": "0px",
