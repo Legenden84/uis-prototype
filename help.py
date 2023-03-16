@@ -21,6 +21,13 @@ modal_open_sfo = dbc.Button("?",
 
 modal_sfo = dbc.Modal(
     [
+        dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
+                        style={
+                            "font-family": "ubuntu",
+                            "font-size": "20px",
+                            "font-weight": "bold",
+                            "margin-left": "8px"},
+                        close_button=False),
         dbc.ModalBody(help_text),
         dbc.ModalFooter(
             dbc.Button("Luk",
@@ -40,6 +47,8 @@ modal_sfo = dbc.Modal(
                             })),
     ],
     id="modal-sfo",
+    keyboard=False,
+    backdrop="static",
     style={
         "position": "absolute",
         "border": "2px solid black",
@@ -73,6 +82,13 @@ modal_open_skole = dbc.Button("?",
 
 modal_skole = dbc.Modal(
     [
+        dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
+                        style={
+                            "font-family": "ubuntu",
+                            "font-size": "32px",
+                            "font-weight": "bold",
+                            "margin-left": "8px"},
+                        close_button=False),
         dbc.ModalBody(help_text),
         dbc.ModalFooter(
             dbc.Button("Luk",
@@ -92,6 +108,8 @@ modal_skole = dbc.Modal(
                         })),
     ],
     id="modal-skole",
+    keyboard=False,
+    backdrop="static",
     style={
         "position": "absolute",
         "border": "2px solid black",
