@@ -39,6 +39,12 @@ body {
     background-color: #16425D;
 }
 
-.range-slider .number {
-    color: red;
-  }
+.modal-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 8px;
+    width: fit-content;
+}
