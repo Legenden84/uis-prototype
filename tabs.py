@@ -1,6 +1,6 @@
 from dash import dcc, html
 from help import *
-from bool_switch import *
+import support_functions as sf
 import dash_daq as daq
 import dash_bootstrap_components as dbc
 
@@ -33,7 +33,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                create_switch("bool-switch-1-1")
+                                sf.create_switch("bool-switch-1-1")
                             ]),
                         ),
                         dbc.Col(
@@ -66,7 +66,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                create_switch("bool-switch-1-2")
+                                sf.create_switch("bool-switch-1-2")
                             ]),
                         ),
                         dbc.Col(
@@ -99,7 +99,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                create_switch("bool-switch-1-3"),
+                                sf.create_switch("bool-switch-1-3"),
                             ]),
                         ),
                         dbc.Col(
@@ -190,7 +190,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                create_switch("bool-switch-2-1"),
+                                sf.create_switch("bool-switch-2-1"),
                             ]),
                         ),
                         dbc.Col(
@@ -223,7 +223,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                create_switch("bool-switch-2-2"),
+                                sf.create_switch("bool-switch-2-2"),
                             ]),
                         ),
                         dbc.Col(
@@ -256,7 +256,7 @@ absence = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                create_switch("bool-switch-2-3"),
+                                sf.create_switch("bool-switch-2-3"),
                             ]),
                         ),
                         dbc.Col(
