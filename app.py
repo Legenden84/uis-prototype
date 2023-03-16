@@ -1,6 +1,6 @@
 import json
 from dash import dash, dcc, html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from header import header
 from tabs import absence, overblik, tider
 
@@ -335,6 +335,39 @@ def toggle_kid_2_3(switch, n_click_inc, n_click_dec, range_val):
 
     display = f"{mode}: {counter}"
     return range_div, display, button_col, dash.no_update, dash.no_update
+
+
+@app.callback(
+    Output(component_id="modal-skole", component_property="is_open"),
+    [
+        Input(component_id="open-skole", component_property="n_clicks"),
+        Input(component_id="close-skole", component_property="n_clicks")
+    ],
+    [
+        State(component_id="modal-skole", component_property="is_open")
+    ]
+)
+def toggle_help_skole(open, close, is_open):
+    if open or close:
+        return not is_open
+    return is_open
+
+
+@app.callback(
+    Output(component_id="modal-sfo", component_property="is_open"),
+    [
+        Input(component_id="open-sfo", component_property="n_clicks"),
+        Input(component_id="close-sfo", component_property="n_clicks")
+    ],
+    [
+        State(component_id="modal-sfo", component_property="is_open")
+    ]
+)
+def toggle_help_sfo(open, close, is_open):
+    if open or close:
+        return not is_open
+    return is_open
+
 
 # create server object
 if __name__ == "__main__":

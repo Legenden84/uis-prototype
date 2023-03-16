@@ -1,4 +1,5 @@
 from dash import dcc, html
+from help import *
 import dash_daq as daq
 import dash_bootstrap_components as dbc
 
@@ -23,7 +24,10 @@ absence = [
                 label="SFO",
                 value="tab-2-sfo",
                 children=[
-                    html.H1("SFO sygemelding", style={"text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
+                    html.Div([
+                        html.H1("SFO sygemelding", style={"display": "inline-block", "text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
+                        modal_open_sfo, modal_sfo,
+                    ], style={"display": "flex", "justify-content": "space-between", "margin-left": "8px"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
@@ -216,7 +220,10 @@ absence = [
                 label="SKOLE",
                 value="tab-2-skole",
                 children=[
-                    html.H1("Skole sygemelding", style={"text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
+                    html.Div([
+                        html.H1("Skole sygemelding", style={"display": "inline-block", "text-align": "center", "font-size": "20px", "font-family": "Ubuntu"}),
+                        modal_open_skole, modal_skole,
+                    ], style={"display": "flex", "justify-content": "space-between", "margin-left": "8px"}),
                     dcc.Markdown(
                         """
                         Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
