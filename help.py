@@ -26,6 +26,16 @@ modal_skole = dbc.Modal(
         dbc.ModalFooter(dbc.Button("Close", id="close-skole", className="ml-auto")),
     ],
     id="modal-skole",
+    style={
+        "position": "absolute",
+        "border": "2px solid black",
+        "margin-top": "200px",
+        "top": "25%",
+        "left": "50%",
+        "height": "525px",
+        "width": "350px",
+        "transform": "translate(-50%, -50%)",
+        "background-color": "#F7F7F7"}
 )
 
 modal_open_sfo = dbc.Button("?",
@@ -53,4 +63,14 @@ modal_sfo = dbc.Modal(
         dbc.ModalFooter(dbc.Button("Close", id="close-sfo", className="ml-auto")),
     ],
     id="modal-sfo",
+    style={
+        "position": "absolute",
+        "border": "2px solid black",
+        "margin-top": "200px",
+        "top": "25%",
+        "left": "50%",
+        "height": "525px",
+        "width": "350px",
+        "transform": "translate(-50%, -50%)",
+        "background-color": "#F7F7F7"}
 )
