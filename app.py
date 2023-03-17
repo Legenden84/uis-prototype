@@ -115,6 +115,8 @@ app.layout = html.Div([header, body],
         Output(component_id="button-col-1-1", component_property="style"),
         Output(component_id="button-1-1-inc", component_property="n_clicks"),
         Output(component_id="button-1-1-dec", component_property="n_clicks"),
+        Output(component_id="button-1-1-inc", component_property="style"),
+        Output(component_id="button-1-1-dec", component_property="style"),
     [
         Input(component_id="bool-switch-1-1", component_property="on"),
         Input(component_id="button-1-1-inc", component_property="n_clicks"),
@@ -124,12 +126,17 @@ app.layout = html.Div([header, body],
 )
 def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
-        return dash.no_update, dash.no_update, dash.no_update, 0, 0
+        return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
     if range_val != [8, 15]:
+        inc_button_style = {"display": "none", "margin-top": "12px"}
+        dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+
     else:
+        inc_button_style = {"display": "inline-block", "margin-top": "12px"}
+        dec_button_style = {"display": "inline-block", "margin-top": "12px"}
         mode = "Dage"
         if n_click_inc - n_click_dec >= 0:
             counter = n_click_inc - n_click_dec
@@ -144,7 +151,7 @@ def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
         button_col = {"display": "none", "padding-top": "5px"}
 
     display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update
+    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -153,6 +160,8 @@ def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
         Output(component_id="button-col-1-2", component_property="style"),
         Output(component_id="button-1-2-inc", component_property="n_clicks"),
         Output(component_id="button-1-2-dec", component_property="n_clicks"),
+        Output(component_id="button-1-2-inc", component_property="style"),
+        Output(component_id="button-1-2-dec", component_property="style"),
     [
         Input(component_id="bool-switch-1-2", component_property="on"),
         Input(component_id="button-1-2-inc", component_property="n_clicks"),
@@ -162,12 +171,16 @@ def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
 )
 def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
-        return dash.no_update, dash.no_update, dash.no_update, 0, 0
+        return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
     if range_val != [8, 15]:
+        inc_button_style = {"display": "none", "margin-top": "12px"}
+        dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
     else:
+        inc_button_style = {"display": "inline-block", "margin-top": "12px"}
+        dec_button_style = {"display": "inline-block", "margin-top": "12px"}
         mode = "Dage"
         if n_click_inc - n_click_dec >= 0:
             counter = n_click_inc - n_click_dec
@@ -182,7 +195,7 @@ def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
         button_col = {"display": "none", "padding-top": "5px"}
 
     display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update
+    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -191,6 +204,8 @@ def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
         Output(component_id="button-col-1-3", component_property="style"),
         Output(component_id="button-1-3-inc", component_property="n_clicks"),
         Output(component_id="button-1-3-dec", component_property="n_clicks"),
+        Output(component_id="button-1-3-inc", component_property="style"),
+        Output(component_id="button-1-3-dec", component_property="style"),
     [
         Input(component_id="bool-switch-1-3", component_property="on"),
         Input(component_id="button-1-3-inc", component_property="n_clicks"),
@@ -200,12 +215,17 @@ def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
 )
 def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
-        return dash.no_update, dash.no_update, dash.no_update, 0, 0
+        return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
     if range_val != [8, 15]:
+        inc_button_style = {"display": "none", "margin-top": "12px"}
+        dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+
     else:
+        inc_button_style = {"display": "inline-block", "margin-top": "12px"}
+        dec_button_style = {"display": "inline-block", "margin-top": "12px"}
         mode = "Dage"
         if n_click_inc - n_click_dec >= 0:
             counter = n_click_inc - n_click_dec
@@ -220,7 +240,7 @@ def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
         button_col = {"display": "none", "padding-top": "5px"}
 
     display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update
+    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -229,6 +249,8 @@ def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
         Output(component_id="button-col-2-1", component_property="style"),
         Output(component_id="button-2-1-inc", component_property="n_clicks"),
         Output(component_id="button-2-1-dec", component_property="n_clicks"),
+        Output(component_id="button-2-1-inc", component_property="style"),
+        Output(component_id="button-2-1-dec", component_property="style"),
     [
         Input(component_id="bool-switch-2-1", component_property="on"),
         Input(component_id="button-2-1-inc", component_property="n_clicks"),
@@ -238,12 +260,17 @@ def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
 )
 def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
-        return dash.no_update, dash.no_update, dash.no_update, 0, 0
+        return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
     if range_val != [8, 15]:
+        inc_button_style = {"display": "none", "margin-top": "12px"}
+        dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+
     else:
+        inc_button_style = {"display": "inline-block", "margin-top": "12px"}
+        dec_button_style = {"display": "inline-block", "margin-top": "12px"}
         mode = "Dage"
         if n_click_inc - n_click_dec >= 0:
             counter = n_click_inc - n_click_dec
@@ -258,7 +285,7 @@ def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
         button_col = {"display": "none", "padding-top": "5px"}
 
     display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update
+    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -267,6 +294,8 @@ def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
         Output(component_id="button-col-2-2", component_property="style"),
         Output(component_id="button-2-2-inc", component_property="n_clicks"),
         Output(component_id="button-2-2-dec", component_property="n_clicks"),
+        Output(component_id="button-2-2-inc", component_property="style"),
+        Output(component_id="button-2-2-dec", component_property="style"),
     [
         Input(component_id="bool-switch-2-2", component_property="on"),
         Input(component_id="button-2-2-inc", component_property="n_clicks"),
@@ -276,12 +305,16 @@ def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
 )
 def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
-        return dash.no_update, dash.no_update, dash.no_update, 0, 0
+        return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
     if range_val != [8, 15]:
+        inc_button_style = {"display": "none", "margin-top": "12px"}
+        dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
     else:
+        inc_button_style = {"display": "inline-block", "margin-top": "12px"}
+        dec_button_style = {"display": "inline-block", "margin-top": "12px"}
         mode = "Dage"
         if n_click_inc - n_click_dec >= 0:
             counter = n_click_inc - n_click_dec
@@ -296,7 +329,7 @@ def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
         button_col = {"display": "none", "padding-top": "5px"}
 
     display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update
+    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -305,6 +338,8 @@ def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
         Output(component_id="button-col-2-3", component_property="style"),
         Output(component_id="button-2-3-inc", component_property="n_clicks"),
         Output(component_id="button-2-3-dec", component_property="n_clicks"),
+        Output(component_id="button-2-3-inc", component_property="style"),
+        Output(component_id="button-2-3-dec", component_property="style"),
     [
         Input(component_id="bool-switch-2-3", component_property="on"),
         Input(component_id="button-2-3-inc", component_property="n_clicks"),
@@ -314,12 +349,16 @@ def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
 )
 def toggle_kid_2_3(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
-        return dash.no_update, dash.no_update, dash.no_update, 0, 0
+        return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
     if range_val != [8, 15]:
+        inc_button_style = {"display": "none", "margin-top": "12px"}
+        dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
     else:
+        inc_button_style = {"display": "inline-block", "margin-top": "12px"}
+        dec_button_style = {"display": "inline-block", "margin-top": "12px"}
         mode = "Dage"
         if n_click_inc - n_click_dec >= 0:
             counter = n_click_inc - n_click_dec
@@ -334,7 +373,7 @@ def toggle_kid_2_3(switch, n_click_inc, n_click_dec, range_val):
         button_col = {"display": "none", "padding-top": "5px"}
 
     display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update
+    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
