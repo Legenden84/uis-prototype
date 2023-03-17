@@ -34,13 +34,13 @@ body = html.Div([
                     "padding": "5px",
                     "height": "30px",
                     "backgroundColor": "#F7F7F7",
-                    "font-family": "Liberation Sans",},
+                    "font-family": "Liberation Sans", "font-weight": "bold"},
                 selected_style={
                     "color": "white",
                     "padding": "5px",
                     "height": "30px",
                     "backgroundColor": "#16425D",
-                    "font-family": "Liberation Sans",},
+                    "font-family": "Liberation Sans","font-weight": "bold"},
                 className="custom-tabs-container",
                 selected_className="custom-tab--selected"
             ),
@@ -52,13 +52,13 @@ body = html.Div([
                     "padding": "5px",
                     "height": "30px",
                     "backgroundColor": "#F7F7F7",
-                    "font-family": "Liberation Sans", },
+                    "font-family": "Liberation Sans", "font-weight": "bold"},
                 selected_style={
                     "color": "white",
                     "padding": "5px",
                     "height": "30px",
                     "backgroundColor": "#16425D",
-                    "font-family": "Liberation Sans", },
+                    "font-family": "Liberation Sans", "font-weight": "bold"},
                 className="custom-tabs-container",
                 selected_className="custom-tab--selected"
             ),
@@ -70,13 +70,13 @@ body = html.Div([
                     "padding": "5px",
                     "height": "30px",
                     "backgroundColor": "#F7F7F7",
-                    "font-family": "Liberation Sans", },
+                    "font-family": "Liberation Sans", "font-weight": "bold"},
                 selected_style={
                     "color": "white",
                     "padding": "5px",
                     "height": "30px",
                     "backgroundColor": "#16425D",
-                    "font-family": "Liberation Sans", },
+                    "font-family": "Liberation Sans", "font-weight": "bold"},
                 className="custom-tabs-container",
                 selected_className="custom-tab--selected"
             ),
