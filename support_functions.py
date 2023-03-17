@@ -1,4 +1,4 @@
-from dash import dcc, html
+from dash import html
 import dash_daq as daq
 
 
@@ -29,5 +29,8 @@ def create_counter(id: str):
     return counter
 
 def create_dec_button(id: str):
-    decrease = html.Button("-", id="button-" + id + "-dec", n_clicks=0, style={"display": "inline-block", "margin-top": "12px"})
+    decrease = html.Button("-",
+                           id="button-" + id + "-dec",
+                           n_clicks=0,
+                           style={"display": "inline-block", "margin-top": "12px"})
     return decrease
