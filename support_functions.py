@@ -24,7 +24,7 @@ def create_counter(id: str):
                       id="counter-" + id,
                       style={
                         "font-size": "16px",
-                        "font-family": "Ubuntu",
+                        "font-family": "Liberation Sans", "font-weight": "bold",
                         "display": "inline-block",
                         "margin": "0 10px",
                         "padding-top": "12px"})
