@@ -10,12 +10,14 @@ def create_switch(id: str):
     )
     return switch
 
+
 def create_inc_buttons(id: str):
     increase = html.Button("+",
                            id="button-" + id + "-inc",
                            n_clicks=0,
                            style={"display": "inline-block", "margin-top": "12px"})
     return increase
+
 
 def create_counter(id: str):
     counter = html.H2(children="0",
@@ -27,6 +29,7 @@ def create_counter(id: str):
                         "margin": "0 10px",
                         "padding-top": "12px"})
     return counter
+
 
 def create_dec_button(id: str):
     decrease = html.Button("-",

@@ -2,12 +2,9 @@ body {
     background-color: #F7F7F7;
 }
 
-.centered-button {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
 
+
+/* TABS */
 .custom-tabs-container {
     padding-bottom: 0px;
     background-color: #D8E1E8;
@@ -35,8 +32,27 @@ body {
     border-bottom-right-radius: 0 !important;
 }
 
+/* RANGE SLIDER */
 .range-slider .rc-slider-track {
     background-color: #16425D;
+}
+
+/* BUTTON */
+.centered-button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    width: 200px;
+    font-size: 20px;
+    font-family: ubuntu;
+    background-color: #16425D;
+    color: white;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+
 }
 
 .modal-button {

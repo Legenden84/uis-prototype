@@ -141,21 +141,12 @@ absence = [
                                 "Registrer fravær",
                                 id="button-sfo",
                                 n_clicks=0,
-                                style={
-                                    "height": "35px",
-                                    "width": "200px",
-                                    "font-size": "20px",
-                                    "font-family": "Ubuntu",
-                                    "backgroundColor": "#16425D",
-                                    "color": "white",
-                                    "border-top-left-radius": "5px",
-                                    "border-top-right-radius": "5px",
-                                    "border-bottom-left-radius": "5px",
-                                    "border-bottom-right-radius": "5px",
-                                    }
+                                className="centered-button",
+                                style={"padding-top": "4px", "align-text": "center"}
                             ),
                         ],
-                            className="centered-button"),
+                            style={"display": "flex", "justify-content": "center"}
+                            ),
                         ], style={
                             "align-text": "center",
                             "position": "absolute",
@@ -289,30 +280,21 @@ absence = [
                     html.Div([
                         bottom_remark,
                         dcc.Textarea(
-                            id="text-area-skole",
+                            id="text-area-sfo",
                             placeholder="Indtast kommentar",
                             style={"margin-left": "8px", "width": "353px", "height": 95},
                         ),
                         html.Div([
                             html.Button(
                                 "Registrer fravær",
-                                id="button-skole",
+                                id="button-sfo",
                                 n_clicks=0,
-                                style={
-                                    "height": "35px",
-                                    "width": "200px",
-                                    "font-size": "20px",
-                                    "font-family": "Ubuntu",
-                                    "backgroundColor": "#16425D",
-                                    "color": "white",
-                                    "border-top-left-radius": "5px",
-                                    "border-top-right-radius": "5px",
-                                    "border-bottom-left-radius": "5px",
-                                    "border-bottom-right-radius": "5px",
-                                    }
+                                className="centered-button",
+                                style={"padding-top": "4px", "align-text": "center"}
                             ),
                         ],
-                            className="centered-button"),
+                            style={"display": "flex", "justify-content": "center"}
+                            ),
                         ], style={
                             "align-text": "center",
                             "position": "absolute",
