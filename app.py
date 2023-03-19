@@ -128,11 +128,20 @@ def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
     if range_val != [12, 17]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, 0, 0, inc_button_style, dec_button_style
 
     else:
         inc_button_style = {"display": "inline-block", "margin-top": "12px"}
@@ -142,16 +151,8 @@ def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
             counter = n_click_inc - n_click_dec
         else:
             counter = 0
-
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -173,11 +174,21 @@ def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
     if range_val != [12, 17]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, 0, 0, inc_button_style, dec_button_style
+
     else:
         inc_button_style = {"display": "inline-block", "margin-top": "12px"}
         dec_button_style = {"display": "inline-block", "margin-top": "12px"}
@@ -186,16 +197,8 @@ def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
             counter = n_click_inc - n_click_dec
         else:
             counter = 0
-
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -217,11 +220,20 @@ def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
     if range_val != [12, 17]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, 0, 0, inc_button_style, dec_button_style
 
     else:
         inc_button_style = {"display": "inline-block", "margin-top": "12px"}
@@ -231,16 +243,8 @@ def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
             counter = n_click_inc - n_click_dec
         else:
             counter = 0
-
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -262,11 +266,20 @@ def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
     if range_val != [8, 15]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, 0, 0, inc_button_style, dec_button_style
 
     else:
         inc_button_style = {"display": "inline-block", "margin-top": "12px"}
@@ -276,16 +289,8 @@ def toggle_kid_2_1(switch, n_click_inc, n_click_dec, range_val):
             counter = n_click_inc - n_click_dec
         else:
             counter = 0
-
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -307,11 +312,21 @@ def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
     if range_val != [8, 15]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, 0, 0, inc_button_style, dec_button_style
+
     else:
         inc_button_style = {"display": "inline-block", "margin-top": "12px"}
         dec_button_style = {"display": "inline-block", "margin-top": "12px"}
@@ -320,16 +335,8 @@ def toggle_kid_2_2(switch, n_click_inc, n_click_dec, range_val):
             counter = n_click_inc - n_click_dec
         else:
             counter = 0
-
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
@@ -351,11 +358,21 @@ def toggle_kid_2_3(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
+    if switch == True:
+        range_div = {"display": "block"}
+        button_col = {"display": "block", "padding-top": "5px"}
+    else:
+        range_div = {"display": "none"}
+        button_col = {"display": "none", "padding-top": "5px"}
+
     if range_val != [8, 15]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
         counter = range_val[1] - range_val[0]
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, 0, 0, inc_button_style, dec_button_style
+
     else:
         inc_button_style = {"display": "inline-block", "margin-top": "12px"}
         dec_button_style = {"display": "inline-block", "margin-top": "12px"}
@@ -364,16 +381,8 @@ def toggle_kid_2_3(switch, n_click_inc, n_click_dec, range_val):
             counter = n_click_inc - n_click_dec
         else:
             counter = 0
-
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    display = f"{mode}: {counter}"
-    return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
+        display = f"{mode}: {counter}"
+        return range_div, display, button_col, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
 @app.callback(
