@@ -52,8 +52,8 @@ modal_sfo = dbc.Modal(
     style={
         "position": "absolute",
         "border": "2px solid black",
-        "margin-top": "200px",
-        "top": "25%",
+        "margin-top": "450px",
+        "top": "0",
         "left": "50%",
         "height": "525px",
         "width": "350px",
@@ -114,8 +114,8 @@ modal_skole = dbc.Modal(
     style={
         "position": "absolute",
         "border": "2px solid black",
-        "margin-top": "200px",
-        "top": "25%",
+        "margin-top": "450px",
+        "top": "0",
         "left": "50%",
         "height": "525px",
         "width": "350px",

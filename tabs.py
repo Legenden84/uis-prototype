@@ -1,8 +1,9 @@
 from dash import dcc, html
+import dash_bootstrap_components as dbc
+
 from help import *
 import support_functions as sf
-import dash_daq as daq
-import dash_bootstrap_components as dbc
+
 
 # tab 1 - overblik
 overblik = [
