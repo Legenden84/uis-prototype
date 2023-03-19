@@ -9,8 +9,8 @@ help_text = dcc.Markdown(
 
 top_remark = dcc.Markdown(
                         """
-                        Bemærk, at dit barn automatisk raskmeldes, så hvis dit barn fortsat er syg, skal
-                        du registrere sygdom næste morgen.
+                        Bemærk, at du selv skal melde dig barn rask, hvis det
+                        forekommer at sygdomsforløb ophører.
                         """,
                         style={
                             "margin-left": "8px",
