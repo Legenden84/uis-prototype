@@ -128,7 +128,7 @@ def toggle_kid_1_1(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
-    if range_val != [8, 15]:
+    if range_val != [12, 17]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
@@ -173,7 +173,7 @@ def toggle_kid_1_2(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
-    if range_val != [8, 15]:
+    if range_val != [12, 17]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"
@@ -217,7 +217,7 @@ def toggle_kid_1_3(switch, n_click_inc, n_click_dec, range_val):
     if n_click_dec - n_click_inc > 0:
         return dash.no_update, dash.no_update, dash.no_update, 0, 0, dash.no_update, dash.no_update
 
-    if range_val != [8, 15]:
+    if range_val != [12, 17]:
         inc_button_style = {"display": "none", "margin-top": "12px"}
         dec_button_style = {"display": "none", "margin-top": "12px"}
         mode = "Timer"

@@ -52,14 +52,14 @@ absence = [
                         html.Div(
                             id="range-slider-div-1-1",
                             children=[
-                                dcc.RangeSlider(min=8, max=15, step=1,
-                                                value=[8, 15],
+                                dcc.RangeSlider(min=12, max=17, step=1,
+                                                value=[12, 17],
                                                 id="range-slider-1-1",
                                                 marks={
                                                     i: {
                                                         "label": str(i),
                                                         "style": {"color": "#16425D"},
-                                                    } for i in range(16)
+                                                    } for i in range(18)
                                                 },
                                                 className="range-slider"),
                         ], style={"display": "None"}),
@@ -85,14 +85,14 @@ absence = [
                         html.Div(
                             id="range-slider-div-1-2",
                             children=[
-                                dcc.RangeSlider(min=8, max=15, step=1,
-                                                value=[8, 15],
+                                dcc.RangeSlider(min=12, max=17, step=1,
+                                                value=[12, 17],
                                                 id="range-slider-1-2",
                                                 marks={
                                                     i: {
                                                         "label": str(i),
                                                         "style": {"color": "#16425D"},
-                                                    } for i in range(16)
+                                                    } for i in range(18)
                                                 },
                                                 className="range-slider"),
                             ]),
@@ -118,14 +118,14 @@ absence = [
                         html.Div(
                             id="range-slider-div-1-3",
                             children=[
-                                dcc.RangeSlider(min=8, max=15, step=1,
-                                                value=[8, 15],
+                                dcc.RangeSlider(min=12, max=17, step=1,
+                                                value=[12, 17],
                                                 id="range-slider-1-3",
                                                 marks={
                                                     i: {
                                                         "label": str(i),
                                                         "style": {"color": "#16425D"},
-                                                    } for i in range(16)
+                                                    } for i in range(18)
                                                 },
                                                 className="range-slider"),
                         ]),
