@@ -1,4 +1,3 @@
-import json
 from dash import dash, dcc, html
 from dash.dependencies import Input, Output, State
 from header import header
@@ -31,16 +30,20 @@ body = html.Div([
                 value="tab-1",
                 children=overblik,
                 style={
-                    "padding": "5px",
+                    "padding": "1px",
                     "height": "30px",
                     "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri", "font-weight": "bold"},
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
                 selected_style={
                     "color": "white",
-                    "padding": "5px",
+                    "padding": "1px",
                     "height": "30px",
                     "backgroundColor": "#16425D",
-                    "font-family": "Calibri","font-weight": "bold"},
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
                 className="custom-tabs-container",
                 selected_className="custom-tab--selected"
             ),
@@ -49,16 +52,20 @@ body = html.Div([
                 value="tab-2",
                 children=absence,
                 style={
-                    "padding": "5px",
+                    "padding": "1px",
                     "height": "30px",
                     "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri", "font-weight": "bold"},
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
                 selected_style={
                     "color": "white",
-                    "padding": "5px",
+                    "padding": "1px",
                     "height": "30px",
                     "backgroundColor": "#16425D",
-                    "font-family": "Calibri", "font-weight": "bold"},
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
                 className="custom-tabs-container",
                 selected_className="custom-tab--selected"
             ),
@@ -67,16 +74,20 @@ body = html.Div([
                 value="tab-3",
                 children=tider,
                 style={
-                    "padding": "5px",
+                    "padding": "1px",
                     "height": "30px",
                     "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri", "font-weight": "bold"},
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
                 selected_style={
                     "color": "white",
-                    "padding": "5px",
+                    "padding": "1px",
                     "height": "30px",
                     "backgroundColor": "#16425D",
-                    "font-family": "Calibri", "font-weight": "bold"},
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
                 className="custom-tabs-container",
                 selected_className="custom-tab--selected"
             ),
