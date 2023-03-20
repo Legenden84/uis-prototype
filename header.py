@@ -10,6 +10,6 @@ header = html.Div(
         "backgroundColor": "#18638D",
         "padding": "10px",
         "borderBottom": "1px solid #CCC",
-        "font-family": "Liberation Sans",
+        "font-family": "Calibri",
     },
 )

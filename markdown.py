@@ -4,7 +4,7 @@ help_text = dcc.Markdown(
     """
     Bla bla bla bla bla bla bla bla bla bla bla bla bla bla...
     """,
-    style={"font-family": "Liberation Sans",  "margin-left": "8px"}
+    style={"font-family": "Calibri",  "margin-left": "8px"}
 )
 
 top_remark = dcc.Markdown(
@@ -18,7 +18,7 @@ top_remark = dcc.Markdown(
                             "margin-top": "0px",
                             "padding-top": "0px",
                             "backgroundColor": "#D8E1E8",
-                            "font-family": "Liberation Sans",
+                            "font-family": "Calibri",
                             "font-size": "12px"},
 )
 
@@ -31,6 +31,6 @@ bottom_remark = dcc.Markdown(
                                 "margin-right": "8px",
                                 "margin-bottom": "0px",
                                 "backgroundColor": "#D8E1E8",
-                                "font-family": "Liberation Sans",
+                                "font-family": "Calibri",
                                 "font-size": "12px"}
 )

@@ -8,7 +8,7 @@ modal_open_sfo = dbc.Button("?",
                                     "height": "20px",
                                     "width": "20px",
                                     "font-size": "14px",
-                                    "font-family": "Liberation Sans",
+                                    "font-family": "Calibri",
                                     "backgroundColor": "#16425D",
                                     "color": "white",
                                     "border-top-left-radius": "8px",
@@ -23,7 +23,7 @@ modal_sfo = dbc.Modal(
     [
         dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
                         style={
-                            "font-family": "Liberation Sans",
+                            "font-family": "Calibri",
                             "font-size": "20px",
 
                             "margin-left": "8px"},
@@ -37,7 +37,7 @@ modal_sfo = dbc.Modal(
                             "height": "35px",
                             "width": "200px",
                             "font-size": "20px",
-                            "font-family": "Liberation Sans",
+                            "font-family": "Calibri",
                             "backgroundColor": "#16425D",
                             "color": "white",
                             "border-top-left-radius": "5px",
@@ -70,7 +70,7 @@ modal_open_skole = dbc.Button("?",
                                     "height": "20px",
                                     "width": "20px",
                                     "font-size": "14px",
-                                    "font-family": "Liberation Sans",
+                                    "font-family": "Calibri",
                                     "backgroundColor": "#16425D",
                                     "color": "white",
                                     "border-top-left-radius": "8px",
@@ -85,7 +85,7 @@ modal_skole = dbc.Modal(
     [
         dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
                         style={
-                            "font-family": "Liberation Sans",
+                            "font-family": "Calibri",
                             "font-size": "32px",
 
                             "margin-left": "8px"},
@@ -99,7 +99,7 @@ modal_skole = dbc.Modal(
                         "height": "35px",
                         "width": "200px",
                         "font-size": "20px",
-                        "font-family": "Liberation Sans",
+                        "font-family": "Calibri",
                         "backgroundColor": "#16425D",
                         "color": "white",
                         "border-top-left-radius": "5px",
