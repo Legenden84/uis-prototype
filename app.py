@@ -157,6 +157,9 @@ app.layout = html.Div([header, content, navbar],
         Output("button-1", "children"),
         Output("button-2", "children"),
         Output("button-3", "children"),
+        # Output("button-1", "style"),
+        # Output("button-2", "style"),
+        # Output("button-3", "style"),
     ],
     [
         Input("button-1", "n_clicks"),
@@ -174,11 +177,10 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn1_children, b
         return no_update, no_update, no_update, no_update
 
     content = []
-    button1 = html.Img(src=overblik_src, style={"width": "50px", "height": "50px"})
-    button2 = html.Img(src=kalender_src, style={"width": "50px", "height": "50px"})
-    button3 = html.Img(src=beskeder_src, style={"width": "50px", "height": "50px"})
+    button1 = html.Img(src=overblik_src)
+    button2 = html.Img(src=kalender_src)
+    button3 = html.Img(src=beskeder_src)
 
-    # ctx = dash.callback_context
     if not ctx.triggered:
         button_id = None
     else:
@@ -186,21 +188,21 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn1_children, b
 
     if button_id == "button-1":
         content = overblik
-        button1 = html.Img(src=overblik_select, style={"width": "50px", "height": "50px"})
-        button2 = html.Img(src=kalender_src, style={"width": "50px", "height": "50px"})
-        button3 = html.Img(src=beskeder_src, style={"width": "50px", "height": "50px"})
+        button1 = html.Img(src=overblik_select)
+        button2 = html.Img(src=kalender_src)
+        button3 = html.Img(src=beskeder_src)
 
     elif button_id == "button-2":
         content = absence
-        button1 = html.Img(src=overblik_src, style={"width": "50px", "height": "50px"})
-        button2 = html.Img(src=kalender_select, style={"width": "50px", "height": "50px"})
-        button3 = html.Img(src=beskeder_src, style={"width": "50px", "height": "50px"})
+        button1 = html.Img(src=overblik_src)
+        button2 = html.Img(src=kalender_select)
+        button3 = html.Img(src=beskeder_src)
 
     elif button_id == "button-3":
         content = tider
-        button1 = html.Img(src=overblik_src, style={"width": "50px", "height": "50px"})
-        button2 = html.Img(src=kalender_src, style={"width": "50px", "height": "50px"})
-        button3 = html.Img(src=beskeder_select, style={"width": "50px", "height": "50px"})
+        button1 = html.Img(src=overblik_src)
+        button2 = html.Img(src=kalender_src)
+        button3 = html.Img(src=beskeder_select)
 
     return content, button1, button2, button3
 
