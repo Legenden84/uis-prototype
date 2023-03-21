@@ -13,10 +13,12 @@ external_stylesheets = [
 overblik_src = "/assets/overblik_deselect.png"
 kalender_src = "/assets/kalender_deselect.png"
 beskeder_src = "/assets/beskeder_deselect.png"
+nowshow_src = "/assets/noshow_deselect.png"
 
 overblik_select = "/assets/overblik_select.png"
 kalender_select = "/assets/kalender_select.png"
 beskeder_select = "/assets/beskeder_select.png"
+nowshow_select = "/assets/noshow_select.png"
 
 content = html.Div(
     id="page-content",
@@ -157,29 +159,30 @@ app.layout = html.Div([header, content, navbar],
         Output("button-1", "children"),
         Output("button-2", "children"),
         Output("button-3", "children"),
-        # Output("button-1", "style"),
-        # Output("button-2", "style"),
-        # Output("button-3", "style"),
+        Output("button-4", "children"),
     ],
     [
         Input("button-1", "n_clicks"),
         Input("button-2", "n_clicks"),
         Input("button-3", "n_clicks"),
+        Input("button-4", "n_clicks"),
     ],
     [
         State("button-1", "children"),
         State("button-2", "children"),
         State("button-3", "children"),
+        State("button-4", "children")
     ],
 )
-def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn1_children, btn2_children, btn3_children):
-    if (btn1_clicks, btn2_clicks, btn3_clicks) == (0, 0, 0):
-        return no_update, no_update, no_update, no_update
+def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn1_children, btn2_children, btn3_children, btn4_children):
+    if (btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks) == (0, 0, 0, 0):
+        return no_update, no_update, no_update, no_update, no_update
 
     content = []
     button1 = html.Img(src=overblik_src)
     button2 = html.Img(src=kalender_src)
     button3 = html.Img(src=beskeder_src)
+    button4 = html.Img(src=nowshow_src)
 
     if not ctx.triggered:
         button_id = None
@@ -191,20 +194,30 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn1_children, b
         button1 = html.Img(src=overblik_select)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)
+        button4 = html.Img(src=nowshow_src)
 
     elif button_id == "button-2":
         content = absence
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_select)
         button3 = html.Img(src=beskeder_src)
+        button4 = html.Img(src=nowshow_src)
 
     elif button_id == "button-3":
         content = tider
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_select)
+        button4 = html.Img(src=nowshow_src)
 
-    return content, button1, button2, button3
+    elif button_id == "button-4":
+        content = absence
+        button1 = html.Img(src=overblik_src)
+        button2 = html.Img(src=kalender_src)
+        button3 = html.Img(src=beskeder_src)
+        button4 = html.Img(src=nowshow_select)
+
+    return content, button1, button2, button3, button4
 
 @app.callback(
         Output(component_id="range-slider-div-1-1", component_property="style"),

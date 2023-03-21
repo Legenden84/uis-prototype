@@ -65,6 +65,28 @@ navbar = html.Div([
                     "padding-right": "0px",
                 },
             ),
+            html.Button(
+                id="button-4",
+                children=html.Img(
+                    id="img4",
+                    src="/assets/noshow_deselect.png",
+                    style={
+                        "height": "55px",
+                        "width": "93px",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    }),
+                n_clicks=0,
+                style={
+                    "border": "none",
+                    "margin-left": "0px",
+                    "margin-right": "0px",
+                    "padding-left": "0px",
+                    "padding-right": "0px",
+                },
+            ),
         ],
         style={
             "position": "absolute",
