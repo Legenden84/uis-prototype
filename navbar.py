@@ -1,8 +1,8 @@
 from dash import html
 
-image1 = "/assets/overblik_deselected.png"
-image2 = "/assets/kalender_deselected.png"
-image3 = "/assets/beskeder_deselected.png"
+image1 = "/assets/overblik_deselect.png"
+image2 = "/assets/kalender_deselect.png"
+image3 = "/assets/beskeder_deselect.png"
 
 navbar = html.Div([
     html.Div(
@@ -32,6 +32,6 @@ navbar = html.Div([
                     style={"border": "none", "background-color": "white"},
             ),
         ],
-        style={"display": "flex", "justify-content": "center", "margin-top": "50px"},
+        style={"display": "flex", "justify-content": "space-between", "margin-top": "50px"},
     )
 ])

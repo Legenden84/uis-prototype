@@ -1,6 +1,7 @@
 from dash import dash, dcc, html
 from dash.dependencies import Input, Output, State
 from header import header
+from navbar import navbar
 from tabs import absence, overblik, tider
 
 # fethching style sheets
@@ -9,6 +10,9 @@ external_stylesheets = [
     "https://raw.githubusercontent.com/plotly/dash-sample-apps/",
     "master/apps/dash-oil-and-gas/assets/styles.css"
 ]
+overblik_select = "/assets/overblik_select.png"
+kalender_select = "/assets/kalender_select.png"
+beskeder_select = "/assets/beskeder_select.png"
 
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
@@ -103,7 +107,7 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, body],
+app.layout = html.Div([header, body, navbar],
                         style={
                             "display": "flex",
                             "flex-direction": "column",
