@@ -1,8 +1,7 @@
-from dash import ctx, dash, dcc, html
+from dash import dash, dcc, html
 from dash.dependencies import Input, Output, State
 from header import header
 from tabs import absence, overblik, tider
-import dash_bootstrap_components as dbc
 
 # fethching style sheets
 external_stylesheets = [
@@ -12,7 +11,7 @@ external_stylesheets = [
 ]
 
 app = dash.Dash(__name__,
-                external_stylesheets=[dbc.themes.BOOTSTRAP, external_stylesheets],
+                external_stylesheets=external_stylesheets,
                 suppress_callback_exceptions=True,
                 meta_tags=[{"name": "viewport",
                             "content": "width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,"}]
@@ -20,80 +19,104 @@ app = dash.Dash(__name__,
 # server = app.server
 server = app.server
 
-# Define bavbar items as dicts
-overblik_dict = {"src": "/assets/overblik_deselect.png", "selected_src": "/assets/overblik_select.png"}
-kalender_dict = {"src": "/assets/kalender_deselect.png", "selected_src": "/assets/kalender_select.png"}
-beskeder_dict = {"src": "/assets/beskeder_deselect.png", "selected_src": "/assets/beskeder_select.png"}
-
-
-
-# Define the navbar layout
-navbar = html.Div([
-    html.Img(id="nav-overblik", src=overblik_dict["src"], n_clicks=0,),
-    html.Img(id="nav-kalender", src=kalender_dict["src"], n_clicks=0,),
-    html.Img(id="nav-beskeder", src=beskeder_dict["src"], n_clicks=0,),
+# main layout
+body = html.Div([
+    dcc.Tabs(
+        id="tabs",
+        value="tab-1",
+        children=[
+            dcc.Tab(
+                label="OVERBLIK",
+                value="tab-1",
+                children=overblik,
+                style={
+                    "padding": "1px",
+                    "height": "30px",
+                    "backgroundColor": "#F7F7F7",
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
+                selected_style={
+                    "color": "white",
+                    "padding": "1px",
+                    "height": "30px",
+                    "backgroundColor": "#16425D",
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
+                className="custom-tabs-container",
+                selected_className="custom-tab--selected"
+            ),
+            dcc.Tab(
+                label="FRAVÆR",
+                value="tab-2",
+                children=absence,
+                style={
+                    "padding": "1px",
+                    "height": "30px",
+                    "backgroundColor": "#F7F7F7",
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
+                selected_style={
+                    "color": "white",
+                    "padding": "1px",
+                    "height": "30px",
+                    "backgroundColor": "#16425D",
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
+                className="custom-tabs-container",
+                selected_className="custom-tab--selected"
+            ),
+            dcc.Tab(
+                label="TIDER",
+                value="tab-3",
+                children=tider,
+                style={
+                    "padding": "1px",
+                    "height": "30px",
+                    "backgroundColor": "#F7F7F7",
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
+                selected_style={
+                    "color": "white",
+                    "padding": "1px",
+                    "height": "30px",
+                    "backgroundColor": "#16425D",
+                    "font-family": "Calibri",
+                    "font-size": "20px",
+                    "font-weight": "bold"},
+                className="custom-tabs-container",
+                selected_className="custom-tab--selected"
+            ),
+        ],
+        style={
+            "padding-bottom": "0px",
+            "margin-bottom": "2px",
+            "height": "30px",
+        },
+        className="custom-tabs-container",
+    ),
 ])
 
 
 # create layout
-app.layout = html.Div(
-    [
-        header,
-        html.Div(
-            id="page-content",
-            children=[]
-        ),
-        html.Div([
-            navbar
-        ], style={"position": "absolute", "bottom": "0"})
-    ],
-    style={
-            "display": "flex",
-            "flex-direction": "column",
-            "backgroundColor": "#D8E1E8",
-            "width": "375px",
-            "height": "667px",
-            "margin": "auto",
-            "border": "1px solid black",
-            "font-family": "Calibri",
-            "position": "relative",
-            "padding-bottom": "50px"
-    },
-)
-
-# creating navbar callback for selecting items
-@app.callback(
-    [
-        Output(component_id="nav-overblik", component_property="src"),
-        Output(component_id="nav-kalender", component_property="src"),
-        Output(component_id="nav-beskeder", component_property="src"),
-        Output(component_id="page-content", component_property="children")
-    ],
-    [
-        Input(component_id="nav-overblik", component_property="n_clicks"),
-        Input(component_id="nav-kalender", component_property="n_clicks"),
-        Input(component_id="nav-beskeder", component_property="n_clicks"),
-    ],
-    [
-        State(component_id="nav-overblik", component_property="src"),
-        State(component_id="nav-kalender", component_property="src"),
-        State(component_id="nav-beskeder", component_property="src"),
-    ]
-)
-def update_navbar(n_clicks_overblik, n_clicks_kalender, n_clicks_beskeder, src_overblik, src_kalender, src_beskeder):
-    selected_item_id = ctx.triggered[0]["prop_id"].split(".")[0]
-    content = []
-    if selected_item_id == "nav-overblik":
-        content = overblik
-        return [overblik_dict["selected_src"], kalender_dict["src"], beskeder_dict["src"], content]
-    elif selected_item_id == "nav-kalender":
-        content = absence
-        return [overblik_dict["src"], kalender_dict["selected_src"], beskeder_dict["src"], content]
-    elif selected_item_id == "nav-beskeder":
-        content = tider
-        return [overblik_dict["src"], kalender_dict["src"], beskeder_dict["selected_src"], content]
-    else:
-        return [src_overblik, src_kalender, src_beskeder, content]
+app.layout = html.Div([header, body],
+                        style={
+                            "display": "flex",
+                            "flex-direction": "column",
+                            "backgroundColor": "#D8E1E8",
+                            "width": "375px",
+                            "height": "667px",
+                            "margin": "auto",
+                            "border": "1px solid black",
+                            "font-family": "Calibri",
+                            "position": "relative",
+                            "padding-bottom": "50px"
+                        },
+                      )
 
 
 # callbacks
@@ -122,7 +145,6 @@ def switch_1_1(switch):
         Output(component_id="button-1-1-inc", component_property="style"),
         Output(component_id="button-1-1-dec", component_property="style"),
     [
-
         Input(component_id="button-1-1-inc", component_property="n_clicks"),
         Input(component_id="button-1-1-dec", component_property="n_clicks"),
         Input(component_id="range-slider-1-1", component_property="value"),
@@ -493,4 +515,3 @@ def toggle_help_sfo(open, close, is_open):
 # create server object
 if __name__ == "__main__":
     app.run_server(debug=True)
-

@@ -1,5 +1,6 @@
 from dash import dcc, html
 import dash_bootstrap_components as dbc
+import dash_daq as daq
 
 from help import *
 import support_functions as sf
@@ -10,6 +11,7 @@ overblik = [
     html.P("This is tab 1.",
            style={
                 "margin-top": "0px",
+                "padding-top": "0px",
                 "height": "536px",
                 "backgroundColor": "#D8E1E8",
                 "font-family": "Calibri",})
