@@ -34,7 +34,6 @@ navbar = html.Div([
     html.Img(id="nav-beskeder", src=beskeder_dict["src"], n_clicks=0,),
 ])
 
-beskeder_content = []
 
 # create layout
 app.layout = html.Div(
