@@ -11,10 +11,10 @@ navbar = html.Div([
                     style={
                         "height": "55px",
                         "width": "93px",
-                        "margin-left": "0px",
-                        "margin-right": "0px",
-                        "padding-left": "0px",
-                        "padding-right": "0px",
+                        # "margin-left": "0px",
+                        # "margin-right": "0px",
+                        # "padding-left": "0px",
+                        # "padding-right": "0px",
                     }),
                 n_clicks=0,
                 style={

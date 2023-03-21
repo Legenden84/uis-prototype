@@ -20,7 +20,25 @@ beskeder_select = "/assets/beskeder_select.png"
 
 content = html.Div(
     id="page-content",
-    children=[]
+    children=[],
+    style={"height": "554px"}
+)
+
+register = html.Div([
+                html.Button(
+                "Registrer fravær",
+                id="button-register",
+                n_clicks=0,
+                className="centered-button",
+                style={"align-text": "center"}
+                ),
+            ], style={
+                "border": "1px solid black",
+                "align-text": "center",
+                "position": "absolute",
+                "margin-bottom": "8px",
+                "bottom": "0",
+            }
 )
 
 app = dash.Dash(__name__,

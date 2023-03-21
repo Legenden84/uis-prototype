@@ -132,28 +132,23 @@ absence = [
                         ]),
                     ]),
                     html.Div([
-                        bottom_remark,
-                        dcc.Textarea(
-                            id="text-area-sfo",
-                            placeholder="Indtast kommentar",
-                            style={"margin-left": "8px", "width": "353px", "height": 95},
-                        ),
                         html.Div([
                             html.Button(
                                 "Registrer fravær",
-                                id="button-sfo",
+                                id="button-register",
                                 n_clicks=0,
                                 className="centered-button",
-                                style={"padding-top": "4px", "align-text": "center"}
+                                style={"align-text": "center"}
                             ),
                         ],
-                            style={"display": "flex", "justify-content": "center"}
+                            style={"display": "flex", "justify-content": "center",}
                             ),
                         ], style={
-                            "align-text": "center",
+                            "text-align": "center",
                             "position": "absolute",
-                            "margin-bottom": "8px",
+                            "margin-bottom": "68px",
                             "bottom": "0",
+                            "left": "88px"
                         }
                     ),
                 ],
@@ -284,28 +279,23 @@ absence = [
                         ]),
                     ]),
                     html.Div([
-                        bottom_remark,
-                        dcc.Textarea(
-                            id="text-area-sfo",
-                            placeholder="Indtast kommentar",
-                            style={"margin-left": "8px", "width": "353px", "height": 95},
-                        ),
                         html.Div([
                             html.Button(
                                 "Registrer fravær",
-                                id="button-sfo",
+                                id="button-register",
                                 n_clicks=0,
                                 className="centered-button",
-                                style={"padding-top": "4px", "align-text": "center"}
+                                style={"align-text": "center"}
                             ),
                         ],
-                            style={"display": "flex", "justify-content": "center"}
+                            style={"display": "flex", "justify-content": "center",}
                             ),
                         ], style={
-                            "align-text": "center",
+                            "text-align": "center",
                             "position": "absolute",
-                            "margin-bottom": "8px",
+                            "margin-bottom": "68px",
                             "bottom": "0",
+                            "left": "88px"
                         }
                     ),
                 ],
@@ -332,6 +322,7 @@ absence = [
             "margin-bottom": "0px",
             "padding-bottom": "0px",
             "height": "30px",
+
         },
         className="custom-tabs-container",
     ),
