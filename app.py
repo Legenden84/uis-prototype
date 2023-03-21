@@ -1,5 +1,6 @@
 from dash import dash, dcc, html
 from dash.dependencies import Input, Output, State
+from flask import Flask, url_for
 from header import header
 from tabs import absence, overblik, tider
 
@@ -18,6 +19,14 @@ app = dash.Dash(__name__,
 )
 # server = app.server
 server = app.server
+
+# defining assets
+beskeder_desel = url_for("static", filename="assets/beskeder_deselect.png")
+beskeder_sel = url_for("static", filename="assets/beskeder_select.png")
+kalender_desel = url_for("static", filename="assets/kalender_deselect.png")
+kalender_sel = url_for("static", filename="assets/kalender_select.png")
+overblik_desel = url_for("static", filename="assets/overblik_deselect")
+overblik_sel = url_for("static", filename="assets/overblik_select.png")
 
 # main layout
 body = html.Div([
@@ -103,7 +112,7 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, body],
+app.layout = html.Div([header],
                         style={
                             "display": "flex",
                             "flex-direction": "column",
