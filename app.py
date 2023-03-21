@@ -1,8 +1,8 @@
-from dash import dash, dcc, html
+from dash import ctx, dash, dcc, html
 from dash.dependencies import Input, Output, State
-from flask import Flask, url_for
 from header import header
 from tabs import absence, overblik, tider
+import dash_bootstrap_components as dbc
 
 # fethching style sheets
 external_stylesheets = [
@@ -12,7 +12,7 @@ external_stylesheets = [
 ]
 
 app = dash.Dash(__name__,
-                external_stylesheets=external_stylesheets,
+                external_stylesheets=[dbc.themes.BOOTSTRAP, external_stylesheets],
                 suppress_callback_exceptions=True,
                 meta_tags=[{"name": "viewport",
                             "content": "width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,"}]
@@ -20,13 +20,17 @@ app = dash.Dash(__name__,
 # server = app.server
 server = app.server
 
-# defining assets
-beskeder_desel = url_for("static", filename="assets/beskeder_deselect.png")
-beskeder_sel = url_for("static", filename="assets/beskeder_select.png")
-kalender_desel = url_for("static", filename="assets/kalender_deselect.png")
-kalender_sel = url_for("static", filename="assets/kalender_select.png")
-overblik_desel = url_for("static", filename="assets/overblik_deselect")
-overblik_sel = url_for("static", filename="assets/overblik_select.png")
+# Define bavbar items as dicts
+beskeder = {"src": "/assets/beskeder_deselect.png", "selected_src": "/assets/beskeder_select.png"}
+kalender = {"src": "/assets/kalender_deselect.png", "selected_src": "/assets/kalender_select.png"}
+overblik = {"src": "/assets/overblik_deselect.png", "selected_src": "/assets/overblik_select.png"}
+
+# Define the navbar layout
+navbar = html.Div([
+    html.Img(id="nav-beskeder", src=beskeder["src"], n_clicks=0, className="navbar-item"),
+    html.Img(id="nav-kalender", src=kalender["src"], n_clicks=0, className="navbar-item"),
+    html.Img(id="nav-overblik", src=overblik["src"], n_clicks=0, className="navbar-item"),
+])
 
 # main layout
 body = html.Div([
@@ -112,20 +116,59 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, body],
-                        style={
-                            "display": "flex",
-                            "flex-direction": "column",
-                            "backgroundColor": "#D8E1E8",
-                            "width": "375px",
-                            "height": "667px",
-                            "margin": "auto",
-                            "border": "1px solid black",
-                            "font-family": "Calibri",
-                            "position": "relative",
-                            "padding-bottom": "50px"
-                        },
-                      )
+app.layout = html.Div(
+    [
+        header,
+        html.Div(
+            id="page-content",
+            children=[]
+        ),
+        html.Div([
+            navbar
+        ], style={"position": "absolute", "bottom": "0"})
+    ],
+    style={
+            "display": "flex",
+            "flex-direction": "column",
+            "backgroundColor": "#D8E1E8",
+            "width": "375px",
+            "height": "667px",
+            "margin": "auto",
+            "border": "1px solid black",
+            "font-family": "Calibri",
+            "position": "relative",
+            "padding-bottom": "50px"
+    },
+)
+
+# creating navbar callback for selecting items
+@app.callback(
+    [
+        Output("nav-beskeder", "src"),
+        Output("nav-kalender", "src"),
+        Output("nav-overblik", "src"),
+    ],
+    [
+        Input("nav-beskeder", "n_clicks"),
+        Input("nav-kalender", "n_clicks"),
+        Input("nav-overblik", "n_clicks"),
+    ],
+    [
+        State("nav-beskeder", "src"),
+        State("nav-kalender", "src"),
+        State("nav-overblik", "src"),
+    ]
+)
+def update_navbar(n_clicks_beskeder, n_clicks_kalender, n_clicks_overblik, src_beskeder, src_kalender, src_overblik):
+    selected_item_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    if selected_item_id == "nav-beskeder":
+        return [beskeder["selected_src"], kalender["src"], overblik["src"]]
+    elif selected_item_id == "nav-kalender":
+        return [beskeder["src"], kalender["selected_src"], overblik["src"]]
+    elif selected_item_id == "nav-overblik":
+        return [beskeder["src"], kalender["src"], overblik["selected_src"]]
+    else:
+        return [src_beskeder, src_kalender, src_overblik]
 
 
 # callbacks
