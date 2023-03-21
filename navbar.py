@@ -1,16 +1,13 @@
 from dash import html
 
-overblik_pic = "/assets/overblik_deselect.png"
-kalender_pic = "/assets/kalender_deselect.png"
-beskeder_pic = "/assets/beskeder_deselect.png"
-
 navbar = html.Div([
     html.Div(
         [
             html.Button(
-                html.Img(
+                id="button-1",
+                children=html.Img(
                     id="img1",
-                    src=overblik_pic,
+                    src="/assets/overblik_deselect.png",
                     style={
                         "height": "55px",
                         "width": "93px",
@@ -19,20 +16,20 @@ navbar = html.Div([
                         "padding-left": "0px",
                         "padding-right": "0px",
                     }),
-                    id="button-1",
-                    n_clicks=0,
-                    style={
-                        "border": "none",
-                        "margin-left": "0px",
-                        "margin-right": "0px",
-                        "padding-left": "0px",
-                        "padding-right": "0px",
-                    },
+                n_clicks=0,
+                style={
+                    "border": "none",
+                    "margin-left": "0px",
+                    "margin-right": "0px",
+                    "padding-left": "0px",
+                    "padding-right": "0px",
+                },
             ),
             html.Button(
-                html.Img(
+                id="button-2",
+                children=html.Img(
                     id="img2",
-                    src=kalender_pic,
+                    src="/assets/kalender_deselect.png",
                     style={
                         "height": "55px",
                         "width": "93px",
@@ -41,20 +38,20 @@ navbar = html.Div([
                         "padding-left": "0px",
                         "padding-right": "0px",
                     }),
-                    id="button-2",
-                    n_clicks=0,
-                    style={
-                        "border": "none",
-                        "margin-left": "0px",
-                        "margin-right": "0px",
-                        "padding-left": "0px",
-                        "padding-right": "0px",
-                    },
+                n_clicks=0,
+                style={
+                    "border": "none",
+                    "margin-left": "0px",
+                    "margin-right": "0px",
+                    "padding-left": "0px",
+                    "padding-right": "0px",
+                },
             ),
             html.Button(
-                html.Img(
+                id="button-3",
+                children=html.Img(
                     id="img3",
-                    src=beskeder_pic,
+                    src="/assets/beskeder_deselect.png",
                     style={
                         "height": "55px",
                         "width": "93px",
@@ -63,15 +60,14 @@ navbar = html.Div([
                         "padding-left": "0px",
                         "padding-right": "0px",
                     }),
-                    id="button-3",
-                    n_clicks=0,
-                    style={
-                        "border": "none",
-                        "margin-left": "0px",
-                        "margin-right": "0px",
-                        "padding-left": "0px",
-                        "padding-right": "0px",
-                    },
+                n_clicks=0,
+                style={
+                    "border": "none",
+                    "margin-left": "0px",
+                    "margin-right": "0px",
+                    "padding-left": "0px",
+                    "padding-right": "0px",
+                },
             ),
         ],
         style={

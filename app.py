@@ -1,4 +1,4 @@
-from dash import dash, dcc, html
+from dash import ctx, dash, dcc, html, no_update
 from dash.dependencies import Input, Output, State
 from header import header
 from navbar import navbar
@@ -10,9 +10,18 @@ external_stylesheets = [
     "https://raw.githubusercontent.com/plotly/dash-sample-apps/",
     "master/apps/dash-oil-and-gas/assets/styles.css"
 ]
+overblik_src = "/assets/overblik_deselect.png"
+kalender_src = "/assets/kalender_deselect.png"
+beskeder_src = "/assets/beskeder_deselect.png"
+
 overblik_select = "/assets/overblik_select.png"
 kalender_select = "/assets/kalender_select.png"
 beskeder_select = "/assets/beskeder_select.png"
+
+content = html.Div(
+    id="page-content",
+    children=[]
+)
 
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
@@ -107,7 +116,7 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, navbar],
+app.layout = html.Div([header, content, navbar],
                         style={
                             "display": "flex",
                             "flex-direction": "column",
@@ -124,6 +133,59 @@ app.layout = html.Div([header, navbar],
 
 
 # callbacks
+@app.callback(
+    [
+        Output("page-content", "children"),
+        Output("button-1", "children"),
+        Output("button-2", "children"),
+        Output("button-3", "children"),
+    ],
+    [
+        Input("button-1", "n_clicks"),
+        Input("button-2", "n_clicks"),
+        Input("button-3", "n_clicks"),
+    ],
+    [
+        State("button-1", "children"),
+        State("button-2", "children"),
+        State("button-3", "children"),
+    ],
+)
+def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn1_children, btn2_children, btn3_children):
+    if (btn1_clicks, btn2_clicks, btn3_clicks) == (0, 0, 0):
+        return no_update, no_update, no_update, no_update
+
+    content = []
+    button1 = html.Img(src=overblik_src, style={"width": "50px", "height": "50px"})
+    button2 = html.Img(src=kalender_src, style={"width": "50px", "height": "50px"})
+    button3 = html.Img(src=beskeder_src, style={"width": "50px", "height": "50px"})
+
+    # ctx = dash.callback_context
+    if not ctx.triggered:
+        button_id = None
+    else:
+        button_id = ctx.triggered[0]["prop_id"].split(".")[0]
+
+    if button_id == "button-1":
+        content = overblik
+        button1 = html.Img(src=overblik_select, style={"width": "50px", "height": "50px"})
+        button2 = html.Img(src=kalender_src, style={"width": "50px", "height": "50px"})
+        button3 = html.Img(src=beskeder_src, style={"width": "50px", "height": "50px"})
+
+    elif button_id == "button-2":
+        content = absence
+        button1 = html.Img(src=overblik_src, style={"width": "50px", "height": "50px"})
+        button2 = html.Img(src=kalender_select, style={"width": "50px", "height": "50px"})
+        button3 = html.Img(src=beskeder_src, style={"width": "50px", "height": "50px"})
+
+    elif button_id == "button-3":
+        content = tider
+        button1 = html.Img(src=overblik_src, style={"width": "50px", "height": "50px"})
+        button2 = html.Img(src=kalender_src, style={"width": "50px", "height": "50px"})
+        button3 = html.Img(src=beskeder_select, style={"width": "50px", "height": "50px"})
+
+    return content, button1, button2, button3
+
 @app.callback(
         Output(component_id="range-slider-div-1-1", component_property="style"),
         Output(component_id="button-col-1-1", component_property="style"),
