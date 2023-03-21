@@ -14,6 +14,7 @@ navbar = html.Div([
                     }),
                 n_clicks=0,
                 style={
+                    "height": "55px",
                     "border": "none",
                     "margin-left": "0px",
                     "margin-right": "0px",
@@ -36,6 +37,7 @@ navbar = html.Div([
                     }),
                 n_clicks=0,
                 style={
+                    "height": "55px",
                     "border": "none",
                     "margin-left": "0px",
                     "margin-right": "0px",
@@ -58,6 +60,7 @@ navbar = html.Div([
                     }),
                 n_clicks=0,
                 style={
+                    "height": "55px",
                     "border": "none",
                     "margin-left": "0px",
                     "margin-right": "0px",
@@ -72,7 +75,7 @@ navbar = html.Div([
                     src="/assets/noshow_deselect.png",
                     style={
                         "height": "55px",
-                        "width": "93px",
+                        "width": "94px",
                         "margin-left": "0px",
                         "margin-right": "0px",
                         "padding-left": "0px",
@@ -80,7 +83,9 @@ navbar = html.Div([
                     }),
                 n_clicks=0,
                 style={
+                    "height": "55px",
                     "border": "none",
+                    "width": "94px",
                     "margin-left": "0px",
                     "margin-right": "0px",
                     "padding-left": "0px",
@@ -90,6 +95,7 @@ navbar = html.Div([
         ],
         style={
             "position": "absolute",
+            "height": "55px",
             "bottom": "0px",
             "width": "100%",
             "display": "flex",
@@ -98,4 +104,4 @@ navbar = html.Div([
             "box-sizing": "border-box",
         },
     )
-])
+], style={"margin-top": "0px", "margin-bottom": "0px",})
