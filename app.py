@@ -21,99 +21,20 @@ app = dash.Dash(__name__,
 server = app.server
 
 # Define bavbar items as dicts
-beskeder = {"src": "/assets/beskeder_deselect.png", "selected_src": "/assets/beskeder_select.png"}
-kalender = {"src": "/assets/kalender_deselect.png", "selected_src": "/assets/kalender_select.png"}
-overblik = {"src": "/assets/overblik_deselect.png", "selected_src": "/assets/overblik_select.png"}
+overblik_dict = {"src": "/assets/overblik_deselect.png", "selected_src": "/assets/overblik_select.png"}
+kalender_dict = {"src": "/assets/kalender_deselect.png", "selected_src": "/assets/kalender_select.png"}
+beskeder_dict = {"src": "/assets/beskeder_deselect.png", "selected_src": "/assets/beskeder_select.png"}
+
+
 
 # Define the navbar layout
 navbar = html.Div([
-    html.Img(id="nav-beskeder", src=beskeder["src"], n_clicks=0, className="navbar-item"),
-    html.Img(id="nav-kalender", src=kalender["src"], n_clicks=0, className="navbar-item"),
-    html.Img(id="nav-overblik", src=overblik["src"], n_clicks=0, className="navbar-item"),
+    html.Img(id="nav-overblik", src=overblik_dict["src"], n_clicks=0,),
+    html.Img(id="nav-kalender", src=kalender_dict["src"], n_clicks=0,),
+    html.Img(id="nav-beskeder", src=beskeder_dict["src"], n_clicks=0,),
 ])
 
-# main layout
-body = html.Div([
-    dcc.Tabs(
-        id="tabs",
-        value="tab-1",
-        children=[
-            dcc.Tab(
-                label="OVERBLIK",
-                value="tab-1",
-                children=overblik,
-                style={
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                selected_style={
-                    "color": "white",
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#16425D",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                className="custom-tabs-container",
-                selected_className="custom-tab--selected"
-            ),
-            dcc.Tab(
-                label="FRAVÆR",
-                value="tab-2",
-                children=absence,
-                style={
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                selected_style={
-                    "color": "white",
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#16425D",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                className="custom-tabs-container",
-                selected_className="custom-tab--selected"
-            ),
-            dcc.Tab(
-                label="TIDER",
-                value="tab-3",
-                children=tider,
-                style={
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                selected_style={
-                    "color": "white",
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#16425D",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                className="custom-tabs-container",
-                selected_className="custom-tab--selected"
-            ),
-        ],
-        style={
-            "padding-bottom": "0px",
-            "margin-bottom": "2px",
-            "height": "30px",
-        },
-        className="custom-tabs-container",
-    ),
-])
-
+beskeder_content = []
 
 # create layout
 app.layout = html.Div(
@@ -144,31 +65,36 @@ app.layout = html.Div(
 # creating navbar callback for selecting items
 @app.callback(
     [
-        Output("nav-beskeder", "src"),
-        Output("nav-kalender", "src"),
-        Output("nav-overblik", "src"),
+        Output(component_id="nav-overblik", component_property="src"),
+        Output(component_id="nav-kalender", component_property="src"),
+        Output(component_id="nav-beskeder", component_property="src"),
+        Output(component_id="page-content", component_property="children")
     ],
     [
-        Input("nav-beskeder", "n_clicks"),
-        Input("nav-kalender", "n_clicks"),
-        Input("nav-overblik", "n_clicks"),
+        Input(component_id="nav-overblik", component_property="n_clicks"),
+        Input(component_id="nav-kalender", component_property="n_clicks"),
+        Input(component_id="nav-beskeder", component_property="n_clicks"),
     ],
     [
-        State("nav-beskeder", "src"),
-        State("nav-kalender", "src"),
-        State("nav-overblik", "src"),
+        State(component_id="nav-overblik", component_property="src"),
+        State(component_id="nav-kalender", component_property="src"),
+        State(component_id="nav-beskeder", component_property="src"),
     ]
 )
-def update_navbar(n_clicks_beskeder, n_clicks_kalender, n_clicks_overblik, src_beskeder, src_kalender, src_overblik):
+def update_navbar(n_clicks_overblik, n_clicks_kalender, n_clicks_beskeder, src_overblik, src_kalender, src_beskeder):
     selected_item_id = ctx.triggered[0]["prop_id"].split(".")[0]
-    if selected_item_id == "nav-beskeder":
-        return [beskeder["selected_src"], kalender["src"], overblik["src"]]
+    content = []
+    if selected_item_id == "nav-overblik":
+        content = overblik
+        return [overblik_dict["selected_src"], kalender_dict["src"], beskeder_dict["src"], content]
     elif selected_item_id == "nav-kalender":
-        return [beskeder["src"], kalender["selected_src"], overblik["src"]]
-    elif selected_item_id == "nav-overblik":
-        return [beskeder["src"], kalender["src"], overblik["selected_src"]]
+        content = absence
+        return [overblik_dict["src"], kalender_dict["selected_src"], beskeder_dict["src"], content]
+    elif selected_item_id == "nav-beskeder":
+        content = tider
+        return [overblik_dict["src"], kalender_dict["src"], beskeder_dict["selected_src"], content]
     else:
-        return [src_beskeder, src_kalender, src_overblik]
+        return [src_overblik, src_kalender, src_beskeder, content]
 
 
 # callbacks
@@ -177,7 +103,6 @@ def update_navbar(n_clicks_beskeder, n_clicks_kalender, n_clicks_overblik, src_b
         Output(component_id="button-col-1-1", component_property="style"),
         [
             Input(component_id="bool-switch-1-1", component_property="on"),
-
         ]
 )
 def switch_1_1(switch):
