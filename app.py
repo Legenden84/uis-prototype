@@ -107,7 +107,7 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, body, navbar],
+app.layout = html.Div([header, navbar],
                         style={
                             "display": "flex",
                             "flex-direction": "column",

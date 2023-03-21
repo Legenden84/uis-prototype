@@ -1,8 +1,8 @@
 from dash import html
 
-image1 = "/assets/overblik_deselect.png"
-image2 = "/assets/kalender_deselect.png"
-image3 = "/assets/beskeder_deselect.png"
+overblik_pic = "/assets/overblik_deselect.png"
+kalender_pic = "/assets/kalender_deselect.png"
+beskeder_pic = "/assets/beskeder_deselect.png"
 
 navbar = html.Div([
     html.Div(
@@ -10,28 +10,78 @@ navbar = html.Div([
             html.Button(
                 html.Img(
                     id="img1",
-                    src=image1, style={"width": "50px", "height": "50px"}),
+                    src=overblik_pic,
+                    style={
+                        "height": "55px",
+                        "width": "93px",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    }),
                     id="button-1",
                     n_clicks=0,
-                    style={"border": "none", "background-color": "white", "margin-right": "10px"},
+                    style={
+                        "border": "none",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    },
             ),
             html.Button(
                 html.Img(
                     id="img2",
-                    src=image2, style={"width": "50px", "height": "50px"}),
+                    src=kalender_pic,
+                    style={
+                        "height": "55px",
+                        "width": "93px",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    }),
                     id="button-2",
                     n_clicks=0,
-                    style={"border": "none", "background-color": "white", "margin-right": "10px"},
+                    style={
+                        "border": "none",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    },
             ),
             html.Button(
                 html.Img(
                     id="img3",
-                    src=image3, style={"width": "50px", "height": "50px"}),
+                    src=beskeder_pic,
+                    style={
+                        "height": "55px",
+                        "width": "93px",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    }),
                     id="button-3",
                     n_clicks=0,
-                    style={"border": "none", "background-color": "white"},
+                    style={
+                        "border": "none",
+                        "margin-left": "0px",
+                        "margin-right": "0px",
+                        "padding-left": "0px",
+                        "padding-right": "0px",
+                    },
             ),
         ],
-        style={"display": "flex", "justify-content": "space-between", "margin-top": "50px"},
+        style={
+            "position": "absolute",
+            "bottom": "0px",
+            "width": "100%",
+            "display": "flex",
+            "justify-content": "center",
+            "padding": "0px",
+            "box-sizing": "border-box",
+        },
     )
 ])
