@@ -2,7 +2,7 @@ from dash import ctx, dash, dcc, html, no_update
 from dash.dependencies import Input, Output, State
 from header import header
 from navbar import navbar
-from tabs import absence, overblik, tider
+from tabs import calender, noshow, overblik, messages
 
 # fethching style sheets
 external_stylesheets = [
@@ -83,7 +83,7 @@ body = html.Div([
             dcc.Tab(
                 label="FRAVÆR",
                 value="tab-2",
-                children=absence,
+                children=noshow,
                 style={
                     "padding": "1px",
                     "height": "30px",
@@ -105,7 +105,7 @@ body = html.Div([
             dcc.Tab(
                 label="TIDER",
                 value="tab-3",
-                children=tider,
+                children=messages,
                 style={
                     "padding": "1px",
                     "height": "30px",
@@ -197,21 +197,21 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         button4 = html.Img(src=nowshow_src)
 
     elif button_id == "button-2":
-        content = absence
+        content = calender
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_select)
         button3 = html.Img(src=beskeder_src)
         button4 = html.Img(src=nowshow_src)
 
     elif button_id == "button-3":
-        content = tider
+        content = messages
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_select)
         button4 = html.Img(src=nowshow_src)
 
     elif button_id == "button-4":
-        content = absence
+        content = noshow
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)

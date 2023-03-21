@@ -17,8 +17,30 @@ overblik = [
                 "font-family": "Calibri",})
 ]
 
-# tab 2 - fravær
-absence = [
+# tab 2 - kalender
+calender = [
+    html.P("This is tab 2.",
+           style={
+                "margin-top": "0px",
+                "padding-top": "0px",
+                "height": "536px",
+                "backgroundColor": "#D8E1E8",
+                "font-family": "Calibri",})
+]
+
+# tab 3 - kalender
+messages = [
+    html.P("This is tab 3.",
+           style={
+                "margin-top": "0px",
+                "padding-top": "0px",
+                "height": "536px",
+                "backgroundColor": "#D8E1E8",
+                "font-family": "Calibri",})
+]
+
+# tab 4 - fravær
+noshow = [
     dcc.Tabs(
         id="absence-tab",
         value="tab-2-skole",
@@ -328,12 +350,3 @@ absence = [
     ),
 ]
 
-# tab 3 - tid
-tider = [
-    html.P("This is tab 3.",
-           style={
-                "margin-top": "0px",
-                "height": "536px",
-                "backgroundColor": "#D8E1E8",
-                "font-family": "Calibri"}),
-]
