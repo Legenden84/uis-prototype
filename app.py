@@ -493,3 +493,4 @@ def toggle_help_sfo(open, close, is_open):
 # create server object
 if __name__ == "__main__":
     app.run_server(debug=True)
+
