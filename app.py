@@ -144,7 +144,6 @@ app.layout = html.Div([header, content, navbar],
                             "width": "375px",
                             "height": "667px",
                             "margin": "auto",
-                            "border": "1px solid black",
                             "font-family": "Calibri",
                             "position": "relative",
                             "padding-bottom": "50px"
