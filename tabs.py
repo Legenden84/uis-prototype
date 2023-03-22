@@ -381,6 +381,8 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-3"),
+                                transparent_modal_2_2,
+                                transparent_modal_2_2_small,
                             ]),
                         ),
                         dbc.Col(

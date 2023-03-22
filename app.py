@@ -494,6 +494,26 @@ def toggle_transparent_modal_2_1(n_clicks, switch, is_open, is_open2):
         return False, False
     return no_update, no_update
 
+
+# callback: toggle transparent modal 2-2
+@app.callback(
+        Output(component_id="transparent-modal-2-2", component_property="is_open"),
+        Output(component_id="transparent-modal-2-2-small", component_property="is_open"),
+        [
+            Input(component_id="button-register-skole", component_property="n_clicks"),
+        ],
+        State(component_id="bool-switch-2-2", component_property="on"),
+        State(component_id="transparent-modal-2-2", component_property="is_open"),
+        State(component_id="transparent-modal-2-2-small", component_property="is_open")
+)
+def toggle_transparent_modal_2_2(n_clicks, switch, is_open, is_open2):
+    if n_clicks and switch:
+        return True, True
+    elif n_clicks and not switch:
+        return False, False
+    return no_update, no_update
+
+
 # callback: toggle help skole
 @app.callback(
     Output(component_id="modal-skole", component_property="is_open"),
