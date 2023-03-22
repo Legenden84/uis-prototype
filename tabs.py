@@ -221,7 +221,7 @@ noshow = [
                         html.Div([
                             html.Button(
                                 "Registrer fravær",
-                                id="button-register",
+                                id="button-register-sfo",
                                 n_clicks=0,
                                 className="centered-button",
                                 style={"align-text": "center"}
@@ -432,7 +432,7 @@ noshow = [
                         html.Div([
                             html.Button(
                                 "Registrer fravær",
-                                id="button-register",
+                                id="button-register-skole",
                                 n_clicks=0,
                                 className="centered-button",
                                 style={"align-text": "center"}
