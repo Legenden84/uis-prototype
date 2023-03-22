@@ -221,24 +221,6 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
 
 # callback: child 1-1
 @app.callback(
-        Output(component_id="range-slider-div-1-1", component_property="style"),
-        Output(component_id="button-col-1-1", component_property="style"),
-        [
-            Input(component_id="bool-switch-1-1", component_property="on"),
-        ]
-)
-def switch_1_1(switch):
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    return range_div, button_col
-
-
-@app.callback(
         Output(component_id="counter-1-1", component_property="children"),
         Output(component_id="button-1-1-inc", component_property="n_clicks"),
         Output(component_id="button-1-1-dec", component_property="n_clicks"),
@@ -282,24 +264,6 @@ def toggle_kid_1_1(n_click_inc, n_click_dec, range_val):
 
 # callback: child 1-2
 @app.callback(
-        Output(component_id="range-slider-div-1-2", component_property="style"),
-        Output(component_id="button-col-1-2", component_property="style"),
-        [
-            Input(component_id="bool-switch-1-2", component_property="on"),
-        ]
-)
-def switch_1_2(switch):
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    return range_div, button_col
-
-
-@app.callback(
         Output(component_id="counter-1-2", component_property="children"),
         Output(component_id="button-1-2-inc", component_property="n_clicks"),
         Output(component_id="button-1-2-dec", component_property="n_clicks"),
@@ -338,24 +302,6 @@ def toggle_kid_1_2(n_click_inc, n_click_dec, range_val):
         display = f"{mode}: {counter}"
 
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
-
-
-@app.callback(
-        Output(component_id="range-slider-div-1-3", component_property="style"),
-        Output(component_id="button-col-1-3", component_property="style"),
-        [
-            Input(component_id="bool-switch-1-3", component_property="on"),
-        ]
-)
-def switch_1_2(switch):
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    return range_div, button_col
 
 
 # callback: child 1-3
@@ -401,24 +347,6 @@ def toggle_kid_1_3(n_click_inc, n_click_dec, range_val):
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
-@app.callback(
-        Output(component_id="range-slider-div-2-1", component_property="style"),
-        Output(component_id="button-col-2-1", component_property="style"),
-        [
-            Input(component_id="bool-switch-2-1", component_property="on"),
-        ]
-)
-def switch_1_2(switch):
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    return range_div, button_col
-
-
 # callback: child 2-1
 @app.callback(
         Output(component_id="counter-2-1", component_property="children"),
@@ -462,25 +390,6 @@ def toggle_kid_2_1(n_click_inc, n_click_dec, range_val):
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
-@app.callback(
-        Output(component_id="range-slider-div-2-2", component_property="style"),
-        Output(component_id="button-col-2-2", component_property="style"),
-        [
-            Input(component_id="bool-switch-2-2", component_property="on"),
-        ]
-)
-def switch_1_2(switch):
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    return range_div, button_col
-
-
 # callback: child 2-2
 @app.callback(
         Output(component_id="counter-2-2", component_property="children"),
@@ -522,24 +431,6 @@ def toggle_kid_2_2(n_click_inc, n_click_dec, range_val):
         display = f"{mode}: {counter}"
 
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
-
-
-@app.callback(
-        Output(component_id="range-slider-div-2-3", component_property="style"),
-        Output(component_id="button-col-2-3", component_property="style"),
-        [
-            Input(component_id="bool-switch-2-3", component_property="on"),
-        ]
-)
-def switch_2_2(switch):
-    if switch == True:
-        range_div = {"display": "block"}
-        button_col = {"display": "block", "padding-top": "5px"}
-    else:
-        range_div = {"display": "none"}
-        button_col = {"display": "none", "padding-top": "5px"}
-
-    return range_div, button_col
 
 
 # callback: child 2-3
