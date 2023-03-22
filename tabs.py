@@ -6,11 +6,7 @@ import dash_daq as daq
 import pandas as pd
 import support_functions as sf
 
-data = {'Barn': [1, 2, 3],
-        'Skole': ["3 dage", "1 dag", "10 - 12"],
-        'SFO': ["", "", ""]}
-
-df = pd.DataFrame(data)
+df = pd.DataFrame()
 
 # tab 1 - overblik
 overblik = [
