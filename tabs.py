@@ -66,7 +66,7 @@ noshow = [
                                 sf.create_dec_button("1-1"),
                                 sf.create_counter("1-1"),
                                 sf.create_inc_buttons("1-1"),
-                            ], style={"display": "none", "padding-top": "5px"}),
+                            ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
                                 dcc.Markdown("Barn 1-1", style={"font-family": "Calibri",  "margin-right": "16px"}),
@@ -107,7 +107,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 className="range-slider"),
-                        ], style={"display": "None"}),
+                        ], style={"display": "block"}),
                     ]),
                     dbc.Row([
                         dbc.Col(
@@ -121,7 +121,7 @@ noshow = [
                                 sf.create_dec_button("1-2"),
                                 sf.create_counter("1-2"),
                                 sf.create_inc_buttons("1-2")
-                            ], style={"display": "none", "padding-top": "5px"}),
+                            ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
                                 dcc.Markdown("Barn 1-2", style={"font-family": "Calibri",  "margin-right": "16px"}),
@@ -175,7 +175,7 @@ noshow = [
                                 sf.create_dec_button("1-3"),
                                 sf.create_counter("1-3"),
                                 sf.create_inc_buttons("1-3"),
-                            ], style={"display": "none", "padding-top": "5px"}),
+                            ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
                                 dcc.Markdown("Barn 1-3", style={"font-family": "Calibri",  "margin-right": "16px"}),
@@ -277,7 +277,7 @@ noshow = [
                                 sf.create_dec_button("2-1"),
                                 sf.create_counter("2-1"),
                                 sf.create_inc_buttons("2-1"),
-                            ], style={"display": "none", "padding-top": "5px"}),
+                            ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
                                 dcc.Markdown("Barn 2-1", style={"font-family": "Calibri",  "margin-right": "16px"}),
@@ -332,7 +332,7 @@ noshow = [
                                 sf.create_dec_button("2-2"),
                                 sf.create_counter("2-2"),
                                 sf.create_inc_buttons("2-2"),
-                            ], style={"display": "none", "padding-top": "5px"}),
+                            ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
                                 dcc.Markdown("Barn 2-2", style={"font-family": "Calibri",  "margin-right": "16px"}),
@@ -386,7 +386,7 @@ noshow = [
                                 sf.create_dec_button("2-3"),
                                 sf.create_counter("2-3"),
                                 sf.create_inc_buttons("2-3"),
-                            ], style={"display": "none", "padding-top": "5px"}),
+                            ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
                                 dcc.Markdown("Barn 2-3", style={"font-family": "Calibri",  "margin-right": "16px"}),
