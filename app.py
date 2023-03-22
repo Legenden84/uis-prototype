@@ -1,5 +1,6 @@
 from dash import ctx, dash, dcc, html, no_update
 from dash.dependencies import Input, Output, State
+from dash.exceptions import PreventUpdate
 from header import header
 from navbar import navbar
 from tabs import calender, noshow, overblik, messages
@@ -475,6 +476,29 @@ def toggle_kid_2_3(n_click_inc, n_click_dec, range_val):
 
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
+
+# callback: toggle transparent modal 2-1
+@app.callback(
+        Output(component_id="transparent-modal-2-1", component_property="is_open"),
+        # Output(component_id="bool-switch-2-1", component_property="")
+        [
+            Input(component_id="button-register-skole", component_property="n_clicks"),
+        ],
+        State(component_id="bool-switch-2-1", component_property="on"),
+        State(component_id="transparent-modal-2-1", component_property="is_open")
+)
+def toggle_transparent_modal(n_clicks, switch, is_open):
+    print("n_clicks: ", n_clicks)
+    print("on: ", switch)
+    print("is_open: ", is_open)
+    if n_clicks and switch:
+        return True
+    elif n_clicks and not switch:
+        return False
+
+    # return is_open
+
+    return no_update
 
 # callback: toggle help skole
 @app.callback(
