@@ -1,6 +1,19 @@
 import dash_bootstrap_components as dbc
 from markdown import *
 
+edit_modal = dbc.Modal([
+    dbc.ModalBody([
+        dcc.Textarea(
+            placeholder="Indtast kommentar."
+        )
+    ]),
+    dbc.ModalFooter([
+        dbc.Button("OK",
+                    id="close-edit",
+        )
+    ])
+])
+
 modal_open_sfo = dbc.Button("?",
                                 id="open-sfo",
                                 color="primary",
@@ -19,32 +32,31 @@ modal_open_sfo = dbc.Button("?",
                                     "margin-top": "6px",
                                 })
 
-modal_sfo = dbc.Modal(
-    [
-        dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
-                        style={
-                            "font-family": "Calibri",
-                            "font-size": "20px",
+modal_sfo = dbc.Modal([
+    dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
+                    style={
+                        "font-family": "Calibri",
+                        "font-size": "20px",
 
-                            "margin-left": "8px"},
-                        close_button=False),
-        dbc.ModalBody(help_text),
-        dbc.ModalFooter(
-            dbc.Button("Luk",
-                        id="close-sfo",
-                        className="modal-button",
-                        style={
-                            "height": "35px",
-                            "width": "200px",
-                            "font-size": "20px",
-                            "font-family": "Calibri",
-                            "backgroundColor": "#16425D",
-                            "color": "white",
-                            "border-top-left-radius": "5px",
-                            "border-top-right-radius": "5px",
-                            "border-bottom-left-radius": "5px",
-                            "border-bottom-right-radius": "5px",
-                            })),
+                        "margin-left": "8px"},
+                    close_button=False),
+    dbc.ModalBody(help_text),
+    dbc.ModalFooter(
+        dbc.Button("Luk",
+                    id="close-sfo",
+                    className="modal-button",
+                    style={
+                        "height": "35px",
+                        "width": "200px",
+                        "font-size": "20px",
+                        "font-family": "Calibri",
+                        "backgroundColor": "#16425D",
+                        "color": "white",
+                        "border-top-left-radius": "5px",
+                        "border-top-right-radius": "5px",
+                        "border-bottom-left-radius": "5px",
+                        "border-bottom-right-radius": "5px",
+                        })),
     ],
     id="modal-sfo",
     keyboard=False,
@@ -81,32 +93,31 @@ modal_open_skole = dbc.Button("?",
                                     "margin-top": "6px",
                                 })
 
-modal_skole = dbc.Modal(
-    [
-        dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
-                        style={
-                            "font-family": "Calibri",
-                            "font-size": "32px",
-
-                            "margin-left": "8px"},
-                        close_button=False),
-        dbc.ModalBody(help_text),
-        dbc.ModalFooter(
-            dbc.Button("Luk",
-                    id="close-skole",
-                    className="modal-button",
+modal_skole = dbc.Modal([
+    dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
                     style={
-                        "height": "35px",
-                        "width": "200px",
-                        "font-size": "20px",
                         "font-family": "Calibri",
-                        "backgroundColor": "#16425D",
-                        "color": "white",
-                        "border-top-left-radius": "5px",
-                        "border-top-right-radius": "5px",
-                        "border-bottom-left-radius": "5px",
-                        "border-bottom-right-radius": "5px",
-                        })),
+                        "font-size": "32px",
+
+                        "margin-left": "8px"},
+                    close_button=False),
+    dbc.ModalBody(help_text),
+    dbc.ModalFooter(
+        dbc.Button("Luk",
+                id="close-skole",
+                className="modal-button",
+                style={
+                    "height": "35px",
+                    "width": "200px",
+                    "font-size": "20px",
+                    "font-family": "Calibri",
+                    "backgroundColor": "#16425D",
+                    "color": "white",
+                    "border-top-left-radius": "5px",
+                    "border-top-right-radius": "5px",
+                    "border-bottom-left-radius": "5px",
+                    "border-bottom-right-radius": "5px",
+                    })),
     ],
     id="modal-skole",
     keyboard=False,
