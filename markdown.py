@@ -1,5 +1,12 @@
 from dash import dcc
 
+overblik_top_remark = dcc.Markdown(
+    """
+    I dette faneblad kan du danne dig et overblik over dine registrede sygemeldinger.
+    """,
+    style={"font-family": "Calibri",  "margin-left": "8px"}
+)
+
 help_text = dcc.Markdown(
     """
     Bla bla bla bla bla bla bla bla bla bla bla bla bla bla...
