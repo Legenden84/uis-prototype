@@ -1,21 +1,43 @@
-from dash import html
 import dash_bootstrap_components as dbc
 
 transparent_modal_2_1 = dbc.Modal(
     [
-        dbc.ModalHeader("Modal Header"),
-        dbc.ModalBody("This is the content of the modal"),
-        dbc.ModalFooter(
-            dbc.Button("Close", id="close", className="ml-auto")
-        ),
+
     ],
     id="transparent-modal-2-1",
-    # is_open=False,
     keyboard=False,
     backdrop="static",
     style={
+        "backgroundColor": "#D8E1E8cc",
+        "position": "absolute",
+        "margin-top": "285px",
+        "margin-left": "35px",
+        "top": "0",
+        "left": "50%",
+        "height": "95px",
+        "width": "284px",
+        "transform": "translate(-50%, -50%)",
         "border": "none",
-        "backgroundColor": "red",
-        # "position": "absolute"
+    }
+)
+
+transparent_modal_2_1_small = dbc.Modal(
+    [
+
+    ],
+    id="transparent-modal-2-1-small",
+    keyboard=False,
+    backdrop="static",
+    style={
+        "backgroundColor": "#D8E1E8cc",
+        "position": "absolute",
+        "margin-top": "310px",
+        "margin-left": "-140px",
+        "top": "0",
+        "left": "50%",
+        "height": "45px",
+        "width": "66px",
+        "transform": "translate(-50%, -50%)",
+        "border": "none",
     }
 )
