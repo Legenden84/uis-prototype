@@ -1,21 +1,31 @@
-from dash import dcc, html
-import dash_bootstrap_components as dbc
-import dash_daq as daq
-
+from dash import dash_table, dcc, html
 from help import *
 from transparent_modal import *
+import dash_bootstrap_components as dbc
+import dash_daq as daq
+import pandas as pd
 import support_functions as sf
 
+data = {'Barn': [1, 2, 3],
+        'Skole': ["3 dage", "1 dag", "10 - 12"],
+        'SFO': ["", "", ""]}
+
+df = pd.DataFrame(data)
 
 # tab 1 - overblik
 overblik = [
-    html.P("This is tab 1.",
-           style={
-                "margin-top": "0px",
-                "padding-top": "0px",
-                "height": "536px",
-                "backgroundColor": "#D8E1E8",
-                "font-family": "Calibri",})
+    html.Div([
+        overblik_top_remark,
+        dash_table.DataTable(
+            id='datatable',
+            columns=[{"name": i, "id": i} for i in df.columns],
+            data=df.to_dict('records'),
+        )
+    ],
+    style={
+        "margin-left": "8px",
+        "margin-right": "8px"
+    })
 ]
 
 # tab 2 - kalender
