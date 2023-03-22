@@ -1,6 +1,5 @@
 from dash import ctx, dash, dcc, html, no_update
 from dash.dependencies import Input, Output, State
-from dash.exceptions import PreventUpdate
 from header import header
 from navbar import navbar
 from tabs import calender, noshow, overblik, messages
