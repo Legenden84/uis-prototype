@@ -1,18 +1,40 @@
 import dash_bootstrap_components as dbc
 from markdown import *
 
-edit_modal = dbc.Modal([
-    dbc.ModalBody([
-        dcc.Textarea(
-            placeholder="Indtast kommentar."
-        )
-    ]),
-    dbc.ModalFooter([
-        dbc.Button("OK",
+edit_modal = dbc.Modal(
+    [
+        dbc.ModalBody(
+            [
+                dcc.Textarea(
+                    placeholder="Indtast kommentar."
+                )
+            ]
+        ),
+        dbc.ModalFooter(
+            [
+                dbc.Button(
+                    "OK",
                     id="close-edit",
-        )
-    ])
-])
+                    n_clicks=0
+                )
+            ]
+        ),
+    ],
+    id="modal-edit",
+    keyboard=False,
+    backdrop="static",
+    style={
+        "position": "absolute",
+        "border": "2px solid black",
+        "margin-top": "450px",
+        "top": "0",
+        "left": "50%",
+        "height": "525px",
+        "width": "350px",
+        "transform": "translate(-50%, -50%)",
+        "background-color": "#F7F7F7",
+    },
+)
 
 modal_open_sfo = dbc.Button("?",
                                 id="open-sfo",
@@ -37,7 +59,6 @@ modal_sfo = dbc.Modal([
                     style={
                         "font-family": "Calibri",
                         "font-size": "20px",
-
                         "margin-left": "8px"},
                     close_button=False),
     dbc.ModalBody(help_text),

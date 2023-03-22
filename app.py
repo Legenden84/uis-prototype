@@ -218,6 +218,8 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
 
     return content, button1, button2, button3, button4
 
+
+# callback: child 1-1
 @app.callback(
         Output(component_id="range-slider-div-1-1", component_property="style"),
         Output(component_id="button-col-1-1", component_property="style"),
@@ -278,6 +280,7 @@ def toggle_kid_1_1(n_click_inc, n_click_dec, range_val):
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
+# callback: child 1-2
 @app.callback(
         Output(component_id="range-slider-div-1-2", component_property="style"),
         Output(component_id="button-col-1-2", component_property="style"),
@@ -355,6 +358,7 @@ def switch_1_2(switch):
     return range_div, button_col
 
 
+# callback: child 1-3
 @app.callback(
         Output(component_id="counter-1-3", component_property="children"),
         Output(component_id="button-1-3-inc", component_property="n_clicks"),
@@ -415,6 +419,7 @@ def switch_1_2(switch):
     return range_div, button_col
 
 
+# callback: child 2-1
 @app.callback(
         Output(component_id="counter-2-1", component_property="children"),
         Output(component_id="button-2-1-inc", component_property="n_clicks"),
@@ -476,6 +481,7 @@ def switch_1_2(switch):
     return range_div, button_col
 
 
+# callback: child 2-2
 @app.callback(
         Output(component_id="counter-2-2", component_property="children"),
         Output(component_id="button-2-2-inc", component_property="n_clicks"),
@@ -525,7 +531,7 @@ def toggle_kid_2_2(n_click_inc, n_click_dec, range_val):
             Input(component_id="bool-switch-2-3", component_property="on"),
         ]
 )
-def switch_1_2(switch):
+def switch_2_2(switch):
     if switch == True:
         range_div = {"display": "block"}
         button_col = {"display": "block", "padding-top": "5px"}
@@ -536,6 +542,7 @@ def switch_1_2(switch):
     return range_div, button_col
 
 
+# callback: child 2-3
 @app.callback(
         Output(component_id="counter-2-3", component_property="children"),
         Output(component_id="button-2-3-inc", component_property="n_clicks"),
@@ -578,6 +585,7 @@ def toggle_kid_2_3(n_click_inc, n_click_dec, range_val):
         return display, dash.no_update, dash.no_update, inc_button_style, dec_button_style
 
 
+# callback: toggle help skole
 @app.callback(
     Output(component_id="modal-skole", component_property="is_open"),
     [
@@ -594,6 +602,7 @@ def toggle_help_skole(open, close, is_open):
     return is_open
 
 
+# callback: toggle help sfo
 @app.callback(
     Output(component_id="modal-sfo", component_property="is_open"),
     [
@@ -609,6 +618,28 @@ def toggle_help_sfo(open, close, is_open):
         return not is_open
     return is_open
 
+
+# callback: toggle edit button
+@app.callback(
+    Output(component_id="modal-edit", component_property="is_open"),
+    [
+        Input(component_id="edit-btn-1-1", component_property="n_clicks"),
+        Input(component_id="edit-btn-1-2", component_property="n_clicks"),
+        Input(component_id="edit-btn-1-3", component_property="n_clicks"),
+        Input(component_id="edit-btn-2-1", component_property="n_clicks"),
+        Input(component_id="edit-btn-2-2", component_property="n_clicks"),
+        Input(component_id="edit-btn-2-3", component_property="n_clicks"),
+        Input(component_id="close-edit", component_property="n_clicks")
+    ],
+    [
+        State(component_id="modal-edit", component_property="is_open")
+    ]
+)
+def toggle_edit(open_edit1_1, open_edit1_2, open_edit1_3, open_edit2_1, open_edit2_2, open_edit2_3, close_edit, is_open):
+    if any([open_edit1_1, open_edit1_2, open_edit1_3, open_edit2_1, open_edit2_2, open_edit2_3, is_open]):
+        return not is_open
+    elif close_edit:
+        return is_open
 
 # create server object
 if __name__ == "__main__":

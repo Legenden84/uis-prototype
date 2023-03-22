@@ -299,6 +299,7 @@ noshow = [
                                         "padding-left": "0px",
                                         "padding-right": "0px",
                                     }),
+                                    edit_modal,
                             ], style={"display": "flex", "align-items": "center"}),
                         ),
                     ], style={"display": "flex", "justify-content": "space-between",}),
