@@ -619,24 +619,41 @@ def toggle_help_sfo(open, close, is_open):
     return is_open
 
 
-# callback: toggle edit button
+# callback: toggle edit button sfo
 @app.callback(
-    Output(component_id="modal-edit", component_property="is_open"),
+    Output(component_id="modal-edit-sfo", component_property="is_open"),
     [
         Input(component_id="edit-btn-1-1", component_property="n_clicks"),
         Input(component_id="edit-btn-1-2", component_property="n_clicks"),
         Input(component_id="edit-btn-1-3", component_property="n_clicks"),
+        Input(component_id="close-edit-sfo", component_property="n_clicks")
+    ],
+    [
+        State(component_id="modal-edit-sfo", component_property="is_open")
+    ]
+)
+def toggle_edit(open_edit2_1, open_edit2_2, open_edit2_3, close_edit, is_open):
+    if any([open_edit2_1, open_edit2_2, open_edit2_3, is_open]):
+        return not is_open
+    elif close_edit:
+        return is_open
+
+
+# callback: toggle edit button skole
+@app.callback(
+    Output(component_id="modal-edit-skole", component_property="is_open"),
+    [
         Input(component_id="edit-btn-2-1", component_property="n_clicks"),
         Input(component_id="edit-btn-2-2", component_property="n_clicks"),
         Input(component_id="edit-btn-2-3", component_property="n_clicks"),
-        Input(component_id="close-edit", component_property="n_clicks")
+        Input(component_id="close-edit-skole", component_property="n_clicks")
     ],
     [
-        State(component_id="modal-edit", component_property="is_open")
+        State(component_id="modal-edit-skole", component_property="is_open")
     ]
 )
-def toggle_edit(open_edit1_1, open_edit1_2, open_edit1_3, open_edit2_1, open_edit2_2, open_edit2_3, close_edit, is_open):
-    if any([open_edit1_1, open_edit1_2, open_edit1_3, open_edit2_1, open_edit2_2, open_edit2_3, is_open]):
+def toggle_edit(open_edit2_1, open_edit2_2, open_edit2_3, close_edit, is_open):
+    if any([open_edit2_1, open_edit2_2, open_edit2_3, is_open]):
         return not is_open
     elif close_edit:
         return is_open

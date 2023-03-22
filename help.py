@@ -1,12 +1,13 @@
 import dash_bootstrap_components as dbc
 from markdown import *
 
-edit_modal = dbc.Modal(
+edit_modal_sfo = dbc.Modal(
     [
         dbc.ModalBody(
             [
                 dcc.Textarea(
-                    placeholder="Indtast kommentar."
+                    placeholder="Indtast kommentar.",
+                    style={"height": "94px", "width": "278px"},
                 )
             ]
         ),
@@ -14,13 +15,26 @@ edit_modal = dbc.Modal(
             [
                 dbc.Button(
                     "OK",
-                    id="close-edit",
-                    n_clicks=0
+                    className="modal-button",
+                    id="close-edit-sfo",
+                    n_clicks=0,
+                    style={
+                        "height": "20px",
+                        "width": "40px",
+                        "font-size": "12px",
+                        "font-family": "Calibri",
+                        "backgroundColor": "#16425D",
+                        "color": "white",
+                        "border-top-left-radius": "5px",
+                        "border-top-right-radius": "5px",
+                        "border-bottom-left-radius": "5px",
+                        "border-bottom-right-radius": "5px",
+                    }
                 )
             ]
         ),
     ],
-    id="modal-edit",
+    id="modal-edit-sfo",
     keyboard=False,
     backdrop="static",
     style={
@@ -29,8 +43,57 @@ edit_modal = dbc.Modal(
         "margin-top": "450px",
         "top": "0",
         "left": "50%",
-        "height": "525px",
-        "width": "350px",
+        "height": "100px",
+        "width": "284px",
+        "transform": "translate(-50%, -50%)",
+        "background-color": "#F7F7F7",
+    },
+)
+
+edit_modal_skole = dbc.Modal(
+    [
+        dbc.ModalBody(
+            [
+                dcc.Textarea(
+                    placeholder="Indtast kommentar.",
+                    style={"height": "94px", "width": "278px"},
+                )
+            ]
+        ),
+        dbc.ModalFooter(
+            [
+                dbc.Button(
+                    "OK",
+                    className="modal-button",
+                    id="close-edit-skole",
+                    n_clicks=0,
+                    style={
+                        "height": "20px",
+                        "width": "40px",
+                        "font-size": "12px",
+                        "font-family": "Calibri",
+                        "backgroundColor": "#16425D",
+                        "color": "white",
+                        "border-top-left-radius": "5px",
+                        "border-top-right-radius": "5px",
+                        "border-bottom-left-radius": "5px",
+                        "border-bottom-right-radius": "5px",
+                    }
+                )
+            ]
+        ),
+    ],
+    id="modal-edit-skole",
+    keyboard=False,
+    backdrop="static",
+    style={
+        "position": "absolute",
+        "border": "2px solid black",
+        "margin-top": "450px",
+        "top": "0",
+        "left": "50%",
+        "height": "100px",
+        "width": "284px",
         "transform": "translate(-50%, -50%)",
         "background-color": "#F7F7F7",
     },
