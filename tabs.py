@@ -6,7 +6,7 @@ import dash_daq as daq
 import pandas as pd
 import support_functions as sf
 
-data = {"Barn": ["Barn 1", "Barn 2", "Barn 3"],
+data = {"Navn": ["Barn 1", "Barn 2", "Barn 3"],
         "Skole": ["", "", ""],
         "SFO": ["", "", ""]}
 
@@ -17,9 +17,9 @@ overblik = [
     html.Div([
         overblik_top_remark,
         dash_table.DataTable(
-            id='datatable',
+            id="datatable",
             columns=[{"name": i, "id": i} for i in df.columns],
-            data=df.to_dict('records'),
+            data=df.to_dict("records"),
         )
     ],
     style={
