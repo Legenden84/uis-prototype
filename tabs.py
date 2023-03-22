@@ -58,7 +58,9 @@ noshow = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                sf.create_switch("bool-switch-1-1")
+                                sf.create_switch("bool-switch-1-1"),
+                                transparent_modal_1_1,
+                                transparent_modal_1_1_small,
                             ]),
                         ),
                         dbc.Col(
@@ -113,7 +115,9 @@ noshow = [
                     dbc.Row([
                         dbc.Col(
                             html.Div([
-                                sf.create_switch("bool-switch-1-2")
+                                sf.create_switch("bool-switch-1-2"),
+                                transparent_modal_1_2,
+                                transparent_modal_1_2_small,
                             ]),
                         ),
                         dbc.Col(
@@ -168,6 +172,8 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-3"),
+                                transparent_modal_1_3,
+                                transparent_modal_1_3_small,
                             ]),
                         ),
                         dbc.Col(
@@ -327,6 +333,8 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-2"),
+                                transparent_modal_2_2,
+                                transparent_modal_2_2_small,
                             ]),
                         ),
                         dbc.Col(
@@ -381,8 +389,8 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-3"),
-                                transparent_modal_2_2,
-                                transparent_modal_2_2_small,
+                                transparent_modal_2_3,
+                                transparent_modal_2_3_small,
                             ]),
                         ),
                         dbc.Col(
