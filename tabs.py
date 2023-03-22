@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 import dash_daq as daq
 
 from help import *
+from transparent_modal import transparent_modal_2_1
 import support_functions as sf
 
 
@@ -269,6 +270,7 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-1"),
+                                transparent_modal_2_1,
                             ]),
                         ),
                         dbc.Col(
