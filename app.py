@@ -38,6 +38,12 @@ table = html.Div(
     ], style={"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 )
 
+store = html.Div([
+    dcc.Store(id="store-overblik", data=[]),
+    dcc.Store(id="store-kalender", data=[]),
+    dcc.Store(id="store-beskeder", data=[]),
+    dcc.Store(id="store-noshow", data=[]),
+])
 
 content = html.Div(
     id="page-content",
@@ -154,7 +160,7 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, content, table, navbar],
+app.layout = html.Div([header, content, table, navbar, store],
                         style={
                             "display": "flex",
                             "flex-direction": "column",
