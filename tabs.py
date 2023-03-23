@@ -6,21 +6,10 @@ import dash_daq as daq
 import pandas as pd
 import support_functions as sf
 
-data = {"Navn": ["Barn 1", "Barn 2", "Barn 3"],
-        "Skole": ["", "", ""],
-        "SFO": ["", "", ""]}
-
-df = pd.DataFrame(data)
-
 # tab 1 - overblik
 overblik = [
     html.Div([
         overblik_top_remark,
-        dash_table.DataTable(
-            id="datatable",
-            columns=[{"name": i, "id": i} for i in df.columns],
-            data=df.to_dict("records"),
-        )
     ],
     style={
         "margin-left": "8px",
@@ -82,7 +71,7 @@ noshow = [
                             ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
-                                dcc.Markdown("Barn 1-1", style={"font-family": "Calibri",  "margin-right": "16px"}),
+                                dcc.Markdown("Hans", style={"font-family": "Calibri",  "margin-right": "16px"}),
                                 html.Button(
                                     id="edit-btn-1-1",
                                     children=[
@@ -139,7 +128,7 @@ noshow = [
                             ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
-                                dcc.Markdown("Barn 1-2", style={"font-family": "Calibri",  "margin-right": "16px"}),
+                                dcc.Markdown("Rosa", style={"font-family": "Calibri",  "margin-right": "16px"}),
                                 html.Button(
                                     id="edit-btn-1-2",
                                     children=[
@@ -195,7 +184,7 @@ noshow = [
                             ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
-                                dcc.Markdown("Barn 1-3", style={"font-family": "Calibri",  "margin-right": "16px"}),
+                                dcc.Markdown("Jimmie", style={"font-family": "Calibri",  "margin-right": "16px"}),
                                 html.Button(
                                     id="edit-btn-1-3",
                                     children=[
@@ -299,7 +288,7 @@ noshow = [
                             ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
-                                dcc.Markdown("Barn 2-1", style={"font-family": "Calibri",  "margin-right": "16px"}),
+                                dcc.Markdown("Hans", style={"font-family": "Calibri",  "margin-right": "16px"}),
                                 html.Button(
                                     id="edit-btn-2-1",
                                     children=[
@@ -356,7 +345,7 @@ noshow = [
                             ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
-                                dcc.Markdown("Barn 2-2", style={"font-family": "Calibri",  "margin-right": "16px"}),
+                                dcc.Markdown("Rosa", style={"font-family": "Calibri",  "margin-right": "16px"}),
                                 html.Button(
                                     id="edit-btn-2-2",
                                     children=[
@@ -412,7 +401,7 @@ noshow = [
                             ], style={"display": "block", "padding-top": "5px"}),
                         dbc.Col(
                             html.Div([
-                                dcc.Markdown("Barn 2-3", style={"font-family": "Calibri",  "margin-right": "16px"}),
+                                dcc.Markdown("Jimmie", style={"font-family": "Calibri",  "margin-right": "16px"}),
                                 html.Button(
                                     id="edit-btn-2-3",
                                     children=[

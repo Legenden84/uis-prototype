@@ -1,8 +1,9 @@
-from dash import ctx, dash, dcc, html, no_update
+from dash import ctx, dash, dash_table, dcc, html, no_update
 from dash.dependencies import Input, Output, State
 from header import header
 from navbar import navbar
 from tabs import calender, noshow, overblik, messages
+import pandas as pd
 
 # fethching style sheets
 external_stylesheets = [
@@ -20,6 +21,24 @@ kalender_select = "/assets/kalender_select.png"
 beskeder_select = "/assets/beskeder_select.png"
 nowshow_select = "/assets/noshow_select.png"
 
+data = {"Navn": ["Hans", "Rosa", "Jimmie"],
+        "Skole": ["", "", ""],
+        "SFO": ["", "", ""]}
+
+df = pd.DataFrame(data)
+
+table = html.Div(
+    id="table-div",
+    children=[
+        dash_table.DataTable(
+            id="table",
+            columns=[{"name": i, "id": i} for i in df.columns],
+            data=df.to_dict("records"),
+        )
+    ], style={"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
+)
+
+
 content = html.Div(
     id="page-content",
     children=[],
@@ -28,11 +47,11 @@ content = html.Div(
 
 register = html.Div([
                 html.Button(
-                "Registrer fravær",
-                id="button-register",
-                n_clicks=0,
-                className="centered-button",
-                style={"align-text": "center"}
+                    "Registrer fravær",
+                    id="button-register",
+                    n_clicks=0,
+                    className="centered-button",
+                    style={"align-text": "center"}
                 ),
             ], style={
                 "border": "1px solid black",
@@ -45,9 +64,8 @@ register = html.Div([
 
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
+                prevent_initial_callbacks=True,
                 suppress_callback_exceptions=True,
-                meta_tags=[{"name": "viewport",
-                            "content": "width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,"}]
 )
 # server = app.server
 server = app.server
@@ -136,7 +154,7 @@ body = html.Div([
 
 
 # create layout
-app.layout = html.Div([header, content, navbar],
+app.layout = html.Div([header, content, table, navbar],
                         style={
                             "display": "flex",
                             "flex-direction": "column",
@@ -159,6 +177,7 @@ app.layout = html.Div([header, content, navbar],
         Output("button-2", "children"),
         Output("button-3", "children"),
         Output("button-4", "children"),
+        Output("table-div", "style")
     ],
     [
         Input("button-1", "n_clicks"),
@@ -175,7 +194,7 @@ app.layout = html.Div([header, content, navbar],
 )
 def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn1_children, btn2_children, btn3_children, btn4_children):
     if (btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks) == (0, 0, 0, 0):
-        return no_update, no_update, no_update, no_update, no_update
+        return no_update, no_update, no_update, no_update, no_update, no_update
 
     content = []
     button1 = html.Img(src=overblik_src)
@@ -194,6 +213,7 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)
         button4 = html.Img(src=nowshow_src)
+        style = {"display": "block", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-2":
         content = calender
@@ -201,6 +221,7 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         button2 = html.Img(src=kalender_select)
         button3 = html.Img(src=beskeder_src)
         button4 = html.Img(src=nowshow_src)
+        style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-3":
         content = messages
@@ -208,6 +229,7 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_select)
         button4 = html.Img(src=nowshow_src)
+        style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-4":
         content = noshow
@@ -215,8 +237,9 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)
         button4 = html.Img(src=nowshow_select)
+        style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
-    return content, button1, button2, button3, button4
+    return content, button1, button2, button3, button4, style
 
 
 # callback: child 1-1
@@ -537,19 +560,23 @@ def toggle_transparent_modal_2_3(n_clicks, switch, is_open, is_open2):
 @app.callback(
         Output(component_id="transparent-modal-2-1", component_property="is_open"),
         Output(component_id="transparent-modal-2-1-small", component_property="is_open"),
+        Output(component_id="table", component_property="data"),
         [
             Input(component_id="button-register-skole", component_property="n_clicks"),
         ],
         State(component_id="bool-switch-2-1", component_property="on"),
         State(component_id="transparent-modal-2-1", component_property="is_open"),
-        State(component_id="transparent-modal-2-1-small", component_property="is_open")
+        State(component_id="transparent-modal-2-1-small", component_property="is_open"),
+        State(component_id="table", component_property="data")
 )
-def toggle_transparent_modal_1_1(n_clicks, switch, is_open, is_open2):
+def toggle_transparent_modal_2_1(n_clicks, switch, is_open, is_open2, data):
     if n_clicks and switch:
-        return True, True
+        data[1]["SFO"] = "if"
+        return True, True, data
     elif n_clicks and not switch:
-        return False, False
-    return no_update, no_update
+        data[1]["SFO"] = "elif"
+        return False, False, data
+    return no_update, no_update, data
 
 
 # callback: toggle transparent modal 2-2
