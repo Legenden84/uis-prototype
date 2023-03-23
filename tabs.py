@@ -58,6 +58,10 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-1"),
+                                dcc.Location(id="transparent-modal-1-1-location", refresh=False),
+                                dcc.Location(id="transparent-modal-1-1-small-location", refresh=False),
+                                dcc.Store(id="transparent-modal-1-1-store", data=False),
+                                dcc.Store(id="transparent-modal-1-1-small-store", data=False),
                                 transparent_modal_1_1,
                                 transparent_modal_1_1_small,
                             ]),
