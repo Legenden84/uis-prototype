@@ -514,7 +514,7 @@ def toggle_kid_2_3(n_click_inc, n_click_dec, range_val):
         State(component_id="transparent-modal-1-1", component_property="is_open"),
         State(component_id="transparent-modal-1-1-small", component_property="is_open")
 )
-def toggle_transparent_modal_2_1(n_clicks, switch, is_open, is_open2):
+def toggle_transparent_modal_1_1(n_clicks, switch, is_open, is_open2):
     if n_clicks and switch:
         return True, True
     elif n_clicks and not switch:
@@ -533,7 +533,7 @@ def toggle_transparent_modal_2_1(n_clicks, switch, is_open, is_open2):
         State(component_id="transparent-modal-1-2", component_property="is_open"),
         State(component_id="transparent-modal-1-2-small", component_property="is_open")
 )
-def toggle_transparent_modal_2_2(n_clicks, switch, is_open, is_open2):
+def toggle_transparent_modal_1_2(n_clicks, switch, is_open, is_open2):
     if n_clicks and switch:
         return True, True
     elif n_clicks and not switch:
@@ -552,7 +552,7 @@ def toggle_transparent_modal_2_2(n_clicks, switch, is_open, is_open2):
         State(component_id="transparent-modal-1-3", component_property="is_open"),
         State(component_id="transparent-modal-1-3-small", component_property="is_open")
 )
-def toggle_transparent_modal_2_3(n_clicks, switch, is_open, is_open2):
+def toggle_transparent_modal_1_3(n_clicks, switch, is_open, is_open2):
     if n_clicks and switch:
         return True, True
     elif n_clicks and not switch:
@@ -594,7 +594,7 @@ def toggle_transparent_modal_2_1(n_clicks, switch, is_open, is_open2, data):
         State(component_id="transparent-modal-2-2", component_property="is_open"),
         State(component_id="transparent-modal-2-2-small", component_property="is_open")
 )
-def toggle_transparent_modal_1_2(n_clicks, switch, is_open, is_open2):
+def toggle_transparent_modal_2_2(n_clicks, switch, is_open, is_open2):
     if n_clicks and switch:
         return True, True
     elif n_clicks and not switch:
@@ -613,7 +613,7 @@ def toggle_transparent_modal_1_2(n_clicks, switch, is_open, is_open2):
         State(component_id="transparent-modal-2-3", component_property="is_open"),
         State(component_id="transparent-modal-2-3-small", component_property="is_open")
 )
-def toggle_transparent_modal_1_1(n_clicks, switch, is_open, is_open2):
+def toggle_transparent_modal_2_3(n_clicks, switch, is_open, is_open2):
     if n_clicks and switch:
         return True, True
     elif n_clicks and not switch:
