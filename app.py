@@ -183,7 +183,11 @@ app.layout = html.Div([header, content, table, navbar, store],
         Output("button-2", "children"),
         Output("button-3", "children"),
         Output("button-4", "children"),
-        Output("table-div", "style")
+        Output("table-div", "style"),
+        Output("store-overblik", "data"),
+        Output("store-kalender", "data"),
+        Output("store-beskeder", "data"),
+        Output("store-noshow", "data"),
     ],
     [
         Input("button-1", "n_clicks"),
@@ -195,12 +199,23 @@ app.layout = html.Div([header, content, table, navbar, store],
         State("button-1", "children"),
         State("button-2", "children"),
         State("button-3", "children"),
-        State("button-4", "children")
+        State("button-4", "children"),
+        State("store-overblik", "data"),
+        State("store-kalender", "data"),
+        State("store-beskeder", "data"),
+        State("store-noshow", "data"),
     ],
 )
-def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn1_children, btn2_children, btn3_children, btn4_children):
+def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks,
+                         btn1_children, btn2_children, btn3_children, btn4_children,
+                         store1, store2, store3, store4):
     if (btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks) == (0, 0, 0, 0):
         return no_update, no_update, no_update, no_update, no_update, no_update
+
+    print(store1)
+    print(store2)
+    print(store3)
+    print(store4)
 
     content = []
     button1 = html.Img(src=overblik_src)
@@ -214,7 +229,11 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         button_id = ctx.triggered[0]["prop_id"].split(".")[0]
 
     if button_id == "button-1":
-        content = overblik
+        if store1 == []:
+            content = overblik
+        else:
+            content = store1
+
         button1 = html.Img(src=overblik_select)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)
@@ -222,7 +241,11 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         style = {"display": "block", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-2":
-        content = calender
+        if store2 == []:
+            content = calender
+        else:
+            content = store2
+
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_select)
         button3 = html.Img(src=beskeder_src)
@@ -230,7 +253,11 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-3":
-        content = messages
+        if store3 == []:
+            content = messages
+        else:
+            content = store3
+
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_select)
@@ -238,14 +265,18 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks, btn
         style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-4":
-        content = noshow
+        if store4 == []:
+            content = noshow
+        else:
+            content = store4
+
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)
         button4 = html.Img(src=nowshow_select)
         style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
-    return content, button1, button2, button3, button4, style
+    return content, button1, button2, button3, button4, style, store1, store2, store3, store4
 
 
 # callback: child 1-1
