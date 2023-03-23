@@ -7,7 +7,9 @@ def create_switch(id: str):
         id=id,
         color="#16425D",
         on=False,
-        style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"}
+        style={"text-align": "left", "padding-top": "12px", "margin-left": "25px", "display": "inline-block"},
+        persistence=True,
+        persistence_type="memory",
     )
     return switch
 
