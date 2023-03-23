@@ -108,6 +108,8 @@ noshow = [
                                                         "style": {"color": "#16425D"},
                                                     } for i in range(18)
                                                 },
+                                                persistence=True,
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ], style={"display": "block"}),
                     ]),
@@ -164,6 +166,8 @@ noshow = [
                                                         "style": {"color": "#16425D"},
                                                     } for i in range(18)
                                                 },
+                                                persistence=True,
+                                                persistence_type="memory",
                                                 className="range-slider"),
                             ]),
                     ]),
@@ -220,6 +224,8 @@ noshow = [
                                                         "style": {"color": "#16425D"},
                                                     } for i in range(18)
                                                 },
+                                                persistence=True,
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -325,6 +331,8 @@ noshow = [
                                                         "style": {"color": "#16425D"},
                                                     } for i in range(16)
                                                 },
+                                                persistence=True,
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -381,6 +389,8 @@ noshow = [
                                                         "style": {"color": "#16425D"},
                                                     } for i in range(16)
                                                 },
+                                                persistence=True,
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -437,6 +447,8 @@ noshow = [
                                                         "style": {"color": "#16425D"},
                                                     } for i in range(16)
                                                 },
+                                                persistence=True,
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
