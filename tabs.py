@@ -112,7 +112,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 persistence=True,
-                                                persistence_type="session",
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ], style={"display": "block"}),
                     ]),
@@ -173,7 +173,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 persistence=True,
-                                                persistence_type="session",
+                                                persistence_type="memory",
                                                 className="range-slider"),
                             ]),
                     ]),
@@ -234,7 +234,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 persistence=True,
-                                                persistence_type="session",
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -344,7 +344,7 @@ noshow = [
                                                     } for i in range(16)
                                                 },
                                                 persistence=True,
-                                                persistence_type="session",
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -405,7 +405,7 @@ noshow = [
                                                     } for i in range(16)
                                                 },
                                                 persistence=True,
-                                                persistence_type="session",
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -466,7 +466,7 @@ noshow = [
                                                     } for i in range(16)
                                                 },
                                                 persistence=True,
-                                                persistence_type="session",
+                                                persistence_type="memory",
                                                 className="range-slider"),
                         ]),
                     ]),
