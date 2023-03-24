@@ -112,7 +112,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 persistence=True,
-                                                persistence_type="memory",
+                                                persistence_type="session",
                                                 className="range-slider"),
                         ], style={"display": "block"}),
                     ]),
@@ -173,7 +173,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 persistence=True,
-                                                persistence_type="memory",
+                                                persistence_type="session",
                                                 className="range-slider"),
                             ]),
                     ]),
@@ -234,7 +234,7 @@ noshow = [
                                                     } for i in range(18)
                                                 },
                                                 persistence=True,
-                                                persistence_type="memory",
+                                                persistence_type="session",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -290,9 +290,9 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-1"),
-                                dcc.Interval(id="transparent-modal-2-1-interval", interval=500, n_intervals=0),
-                                dcc.Store(id="transparent-modal-2-1-store", data=[]),
-                                dcc.Store(id="transparent-modal-2-1-small-store", data=[]),
+                                dcc.Interval(id="transparent-modal-2-1-interval", interval=100, n_intervals=0, disabled=False),
+                                dcc.Store(id="transparent-modal-2-1-store", data=False, storage_type="session"),
+                                dcc.Store(id="transparent-modal-2-1-small-store", data=False, storage_type="session"),
                                 transparent_modal_2_1,
                                 transparent_modal_2_1_small,
                             ]),
@@ -344,7 +344,7 @@ noshow = [
                                                     } for i in range(16)
                                                 },
                                                 persistence=True,
-                                                persistence_type="memory",
+                                                persistence_type="session",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -405,7 +405,7 @@ noshow = [
                                                     } for i in range(16)
                                                 },
                                                 persistence=True,
-                                                persistence_type="memory",
+                                                persistence_type="session",
                                                 className="range-slider"),
                         ]),
                     ]),
@@ -466,7 +466,7 @@ noshow = [
                                                     } for i in range(16)
                                                 },
                                                 persistence=True,
-                                                persistence_type="memory",
+                                                persistence_type="session",
                                                 className="range-slider"),
                         ]),
                     ]),
