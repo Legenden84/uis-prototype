@@ -58,11 +58,6 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-1"),
-                                dcc.Interval(id="transparent-modal-1-1-interval", interval=100, n_intervals=0, disabled=False),
-                                dcc.Store(id="transparent-modal-1-1-store", data=False, storage_type="session"),
-                                dcc.Store(id="transparent-modal-1-1-small-store", data=False, storage_type="session"),
-                                transparent_modal_1_1,
-                                transparent_modal_1_1_small,
                             ]),
                         ),
                         dbc.Col(
@@ -120,11 +115,6 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-2"),
-                                dcc.Interval(id="transparent-modal-1-2-interval", interval=100, n_intervals=0, disabled=False),
-                                dcc.Store(id="transparent-modal-1-2-store", data=False, storage_type="session"),
-                                dcc.Store(id="transparent-modal-1-2-small-store", data=False, storage_type="session"),
-                                transparent_modal_1_2,
-                                transparent_modal_1_2_small,
                             ]),
                         ),
                         dbc.Col(
@@ -181,11 +171,6 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-3"),
-                                dcc.Interval(id="transparent-modal-1-3-interval", interval=100, n_intervals=0, disabled=False),
-                                dcc.Store(id="transparent-modal-1-3-store", data=False, storage_type="session"),
-                                dcc.Store(id="transparent-modal-1-3-small-store", data=False, storage_type="session"),
-                                transparent_modal_1_3,
-                                transparent_modal_1_3_small,
                             ]),
                         ),
                         dbc.Col(
@@ -347,11 +332,6 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-2"),
-                                dcc.Interval(id="transparent-modal-2-2-interval", interval=100, n_intervals=0, disabled=False),
-                                dcc.Store(id="transparent-modal-2-2-store", data=False, storage_type="session"),
-                                dcc.Store(id="transparent-modal-2-2-small-store", data=False, storage_type="session"),
-                                transparent_modal_2_2,
-                                transparent_modal_2_2_small,
                             ]),
                         ),
                         dbc.Col(
@@ -408,11 +388,6 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-3"),
-                                dcc.Interval(id="transparent-modal-2-3-interval", interval=100, n_intervals=0, disabled=False),
-                                dcc.Store(id="transparent-modal-2-3-store", data=False, storage_type="session"),
-                                dcc.Store(id="transparent-modal-2-3-small-store", data=False, storage_type="session"),
-                                transparent_modal_2_3,
-                                transparent_modal_2_3_small,
                             ]),
                         ),
                         dbc.Col(
