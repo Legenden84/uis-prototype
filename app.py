@@ -232,11 +232,7 @@ def update_button_images(btn1_clicks, btn2_clicks, btn3_clicks, btn4_clicks,
         style = {"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 
     elif button_id == "button-4":
-        #if store4 == []:
         content = noshow
-        #else:
-        #    content = store4
-
         button1 = html.Img(src=overblik_src)
         button2 = html.Img(src=kalender_src)
         button3 = html.Img(src=beskeder_src)
