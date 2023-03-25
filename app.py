@@ -502,128 +502,14 @@ def toggle_kid_2_3(n_click_inc, n_click_dec, range_val):
 # callback: toggle transparent modal 1-1
 @app.callback(
         [
-            Output(component_id="transparent-modal-1-1", component_property="is_open"),
-            Output(component_id="transparent-modal-1-1-small", component_property="is_open"),
-            Output(component_id="transparent-modal-1-1-store", component_property="data"),
-            Output(component_id="transparent-modal-1-1-small-store", component_property="data"),
-            Output(component_id="transparent-modal-1-1-interval", component_property="disabled"),
-        ],
-        [
-            Input(component_id="transparent-modal-1-1-interval", component_property="n_intervals"),
-            Input(component_id="button-register-sfo", component_property="n_clicks"),
-        ],
-        [
-            State(component_id="bool-switch-1-1", component_property="on"),
-            State(component_id="transparent-modal-1-1", component_property="is_open"),
-            State(component_id="transparent-modal-1-1-small", component_property="is_open"),
-            State(component_id="transparent-modal-1-1-store", component_property="data"),
-            State(component_id="transparent-modal-1-1-small-store", component_property="data"),
-            State(component_id="transparent-modal-1-1-interval", component_property="disabled")
-        ]
-)
-def toggle_transparent_modal_1_1(auto, n_clicks, switch, is_open, is_open2, init_state, init_state_small, disabled):
-    if not disabled:
-        if (init_state, init_state_small) == (True, True):
-            return True, True, no_update, no_update, True
-        elif (init_state, init_state_small) == (False, False):
-            return False, False, no_update, no_update, True
-        elif (init_state, init_state_small) == ([], []):
-            return no_update, no_update, no_update, no_update, True
-
-    if n_clicks and switch:
-        return True, True, True, True, False
-    elif n_clicks and not switch:
-        return False, False, False, False, False
-    return no_update, no_update, no_update, no_update, no_update
-
-
-# callback: toggle transparent modal 1-2
-@app.callback(
-        [
-            Output(component_id="transparent-modal-1-2", component_property="is_open"),
-            Output(component_id="transparent-modal-1-2-small", component_property="is_open"),
-            Output(component_id="transparent-modal-1-2-store", component_property="data"),
-            Output(component_id="transparent-modal-1-2-small-store", component_property="data"),
-            Output(component_id="transparent-modal-1-2-interval", component_property="disabled"),
-        ],
-        [
-            Input(component_id="transparent-modal-1-2-interval", component_property="n_intervals"),
-            Input(component_id="button-register-sfo", component_property="n_clicks"),
-        ],
-        [
-            State(component_id="bool-switch-1-2", component_property="on"),
-            State(component_id="transparent-modal-1-2", component_property="is_open"),
-            State(component_id="transparent-modal-1-2-small", component_property="is_open"),
-            State(component_id="transparent-modal-1-2-store", component_property="data"),
-            State(component_id="transparent-modal-1-2-small-store", component_property="data"),
-            State(component_id="transparent-modal-1-2-interval", component_property="disabled")
-        ]
-)
-def toggle_transparent_modal_1_2(auto, n_clicks, switch, is_open, is_open2, init_state, init_state_small, disabled):
-    if not disabled:
-        if (init_state, init_state_small) == (True, True):
-            return True, True, no_update, no_update, True
-        elif (init_state, init_state_small) == (False, False):
-            return False, False, no_update, no_update, True
-        elif (init_state, init_state_small) == ([], []):
-            return no_update, no_update, no_update, no_update, True
-
-    if n_clicks and switch:
-        return True, True, True, True, False
-    elif n_clicks and not switch:
-        return False, False, False, False, False
-    return no_update, no_update, no_update, no_update, no_update
-
-
-# callback: toggle transparent modal 1-3
-@app.callback(
-        [
-            Output(component_id="transparent-modal-1-3", component_property="is_open"),
-            Output(component_id="transparent-modal-1-3-small", component_property="is_open"),
-            Output(component_id="transparent-modal-1-3-store", component_property="data"),
-            Output(component_id="transparent-modal-1-3-small-store", component_property="data"),
-            Output(component_id="transparent-modal-1-3-interval", component_property="disabled"),
-        ],
-        [
-            Input(component_id="transparent-modal-1-3-interval", component_property="n_intervals"),
-            Input(component_id="button-register-sfo", component_property="n_clicks"),
-        ],
-        [
-            State(component_id="bool-switch-1-3", component_property="on"),
-            State(component_id="transparent-modal-1-3", component_property="is_open"),
-            State(component_id="transparent-modal-1-3-small", component_property="is_open"),
-            State(component_id="transparent-modal-1-3-store", component_property="data"),
-            State(component_id="transparent-modal-1-3-small-store", component_property="data"),
-            State(component_id="transparent-modal-1-3-interval", component_property="disabled")
-        ]
-)
-def toggle_transparent_modal_1_1(auto, n_clicks, switch, is_open, is_open2, init_state, init_state_small, disabled):
-    if not disabled:
-        if (init_state, init_state_small) == (True, True):
-            return True, True, no_update, no_update, True
-        elif (init_state, init_state_small) == (False, False):
-            return False, False, no_update, no_update, True
-        elif (init_state, init_state_small) == ([], []):
-            return no_update, no_update, no_update, no_update, True
-
-    if n_clicks and switch:
-        return True, True, True, True, False
-    elif n_clicks and not switch:
-        return False, False, False, False, False
-    return no_update, no_update, no_update, no_update, no_update
-
-
-# callback: toggle transparent modal 2-1
-@app.callback(
-        [
-            Output(component_id="button-col-2-1", component_property="style"),
-            Output(component_id="range-slider-div-2-1", component_property="style"),
+            Output(component_id="button-col-1-1", component_property="style"),
+            Output(component_id="range-slider-div-1-1", component_property="style"),
         ],
         [
             Input(component_id="button-register-skole", component_property="n_clicks"),
         ],
         [
-            State(component_id="bool-switch-2-1", component_property="on"),
+            State(component_id="bool-switch-1-1", component_property="on"),
         ]
 )
 def toggle_transparent_modal_2_1(n_clicks, switch):
@@ -639,80 +525,160 @@ def toggle_transparent_modal_2_1(n_clicks, switch):
 
     return no_update, no_update
 
+
+# callback: toggle transparent modal 1-2
+@app.callback(
+        [
+            Output(component_id="button-col-1-2", component_property="style"),
+            Output(component_id="range-slider-div-1-2", component_property="style"),
+        ],
+        [
+            Input(component_id="button-register-skole", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="bool-switch-1-2", component_property="on"),
+        ]
+)
+def toggle_transparent_modal_2_1(n_clicks, switch):
+    if n_clicks and switch:
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
+        range_slider_style = {"opacity": "0.5", "pointer-events": "none"}
+        return button_col_style, range_slider_style
+
+    elif n_clicks and not switch:
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
+        range_slider_style = {"opacity": "1", "pointer-events": "auto"}
+        return button_col_style, range_slider_style
+
+    return no_update, no_update
+
+
+# callback: toggle transparent modal 1-3
+@app.callback(
+        [
+            Output(component_id="button-col-1-3", component_property="style"),
+            Output(component_id="range-slider-div-1-3", component_property="style"),
+        ],
+        [
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="bool-switch-1-3", component_property="on"),
+        ]
+)
+def toggle_transparent_modal_2_1(n_clicks, switch):
+    if n_clicks and switch:
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
+        range_slider_style = {"opacity": "0.5", "pointer-events": "none"}
+        return button_col_style, range_slider_style
+
+    elif n_clicks and not switch:
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
+        range_slider_style = {"opacity": "1", "pointer-events": "auto"}
+        return button_col_style, range_slider_style
+
+    return no_update, no_update
+
+
+# callback: toggle transparent modal 2-1
+@app.callback(
+        [
+            Output(component_id="button-col-2-1", component_property="style"),
+            Output(component_id="range-slider-div-2-1", component_property="style"),
+            Output(component_id="grey-out-but-2-1", component_property="data"),
+            Output(component_id="grey-out-range-2-1", component_property="data"),
+            Output(component_id="interval-2-1", component_property="disabled"),
+        ],
+        [
+            Input(component_id="interval-2-1", component_property="n_intervals"),
+            Input(component_id="button-register-skole", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="bool-switch-2-1", component_property="on"),
+            State(component_id="grey-out-but-2-1", component_property="data"),
+            State(component_id="grey-out-range-2-1", component_property="data"),
+            State(component_id="interval-2-1", component_property="disabled"),
+        ]
+)
+def toggle_transparent_modal_2_1(n_intervals, n_clicks, switch, state_but, state_range, disabled):
+    if not disabled and n_intervals:
+        if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
+            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
+            state_range = {"opacity": "0.5", "pointer-events": "none"}
+            return state_but, state_range, state_but, state_range, True
+
+        elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
+            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
+            state_range = {"opacity": "1", "pointer-events": "auto"}
+            return state_but, state_range, state_but, state_range, True
+
+        elif (state_but == [] and state_range == []):
+            return no_update, no_update, no_update, no_update, True
+
+    if n_clicks and switch:
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
+        range_style = {"opacity": "0.5", "pointer-events": "none"}
+        return button_col_style, range_style, button_col_style, range_style, False
+
+    elif n_clicks and not switch:
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
+        range_style = {"opacity": "1", "pointer-events": "auto"}
+        return button_col_style, range_style, button_col_style, range_style, False
+
+    return no_update, no_update, no_update, no_update, no_update
+
 # callback: toggle transparent modal 2-2
 @app.callback(
         [
-            Output(component_id="transparent-modal-2-2", component_property="is_open"),
-            Output(component_id="transparent-modal-2-2-small", component_property="is_open"),
-            Output(component_id="transparent-modal-2-2-store", component_property="data"),
-            Output(component_id="transparent-modal-2-2-small-store", component_property="data"),
-            Output(component_id="transparent-modal-2-2-interval", component_property="disabled"),
+            Output(component_id="button-col-2-2", component_property="style"),
+            Output(component_id="range-slider-div-2-2", component_property="style"),
         ],
         [
-            Input(component_id="transparent-modal-2-2-interval", component_property="n_intervals"),
             Input(component_id="button-register-skole", component_property="n_clicks"),
         ],
         [
             State(component_id="bool-switch-2-2", component_property="on"),
-            State(component_id="transparent-modal-2-2", component_property="is_open"),
-            State(component_id="transparent-modal-2-2-small", component_property="is_open"),
-            State(component_id="transparent-modal-2-2-store", component_property="data"),
-            State(component_id="transparent-modal-2-2-small-store", component_property="data"),
-            State(component_id="transparent-modal-2-2-interval", component_property="disabled")
         ]
 )
-def toggle_transparent_modal_2_2(auto, n_clicks, switch, is_open, is_open2, init_state, init_state_small, disabled):
-    if not disabled:
-        if (init_state, init_state_small) == (True, True):
-            return True, True, no_update, no_update, True
-        elif (init_state, init_state_small) == (False, False):
-            return False, False, no_update, no_update, True
-        elif (init_state, init_state_small) == ([], []):
-            return no_update, no_update, no_update, no_update, True
-
+def toggle_transparent_modal_2_1(n_clicks, switch):
     if n_clicks and switch:
-        return True, True, True, True, False
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
+        range_slider_style = {"opacity": "0.5", "pointer-events": "none"}
+        return button_col_style, range_slider_style
+
     elif n_clicks and not switch:
-        return False, False, False, False, False
-    return no_update, no_update, no_update, no_update, no_update
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
+        range_slider_style = {"opacity": "1", "pointer-events": "auto"}
+        return button_col_style, range_slider_style
+
+    return no_update, no_update
 
 
 # callback: toggle transparent modal 2-3
 @app.callback(
         [
-            Output(component_id="transparent-modal-2-3", component_property="is_open"),
-            Output(component_id="transparent-modal-2-3-small", component_property="is_open"),
-            Output(component_id="transparent-modal-2-3-store", component_property="data"),
-            Output(component_id="transparent-modal-2-3-small-store", component_property="data"),
-            Output(component_id="transparent-modal-2-3-interval", component_property="disabled"),
+            Output(component_id="button-col-2-3", component_property="style"),
+            Output(component_id="range-slider-div-2-3", component_property="style"),
         ],
         [
-            Input(component_id="transparent-modal-2-3-interval", component_property="n_intervals"),
             Input(component_id="button-register-skole", component_property="n_clicks"),
         ],
         [
             State(component_id="bool-switch-2-3", component_property="on"),
-            State(component_id="transparent-modal-2-3", component_property="is_open"),
-            State(component_id="transparent-modal-2-3-small", component_property="is_open"),
-            State(component_id="transparent-modal-2-3-store", component_property="data"),
-            State(component_id="transparent-modal-2-3-small-store", component_property="data"),
-            State(component_id="transparent-modal-2-3-interval", component_property="disabled")
         ]
 )
-def toggle_transparent_modal_2_3(auto, n_clicks, switch, is_open, is_open2, init_state, init_state_small, disabled):
-    if not disabled:
-        if (init_state, init_state_small) == (True, True):
-            return True, True, no_update, no_update, True
-        elif (init_state, init_state_small) == (False, False):
-            return False, False, no_update, no_update, True
-        elif (init_state, init_state_small) == ([], []):
-            return no_update, no_update, no_update, no_update, True
-
+def toggle_transparent_modal_2_1(n_clicks, switch):
     if n_clicks and switch:
-        return True, True, True, True, False
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
+        range_slider_style = {"opacity": "0.5", "pointer-events": "none"}
+        return button_col_style, range_slider_style
+
     elif n_clicks and not switch:
-        return False, False, False, False, False
-    return no_update, no_update, no_update, no_update, no_update
+        button_col_style = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
+        range_slider_style = {"opacity": "1", "pointer-events": "auto"}
+        return button_col_style, range_slider_style
+
+    return no_update, no_update
 
 
 # callback: toggle help skole

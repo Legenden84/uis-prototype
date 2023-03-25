@@ -275,6 +275,15 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-1"),
+                                dcc.Interval(id="interval-2-1", interval=500, n_intervals=0, disabled=False),
+                                dcc.Store(
+                                    id="grey-out-but-2-1",
+                                    data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
+                                    storage_type="session"),
+                                dcc.Store(
+                                    id="grey-out-range-2-1",
+                                    data={"opacity": "1", "pointer-events": "auto"},
+                                    storage_type="session"),
                             ]),
                         ),
                         dbc.Col(
