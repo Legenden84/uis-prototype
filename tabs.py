@@ -58,7 +58,7 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-1"),
-                                dcc.Interval(id="interval-1-1", interval=500, n_intervals=0, disabled=False),
+                                dcc.Interval(id="interval-1-1", interval=200, n_intervals=0, disabled=False),
                                 dcc.Store(
                                     id="grey-out-but-1-1",
                                     data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
@@ -124,9 +124,9 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-2"),
-                                dcc.Interval(id="interval-2-1", interval=500, n_intervals=0, disabled=False),
+                                dcc.Interval(id="interval-1-2", interval=200, n_intervals=0, disabled=False),
                                 dcc.Store(
-                                    id="grey-out-but-2-2",
+                                    id="grey-out-but-1-2",
                                     data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
                                     storage_type="session"),
                                 dcc.Store(
@@ -189,7 +189,7 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-1-3"),
-                                dcc.Interval(id="interval-2-1", interval=500, n_intervals=0, disabled=False),
+                                dcc.Interval(id="interval-1-3", interval=200, n_intervals=0, disabled=False),
                                 dcc.Store(
                                     id="grey-out-but-1-3",
                                     data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
@@ -302,7 +302,7 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-1"),
-                                dcc.Interval(id="interval-2-1", interval=500, n_intervals=0, disabled=False),
+                                dcc.Interval(id="interval-2-1", interval=200, n_intervals=0, disabled=False),
                                 dcc.Store(
                                     id="grey-out-but-2-1",
                                     data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
@@ -368,7 +368,7 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-2"),
-                                dcc.Interval(id="interval-2-2", interval=500, n_intervals=0, disabled=False),
+                                dcc.Interval(id="interval-2-2", interval=200, n_intervals=0, disabled=False),
                                 dcc.Store(
                                     id="grey-out-but-2-2",
                                     data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
@@ -433,7 +433,7 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-3"),
-                                dcc.Interval(id="interval-2-3", interval=500, n_intervals=0, disabled=False),
+                                dcc.Interval(id="interval-2-3", interval=200, n_intervals=0, disabled=False),
                                 dcc.Store(
                                     id="grey-out-but-2-3",
                                     data={"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"},
