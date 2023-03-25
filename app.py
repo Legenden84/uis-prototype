@@ -510,7 +510,7 @@ def toggle_kid_2_3(n_click_inc, n_click_dec, range_val):
         ],
         [
             Input(component_id="interval-1-1", component_property="n_intervals"),
-            Input(component_id="button-register-skole", component_property="n_clicks"),
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
         ],
         [
             State(component_id="bool-switch-1-1", component_property="on"),
@@ -558,7 +558,7 @@ def toggle_transparent_modal_1_1(n_intervals, n_clicks, switch, state_but, state
         ],
         [
             Input(component_id="interval-1-2", component_property="n_intervals"),
-            Input(component_id="button-register-skole", component_property="n_clicks"),
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
         ],
         [
             State(component_id="bool-switch-1-2", component_property="on"),
@@ -606,7 +606,7 @@ def toggle_transparent_modal_1_2(n_intervals, n_clicks, switch, state_but, state
         ],
         [
             Input(component_id="interval-1-3", component_property="n_intervals"),
-            Input(component_id="button-register-skole", component_property="n_clicks"),
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
         ],
         [
             State(component_id="bool-switch-1-3", component_property="on"),
