@@ -9,6 +9,8 @@ import support_functions as sf
 overblik = [
     html.Div([
         overblik_top_remark,
+        dcc.Store(id="store-table"),
+
     ],
     style={
         "margin-left": "8px",
