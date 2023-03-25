@@ -290,11 +290,6 @@ noshow = [
                         dbc.Col(
                             html.Div([
                                 sf.create_switch("bool-switch-2-1"),
-                                dcc.Interval(id="transparent-modal-2-1-interval", interval=100, n_intervals=0, disabled=False),
-                                dcc.Store(id="transparent-modal-2-1-store", data=False, storage_type="session"),
-                                dcc.Store(id="transparent-modal-2-1-small-store", data=False, storage_type="session"),
-                                transparent_modal_2_1,
-                                transparent_modal_2_1_small,
                             ]),
                         ),
                         dbc.Col(
