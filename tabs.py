@@ -1,6 +1,5 @@
 from dash import dash_table, dcc, html
 from help import *
-from transparent_modal import *
 import dash_bootstrap_components as dbc
 import dash_daq as daq
 import pandas as pd
