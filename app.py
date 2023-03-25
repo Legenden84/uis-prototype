@@ -522,13 +522,9 @@ def toggle_kid_2_3(n_click_inc, n_click_dec, range_val):
 def toggle_transparent_modal_1_1(n_intervals, n_clicks, switch, state_but, state_range, disabled):
     if not disabled and n_intervals:
         if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
-            state_range = {"opacity": "0.5", "pointer-events": "none"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
-            state_range = {"opacity": "1", "pointer-events": "auto"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == [] and state_range == []):
@@ -570,13 +566,9 @@ def toggle_transparent_modal_1_1(n_intervals, n_clicks, switch, state_but, state
 def toggle_transparent_modal_1_2(n_intervals, n_clicks, switch, state_but, state_range, disabled):
     if not disabled and n_intervals:
         if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
-            state_range = {"opacity": "0.5", "pointer-events": "none"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
-            state_range = {"opacity": "1", "pointer-events": "auto"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == [] and state_range == []):
@@ -618,13 +610,9 @@ def toggle_transparent_modal_1_2(n_intervals, n_clicks, switch, state_but, state
 def toggle_transparent_modal_1_3(n_intervals, n_clicks, switch, state_but, state_range, disabled):
     if not disabled and n_intervals:
         if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
-            state_range = {"opacity": "0.5", "pointer-events": "none"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
-            state_range = {"opacity": "1", "pointer-events": "auto"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == [] and state_range == []):
@@ -666,13 +654,9 @@ def toggle_transparent_modal_1_3(n_intervals, n_clicks, switch, state_but, state
 def toggle_transparent_modal_2_1(n_intervals, n_clicks, switch, state_but, state_range, disabled):
     if not disabled and n_intervals:
         if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
-            state_range = {"opacity": "0.5", "pointer-events": "none"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
-            state_range = {"opacity": "1", "pointer-events": "auto"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == [] and state_range == []):
@@ -714,13 +698,9 @@ def toggle_transparent_modal_2_1(n_intervals, n_clicks, switch, state_but, state
 def toggle_transparent_modal_2_2(n_intervals, n_clicks, switch, state_but, state_range, disabled):
     if not disabled and n_intervals:
         if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
-            state_range = {"opacity": "0.5", "pointer-events": "none"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
-            state_range = {"opacity": "1", "pointer-events": "auto"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == [] and state_range == []):
@@ -762,13 +742,9 @@ def toggle_transparent_modal_2_2(n_intervals, n_clicks, switch, state_but, state
 def toggle_transparent_modal_2_3(n_intervals, n_clicks, switch, state_but, state_range, disabled):
     if not disabled and n_intervals:
         if (state_but == {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"} and state_range == {"opacity": "0.5", "pointer-events": "none"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "0.5", "pointer-events": "none"}
-            state_range = {"opacity": "0.5", "pointer-events": "none"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"} and state_range == {"opacity": "1", "pointer-events": "auto"}):
-            state_but = {"display": "block", "padding-top": "5px", "opacity": "1", "pointer-events": "auto"}
-            state_range = {"opacity": "1", "pointer-events": "auto"}
             return state_but, state_range, state_but, state_range, True
 
         elif (state_but == [] and state_range == []):
