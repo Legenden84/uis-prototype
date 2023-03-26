@@ -22,8 +22,9 @@ beskeder_select = "/assets/beskeder_select.png"
 nowshow_select = "/assets/noshow_select.png"
 
 data = {"Navn": ["Hans", "Rosa", "Jimmie"],
-        "Skole": ["", "", ""],
-        "SFO": ["", "", ""]}
+        "SFO": ["", "", ""],
+        "Skole": ["", "", ""]
+        }
 
 df = pd.DataFrame(data)
 
@@ -763,14 +764,35 @@ def toggle_transparent_modal_2_3(n_intervals, n_clicks, switch, state_but, state
     return no_update, no_update, no_update, no_update, no_update
 
 
-# callback: update table
+# callback: update table for child 2-1
 @app.callback(
         Output(component_id="table", component_property="data"),
-        Input(component_id="store-table", component_property="data")
+        [
+            Input(component_id="button-register-skole", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="range-slider-2-1", component_property="value"),
+            State(component_id="button-2-1-inc", component_property="n_clicks"),
+            State(component_id="button-2-1-dec", component_property="n_clicks"),
+            State(component_id="table", component_property="data"),
+        ]
 )
-def update_table(table):
-    table_content = df.to_dict("records")
-    return table_content
+def update_table_2_1(n_clicks, value, inc, dec, data):
+    days = inc - dec
+    if n_clicks:
+        if value == [8, 15]:
+            if days == 1:
+                data[1]["Skole"] = f"Idag"
+                return data
+            else:
+                data[1]["Skole"] = f"{days} dage"
+                return data
+        else:
+            data[1]["Skole"] = f"Fra {value[0]} til {value[1]}"
+            return data
+
+    return no_update
+
 
 # callback: toggle help skole
 @app.callback(
