@@ -799,6 +799,8 @@ def update_table(n_clicks, *args):
             if value == [12, 17]:
                 if days == 1:
                     data[i - 1]["SFO"] = "Idag"
+                elif days == 0:
+                    data[i - 1]["SFO"] = ""
                 else:
                     data[i - 1]["SFO"] = f"{days} dage"
             else:
@@ -846,6 +848,8 @@ def update_table(n_clicks, *args):
             if value == [8, 15]:
                 if days == 1:
                     data[i - 1]["Skole"] = "Idag"
+                elif days == 0:
+                    data[i - 1]["Skole"] = ""
                 else:
                     data[i - 1]["Skole"] = f"{days} dage"
             else:
