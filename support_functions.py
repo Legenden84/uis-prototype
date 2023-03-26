@@ -23,7 +23,7 @@ def create_inc_buttons(id: str):
 
 
 def create_counter(id: str):
-    counter = html.H2(children="0",
+    counter = html.H2(children="Dage: 0",
                       id="counter-" + id,
                       style={
                         "font-size": "16px",
