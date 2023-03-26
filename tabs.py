@@ -5,11 +5,15 @@ import dash_daq as daq
 import pandas as pd
 import support_functions as sf
 
+data = {"Navn": ["Hans", "Rosa", "Jimmie"],
+        "Skole": ["", "", ""],
+        "SFO": ["", "", ""]}
+
 # tab 1 - overblik
 overblik = [
     html.Div([
         overblik_top_remark,
-        dcc.Store(id="store-table"),
+        dcc.Store(id="store-table", data=data, storage_type="session"),
 
     ],
     style={
