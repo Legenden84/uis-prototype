@@ -764,6 +764,99 @@ def toggle_transparent_modal_2_3(n_intervals, n_clicks, switch, state_but, state
     return no_update, no_update, no_update, no_update, no_update
 
 
+# callback: update table for child 1-1
+@app.callback(
+        Output(component_id="table", component_property="data", allow_duplicate=True),
+        [
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="bool-switch-1-1", component_property="on"),
+            State(component_id="range-slider-1-1", component_property="value"),
+            State(component_id="button-1-1-inc", component_property="n_clicks"),
+            State(component_id="button-1-1-dec", component_property="n_clicks"),
+            State(component_id="table", component_property="data"),
+        ]
+)
+def update_table_2_1(n_clicks, switch, value, inc, dec, data):
+    days = inc - dec
+    if n_clicks and switch:
+        if value == [12, 17]:
+            if days == 1:
+                data[0]["SFO"] = f"Idag"
+                return data
+            else:
+                data[0]["SFO"] = f"{days} dage"
+                return data
+        else:
+            data[0]["Skole"] = f"Fra {value[0]} til {value[1]}"
+            return data
+
+    return no_update
+
+
+# callback: update table for child 1-2
+@app.callback(
+        Output(component_id="table", component_property="data", allow_duplicate=True),
+        [
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="bool-switch-1-2", component_property="on"),
+            State(component_id="range-slider-1-2", component_property="value"),
+            State(component_id="button-1-2-inc", component_property="n_clicks"),
+            State(component_id="button-1-2-dec", component_property="n_clicks"),
+            State(component_id="table", component_property="data"),
+        ]
+)
+def update_table_2_2(n_clicks, switch, value, inc, dec, data):
+    days = inc - dec
+    if n_clicks and switch:
+        if value == [12, 17]:
+            if days == 1:
+                data[1]["SFO"] = f"Idag"
+                return data
+            else:
+                data[1]["SFO"] = f"{days} dage"
+                return data
+        else:
+            data[1]["SFO"] = f"Fra {value[0]} til {value[1]}"
+            return data
+
+    return no_update
+
+
+# callback: update table for child 1-3
+@app.callback(
+        Output(component_id="table", component_property="data", allow_duplicate=True),
+        [
+            Input(component_id="button-register-sfo", component_property="n_clicks"),
+        ],
+        [
+            State(component_id="bool-switch-1-3", component_property="on"),
+            State(component_id="range-slider-1-3", component_property="value"),
+            State(component_id="button-1-3-inc", component_property="n_clicks"),
+            State(component_id="button-1-3-dec", component_property="n_clicks"),
+            State(component_id="table", component_property="data"),
+        ]
+)
+def update_table_2_2(n_clicks, switch, value, inc, dec, data):
+    days = inc - dec
+    if n_clicks and switch:
+        if value == [12, 17]:
+            if days == 1:
+                data[2]["SFO"] = f"Idag"
+                return data
+            else:
+                data[2]["SFO"] = f"{days} dage"
+                return data
+        else:
+            data[2]["SFO"] = f"Fra {value[0]} til {value[1]}"
+            return data
+
+    return no_update
+
+
 # callback: update table for child 2-1
 @app.callback(
         Output(component_id="table", component_property="data", allow_duplicate=True),
@@ -855,6 +948,7 @@ def update_table_2_2(n_clicks, switch, value, inc, dec, data):
             return data
 
     return no_update
+
 
 # callback: toggle help skole
 @app.callback(
