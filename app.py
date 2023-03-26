@@ -778,7 +778,7 @@ def toggle_transparent_modal_2_3(n_intervals, n_clicks, switch, state_but, state
             State(component_id="table", component_property="data"),
         ]
 )
-def update_table_2_1(n_clicks, switch, value, inc, dec, data):
+def update_table_1_1(n_clicks, switch, value, inc, dec, data):
     days = inc - dec
     if n_clicks and switch:
         if value == [12, 17]:
@@ -809,7 +809,7 @@ def update_table_2_1(n_clicks, switch, value, inc, dec, data):
             State(component_id="table", component_property="data"),
         ]
 )
-def update_table_2_2(n_clicks, switch, value, inc, dec, data):
+def update_table_1_2(n_clicks, switch, value, inc, dec, data):
     days = inc - dec
     if n_clicks and switch:
         if value == [12, 17]:
@@ -840,7 +840,7 @@ def update_table_2_2(n_clicks, switch, value, inc, dec, data):
             State(component_id="table", component_property="data"),
         ]
 )
-def update_table_2_2(n_clicks, switch, value, inc, dec, data):
+def update_table_1_3(n_clicks, switch, value, inc, dec, data):
     days = inc - dec
     if n_clicks and switch:
         if value == [12, 17]:
@@ -933,7 +933,7 @@ def update_table_2_2(n_clicks, switch, value, inc, dec, data):
             State(component_id="table", component_property="data"),
         ]
 )
-def update_table_2_2(n_clicks, switch, value, inc, dec, data):
+def update_table_2_3(n_clicks, switch, value, inc, dec, data):
     days = inc - dec
     if n_clicks and switch:
         if value == [8, 15]:
