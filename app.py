@@ -763,6 +763,15 @@ def toggle_transparent_modal_2_3(n_intervals, n_clicks, switch, state_but, state
     return no_update, no_update, no_update, no_update, no_update
 
 
+# callback: update table
+@app.callback(
+        Output(component_id="table", component_property="data"),
+        Input(component_id="store-table", component_property="data")
+)
+def update_table(table):
+    table_content = df.to_dict("records")
+    return table_content
+
 # callback: toggle help skole
 @app.callback(
     Output(component_id="modal-skole", component_property="is_open"),
