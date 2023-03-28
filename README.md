@@ -7,19 +7,19 @@ Følg nedenstående vejledning
 ## Vejledning:
 Såfremt at Python3.8 og Conda er installeret. Kan følgende trin udføres.
 
-1) Lav et python virtual environment: \
+1) Lav et python virtual environment:
     ```
     $ conda create -n uis python=3.8
     ```
-2) Aktiver virtual environment: \
+2) Aktiver virtual environment:
     ```
     $ conda activate uis
     ```
-3) Installer dependencies: \
+3) Installer dependencies:
     ```
     $ pip install -r requirements.txt
     ```
-4) Kør Aula-prototypen: \
+4) Kør Aula-prototypen:
     ```
     $ python app.py
     ```
