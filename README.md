@@ -8,8 +8,9 @@ Følg nedenstående vejledning
 Såfremt at Python3.8 og Conda er installeret. Kan følgende trin udføres.
 
 1) Lav et python virtual environment: \
+    ```
     $ conda create -n uis python=3.8
-
+    ```
 2) Aktiver virtual environment: \
     $ conda activate uis
 
