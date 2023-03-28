@@ -12,14 +12,17 @@ Såfremt at Python3.8 og Conda er installeret. Kan følgende trin udføres.
     $ conda create -n uis python=3.8
     ```
 2) Aktiver virtual environment: \
+    ```
     $ conda activate uis
-
+    ```
 3) Installer dependencies: \
+    ```
     $ pip install -r requirements.txt
-
+    ```
 4) Kør Aula-prototypen: \
+    ```
     $ python app.py
-
+    ```
 ## Authors:
 Tobias Legenden (jkw333), email: jkw333@alumni.ku.dk \
 Emma Fowler (mtf885), email: emmafowler1@hotmail.com \
