@@ -118,13 +118,13 @@ modal_open_sfo = dbc.Button("?",
                                 })
 
 modal_sfo = dbc.Modal([
-    dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
+    dbc.ModalHeader(dbc.ModalTitle("Vejledning: Registrer sygemelding", style={"font-size": "24px"}),
                     style={
                         "font-family": "Calibri",
                         "font-size": "20px",
                         "margin-left": "8px"},
                     close_button=False),
-    dbc.ModalBody(help_text),
+    dbc.ModalBody(help_text_sfo),
     dbc.ModalFooter(
         dbc.Button("Luk",
                     id="close-sfo",
@@ -151,9 +151,9 @@ modal_sfo = dbc.Modal([
         "margin-top": "450px",
         "top": "0",
         "left": "50%",
-        "height": "525px",
+        "height": "300px",
         "width": "350px",
-        "transform": "translate(-50%, -50%)",
+        "transform": "translate(-50%, -85%)",
         "background-color": "#F7F7F7"
     }
 )
@@ -178,14 +178,14 @@ modal_open_skole = dbc.Button("?",
                                 })
 
 modal_skole = dbc.Modal([
-    dbc.ModalHeader(dbc.ModalTitle("Vejledning"),
+    dbc.ModalHeader(dbc.ModalTitle("Vejledning: Registrer sygemelding", style={"font-size": "24px"}),
                     style={
                         "font-family": "Calibri",
                         "font-size": "32px",
 
                         "margin-left": "8px"},
                     close_button=False),
-    dbc.ModalBody(help_text),
+    dbc.ModalBody(help_text_skole),
     dbc.ModalFooter(
         dbc.Button("Luk",
                 id="close-skole",
@@ -212,9 +212,9 @@ modal_skole = dbc.Modal([
         "margin-top": "450px",
         "top": "0",
         "left": "50%",
-        "height": "525px",
+        "height": "400px",
         "width": "350px",
-        "transform": "translate(-50%, -50%)",
+        "transform": "translate(-50%, -65%)",
         "background-color": "#F7F7F7"
     }
 )
