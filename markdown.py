@@ -7,11 +7,41 @@ overblik_top_remark = dcc.Markdown(
     style={"font-family": "Calibri",  "margin-left": "8px"}
 )
 
-help_text = dcc.Markdown(
+help_text_sfo = dcc.Markdown(
     """
-    Bla bla bla bla bla bla bla bla bla bla bla bla bla bla...
+    Følg vejledningen nedenfor ved sygemelding:
+    * Marker barnet vha. knappen til venstre for
+      barnet.
+
+    * Vælg antal dage ved at trykke +/-
+
+    * Ønsker du at registrer fravær i mindre end
+      en dag. Kan du anvende intervallet.
+
+    * Tryk registrer fravær.
     """,
-    style={"font-family": "Calibri",  "margin-left": "8px"}
+    style={"font-family": "Calibri",  "margin-left": "8px", "white-space": "pre"}
+)
+
+help_text_skole = dcc.Markdown(
+    """
+    Følg vejledningen nedenfor ved sygemelding:
+    * Marker barnet vha. knappen til venstre for
+      barnet.
+
+    * Vælg antal dage ved at trykke +/-
+
+    * Ønsker du at registrer fravær i mindre end
+      en dag. Kan du anvende intervallet.
+
+    * Tryk registrer fravær.
+
+    NB: Såfremt at du sygemelder et barn i mindst én
+    hel dag. Vil SFO automatisk blive registret. Ønsker
+    du kun at sygemelde barnet i skolen. Skal du der-
+    for selv fjerne registregingen i SFO.
+    """,
+    style={"font-family": "Calibri",  "margin-left": "8px", "white-space": "pre"}
 )
 
 top_remark = dcc.Markdown(
