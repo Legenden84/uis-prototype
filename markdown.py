@@ -11,7 +11,7 @@ help_text_sfo = dcc.Markdown(
     """
     Følg vejledningen nedenfor ved sygemelding:
     * Marker barnet vha. knappen til venstre for
-      barnet.
+      barnets navn.
 
     * Vælg antal dage ved at trykke +/-
 
@@ -27,7 +27,7 @@ help_text_skole = dcc.Markdown(
     """
     Følg vejledningen nedenfor ved sygemelding:
     * Marker barnet vha. knappen til venstre for
-      barnet.
+      barnets navn.
 
     * Vælg antal dage ved at trykke +/-
 

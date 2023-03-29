@@ -36,12 +36,12 @@ table = html.Div(
             columns=[{"name": i, "id": i} for i in df.columns],
             data=df.to_dict("records"),
         )
-    ], style={"display": "none", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
+    ], style={"display": "block", "margin-left": "8px", "margin-right": "8px", "margin-bottom": "500px"}
 )
 
 content = html.Div(
     id="page-content",
-    children=[],
+    children=overblik,
     style={"height": "554px"}
 )
 
@@ -69,89 +69,6 @@ app = dash.Dash(__name__,
 )
 # server = app.server
 server = app.server
-
-# main layout
-body = html.Div([
-    dcc.Tabs(
-        id="tabs",
-        value="tab-1",
-        children=[
-            dcc.Tab(
-                label="OVERBLIK",
-                value="tab-1",
-                children=overblik,
-                style={
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                selected_style={
-                    "color": "white",
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#16425D",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                className="custom-tabs-container",
-                selected_className="custom-tab--selected"
-            ),
-            dcc.Tab(
-                label="FRAVÆR",
-                value="tab-2",
-                children=noshow,
-                style={
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                selected_style={
-                    "color": "white",
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#16425D",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                className="custom-tabs-container",
-                selected_className="custom-tab--selected"
-            ),
-            dcc.Tab(
-                label="TIDER",
-                value="tab-3",
-                children=messages,
-                style={
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#F7F7F7",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                selected_style={
-                    "color": "white",
-                    "padding": "1px",
-                    "height": "30px",
-                    "backgroundColor": "#16425D",
-                    "font-family": "Calibri",
-                    "font-size": "20px",
-                    "font-weight": "bold"},
-                className="custom-tabs-container",
-                selected_className="custom-tab--selected"
-            ),
-        ],
-        style={
-            "padding-bottom": "0px",
-            "margin-bottom": "2px",
-            "height": "30px",
-        },
-        className="custom-tabs-container",
-    ),
-])
-
 
 # create layout
 app.layout = html.Div([header, content, table, navbar],
