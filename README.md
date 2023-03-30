@@ -13,7 +13,7 @@ Såfremt at Python3.8 og Conda er installeret. Kan følgende trin udføres.
     ```
 2) Naviger ind i det klonet repository:
     ```
-    $ cd uis-prototypr
+    $ cd uis-prototype
     ```
 3) Lav et python virtual environment:
     ```
