@@ -8,13 +8,13 @@ Følg nedenstående vejledning
 Såfremt at Python3.8 og Conda er installeret. Kan følgende trin udføres.
 
 1) Klon repository:
-    '''
+    ```
     $ git clone https://github.com/Legenden84/uis-prototype.git
-    '''
+    ```
 2) Naviger ind i det klonet repository:
-    '''
+    ```
     cd uis-prototypr
-    '''
+    ```
 3) Lav et python virtual environment:
     ```
     $ conda create -n uis python=3.8
