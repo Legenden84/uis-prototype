@@ -7,7 +7,7 @@ navbar = html.Div([
                 id="button-1",
                 children=html.Img(
                     id="img1",
-                    src="/assets/overblik_deselect.png",
+                    src="/assets/overblik_select.png",
                     style={
                         "height": "55px",
                         "width": "93px",
