@@ -74,6 +74,7 @@ server = app.server
 app.layout = html.Div([header, content, table, navbar],
                         style={
                             "display": "flex",
+                            "border": "1px solid black",
                             "flex-direction": "column",
                             "backgroundColor": "#D8E1E8",
                             "width": "375px",
