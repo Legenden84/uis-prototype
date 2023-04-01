@@ -2,7 +2,7 @@ from dash import html
 
 # header layout
 header = html.Div(
-    children=[html.H1("Aula prototype")],
+    children=[html.H1("Aula Prototype")],
     style={
         "display": "flex",
         "color": "white",
